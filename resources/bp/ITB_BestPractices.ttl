@@ -1,0 +1,11 @@
+# baseURI: http://www.w3.org/ns/shacl-shacl#
+
+# A SHACL shapes graph to validate Best Practices on SHACL shapes graphs
+# Draft last edited 2020-03-12
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix shsh: <http://www.w3.org/ns/shacl-shacl#> .
