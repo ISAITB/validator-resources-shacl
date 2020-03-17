@@ -1,0 +1,87 @@
+# baseURI: http://www.w3.org/ns/shacl-shacl#
+
+# A SHACL shapes graph to validate SHACL shapes graphs  (Extended)
+# Draft last edited 2020-03-13
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix shsh: <http://www.w3.org/ns/shacl-shacl#> .
+
+shsh:
+	rdfs:label "SHACL for SHACL"@en ;
+	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
+	sh:declare [
+		sh:prefix "shsh" ;
+		sh:namespace "http://www.w3.org/ns/shacl-shacl#" ;
+	] .
+
+shsh:SparqlShapeShape
+	a sh:NodeShape ;
+	sh:targetObjectsOf sh:sparql ;    	# sparql-nodeKind
+	sh:message "Shapes may have values for the property sh:sparql, and these values are either IRIs or blank nodes.";
+	sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;
+	
+	sh:property [
+		sh:path sh:select ;				
+		sh:message "SPARQL-based constraints have exactly one value for the property sh:select.";
+		sh:maxCount 1 ;					# SPARQLConstraint-select-count
+		sh:minCount 1 ;					# SPARQLConstraint-select-count
+	] ;
+	
+	sh:property [
+		sh:path sh:select ;	
+		sh:message "The value of sh:select is a literal of datatype xsd:string.";
+		sh:nodeKind sh:Literal ;		# SPARQLConstraint-select-datatype
+	] ;
+	
+	sh:property [
+		sh:path sh:message ;
+		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag.";
+		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 		# SPARQLConstraint-message-datatype
+	] ;
+	
+	sh:property [
+		sh:path sh:deactivated ;
+		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated.";
+		sh:maxCount 1 ;					# SPARQLConstraint-deactivated-maxCount
+	] ;
+	
+	sh:property [
+		sh:path sh:prefixes ;
+		sh:message "The values of sh:prefixes are either IRIs or blank nodes.";
+		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;				# prefixes-nodeKind
+	] . 
+
+shsh:DeclareShapeShape
+	a sh:NodeShape ;
+	sh:targetObjectsOf sh:declare ;    	# declare-nodeKind
+	
+	sh:property [
+		sh:path sh:prefix ;				
+		sh:message "Prefix declarations have exactly one value for the property sh:prefix.";
+		sh:maxCount 1 ;					# prefix-count
+		sh:minCount 1 ;					# prefix-count
+	] ;
+	
+	sh:property [
+		sh:path sh:prefix ;
+		sh:message "The values of sh:prefix are literals of datatype xsd:string.";
+		sh:datatype xsd:string ; 		# prefix-datatype
+	] ;
+	
+	sh:property [
+		sh:path sh:namespace ;				
+		sh:message "Prefix declarations have exactly one value for the property sh:namespace.";
+		sh:maxCount 1 ;					# namespace-count
+		sh:minCount 1 ;					# namespace-count
+	] ;
+	
+	sh:property [
+		sh:path sh:namespace ;
+		sh:message "The values of sh:namespace are literals of datatype xsd:anyURI.";
+		sh:datatype xsd:anyURI ; 		# namespace-datatype
+	] .
+
