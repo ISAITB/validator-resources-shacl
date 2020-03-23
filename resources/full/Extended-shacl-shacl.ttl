@@ -38,6 +38,28 @@ shsh:SparqlShapeShape
 	] ;
 	
 	sh:property [
+		sh:path sh:select ;	
+		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query.";
+		sh:pattern "SELECT.*WHERE(\\s*)\\{.*\\}" ;		# select-query-valid
+		sh:flags "si" ;
+	] ;
+	
+	sh:property [
+		sh:path sh:select ;	
+		sh:message "The SPARQL query derived from the value of sh:select projects the variable this in the SELECT clause.";
+		sh:pattern "SELECT.*\\$this.*WHERE.*" ;		# select-query-this
+		sh:flags "si" ;
+	] ;
+	
+	# sh:property [
+		# sh:path sh:select ;	
+		# sh:message "The only legal use of the variable PATH in the SPARQL queries of SPARQL-based constraints and SELECT-based validators is in the predicate position of a triple # pattern.";
+		# sh:pattern "((\\$|\\?|[A-Z]*:)[A-Z]*(\\s*)(\\$PATH)(\\s*)(\\$|\\?|[A-Z]*:)[A-Z]*(\\s*).)+" ;		# PATH-position
+		# sh:pattern "((\\$|\\?)[A-Z]*(\\s*)\\$PATH(\\s*)(\\$|\\?)[A-Z]*(\\s*).)+" ;		# PATH-position
+		# sh:flags "si" ;
+	# ] ;
+	
+	sh:property [
 		sh:path sh:message ;
 		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag.";
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 		# SPARQLConstraint-message-datatype
@@ -58,6 +80,8 @@ shsh:SparqlShapeShape
 shsh:DeclareShapeShape
 	a sh:NodeShape ;
 	sh:targetObjectsOf sh:declare ;    	# declare-nodeKind
+	sh:message "The values of the property sh:declare are IRIs or blank nodes.";
+	sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;
 	
 	sh:property [
 		sh:path sh:prefix ;				
@@ -85,3 +109,15 @@ shsh:DeclareShapeShape
 		sh:datatype xsd:anyURI ; 		# namespace-datatype
 	] .
 
+shsh:ContstraintComponentShape
+	a sh:NodeShape ;			# ConstraintComponent
+	sh:targetClass sh:ConstraintComponent ;
+	sh:targetObjectsOf sh:parameter ;    	
+	#sh:message "A SPARQL-based constraint component is an IRI that has SHACL type sh:ConstraintComponent in the shapes graph.";
+	#sh:nodeKind sh:IRI ;
+	
+	sh:property [
+		sh:path sh:path ;
+		sh:message "Each parameter declaration has exactly one value for the property sh:path.";
+		sh:maxCount 1 ; 				# Parameter-predicate-count
+	] .
