@@ -110,14 +110,47 @@ shsh:DeclareShapeShape
 	] .
 
 shsh:ContstraintComponentShape
-	a sh:NodeShape ;			# ConstraintComponent
-	sh:targetClass sh:ConstraintComponent ;
-	sh:targetObjectsOf sh:parameter ;    	
-	#sh:message "A SPARQL-based constraint component is an IRI that has SHACL type sh:ConstraintComponent in the shapes graph.";
-	#sh:nodeKind sh:IRI ;
+	a sh:NodeShape ;			
+	sh:targetClass sh:ConstraintComponent ;		# ConstraintComponent
 	
 	sh:property [
-		sh:path sh:path ;
-		sh:message "Each parameter declaration has exactly one value for the property sh:path.";
-		sh:maxCount 1 ; 				# Parameter-predicate-count
+		sh:path (sh:parameter sh:optional) ;
+		sh:message "The values of sh:optional must be literals with datatype xsd:boolean.";
+		sh:datatype xsd:boolean ;		# optional-datatype
+	] ;
+	
+	sh:property [
+		sh:path (sh:parameter sh:optional) ;
+		sh:message "A parameter declaration can have at most one value for the property sh:optional.";
+		sh:maxCount 1 ;	 				# optional-maxCount
+	] ;
+	
+	sh:property [
+		sh:path sh:labelTemplate ;
+		sh:message "The values of sh:labelTemplate are strings (possibly with language tag).";
+		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 				# labelTemplate-datatype
+	] ;
+	
+	sh:property [
+		sh:path sh:nodeValidator ;
+		sh:message "The values of sh:nodeValidator must be SELECT-based validators.";
+		sh:class sh:SPARQLSelectValidator ;				# nodeValidator-class
+	] ;
+	
+	sh:property [
+		sh:path sh:propertyValidator ;
+		sh:message "The values of sh:propertyValidator must be SELECT-based validators.";
+		sh:class sh:SPARQLSelectValidator ;				# propertyValidator-class
 	] .
+	
+	
+	#sh:targetObjectsOf sh:parameter ;  
+	#sh:message "A SPARQL-based constraint component is an IRI that has SHACL type sh:ConstraintComponent in the shapes graph.";
+	#sh:nodeKind sh:IRI .
+	
+	#sh:property [
+	#	sh:path sh:path ;
+	#	sh:message "Parameter names must not be one of the following: this, shapesGraph, currentShape, path, PATH, value.";
+	#	sh:pattern "((?!this).)*" ;		# parameter-name-not-in
+	#	sh:flags "s" ;
+	#] .
