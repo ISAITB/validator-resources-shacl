@@ -129,18 +129,6 @@ shsh:ContstraintComponentShape
 		sh:path sh:labelTemplate ;
 		sh:message "The values of sh:labelTemplate are strings (possibly with language tag).";
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 				# labelTemplate-datatype
-	] ;
-	
-	sh:property [
-		sh:path sh:nodeValidator ;
-		sh:message "The values of sh:nodeValidator must be SELECT-based validators.";
-		sh:class sh:SPARQLSelectValidator ;				# nodeValidator-class
-	] ;
-	
-	sh:property [
-		sh:path sh:propertyValidator ;
-		sh:message "The values of sh:propertyValidator must be SELECT-based validators.";
-		sh:class sh:SPARQLSelectValidator ;				# propertyValidator-class
 	] .
 	
 	
@@ -154,3 +142,66 @@ shsh:ContstraintComponentShape
 	#	sh:pattern "((?!this).)*" ;		# parameter-name-not-in
 	#	sh:flags "s" ;
 	#] .
+
+shsh:SELECTBasedShapes
+	a sh:NodeShape ;	
+	sh:targetSubjectsOf sh:nodeValidator, sh:propertyValidator ;
+	
+	sh:property [
+		sh:path sh:nodeValidator ;
+		sh:message "The values of sh:nodeValidator must be SELECT-based validators.";
+		sh:class sh:SPARQLSelectValidator ;				# nodeValidator-class
+	] ;
+		
+	sh:property [
+		sh:path sh:propertyValidator ;
+		sh:message "The values of sh:propertyValidator must be SELECT-based validators.";
+		sh:class sh:SPARQLSelectValidator ;				# propertyValidator-class
+	] .
+	
+shsh:SELECTBasedShapesClass
+	a sh:NodeShape ;			
+	sh:targetClass sh:SPARQLSelectValidator ;	
+	
+	sh:property [
+		sh:path sh:select ;
+		sh:message "SELECT-based validators have exactly one value for the property sh:select.";
+		sh:maxCount 1 ;	 				# SPARQLSelectValidator-select-count
+		sh:minCount 1 ;	 				# SPARQLSelectValidator-select-count
+	] .
+
+shsh:ASKBasedShapes
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:validator ;
+	
+	sh:property [
+		sh:path sh:validator ;
+		sh:message "The values of sh:validator must be ASK-based validators.";
+		sh:class sh:SPARQLAskValidator ;				# validator-class
+	] .
+	
+shsh:ASKBasedShapesClass
+	a sh:NodeShape ;			
+	sh:targetClass sh:SPARQLAskValidator ;	
+	
+	sh:property [
+		sh:path sh:ask ;
+		sh:message "ASK-based validators have exactly one value for the property sh:ask.";
+		sh:maxCount 1 ;	 				# ask-count
+		sh:minCount 1 ;	 				# ask-count
+	] ;
+	
+	sh:property [
+		sh:path sh:ask ;
+		sh:message "The value of sh:ask must be a literal with datatype xsd:string.";
+		sh:datatype xsd:string ;	 				# ask-datatype
+	] ;
+	
+	sh:property [
+		sh:path sh:ask ;	
+		sh:message "The value of sh:ask must be a valid SPARQL ASK query using the aforementioned prefix handling rules.";
+		sh:pattern "ASK(.*FROM.*>)*.*WHERE(\\s*)\\{.*\\}" ;		# ask-sparql
+		sh:flags "si" ;
+	] .
+	
+	
