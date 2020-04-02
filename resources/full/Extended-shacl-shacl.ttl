@@ -18,34 +18,39 @@ shsh:
 		sh:namespace "http://www.w3.org/ns/shacl-shacl#" ;
 	] .
 
-shsh:SparqlShapeShape
+shsh:SparqlBasedShape
 	a sh:NodeShape ;
-	sh:targetObjectsOf sh:sparql ;    	# sparql-nodeKind
-	sh:message "Shapes may have values for the property sh:sparql, and these values are either IRIs or blank nodes.";
-	sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;
+	sh:targetSubjectsOf sh:sparql ;
 	
 	sh:property [
-		sh:path sh:select ;				
+		sh:path sh:sparql ;				
+		sh:message "Shapes may have values for the property sh:sparql, and these values are either IRIs or blank nodes.";
+		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# sparql-nodeKind
+	] ;
+	
+	sh:property [
+		sh:path (sh:sparql sh:select) ;				
 		sh:message "SPARQL-based constraints have exactly one value for the property sh:select.";
 		sh:maxCount 1 ;					# SPARQLConstraint-select-count
 		sh:minCount 1 ;					# SPARQLConstraint-select-count
 	] ;
 	
 	sh:property [
-		sh:path sh:select ;	
+		sh:path (sh:sparql sh:select) ;	
 		sh:message "The value of sh:select is a literal of datatype xsd:string.";
 		sh:nodeKind sh:Literal ;		# SPARQLConstraint-select-datatype
 	] ;
 	
 	sh:property [
-		sh:path sh:select ;	
+		sh:path (sh:sparql sh:select) ;	
 		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query.";
 		sh:pattern "SELECT.*WHERE(\\s*)\\{.*\\}" ;		# select-query-valid
 		sh:flags "si" ;
+		#\s*SELECT\s*(DISTINCT|REDUCED)?\s*(((\s*(\?|\$)(\S)+)|\s*\(\s*(\S)+ AS (\?|\$)(\S)+\s*\))+|\*)\s*(FROM\s*(NAMED)?(\S)+)*\s*(WHERE)?\s*\{
 	] ;
 	
 	sh:property [
-		sh:path sh:select ;	
+		sh:path (sh:sparql sh:select) ;	
 		sh:message "The SPARQL query derived from the value of sh:select projects the variable this in the SELECT clause.";
 		sh:pattern "SELECT.*\\$this.*WHERE.*" ;		# select-query-this
 		sh:flags "si" ;
@@ -60,13 +65,13 @@ shsh:SparqlShapeShape
 	# ] ;
 	
 	sh:property [
-		sh:path sh:message ;
+		sh:path (sh:sparql sh:message) ;
 		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag.";
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 		# SPARQLConstraint-message-datatype
 	] ;
 	
 	sh:property [
-		sh:path sh:deactivated ;
+		sh:path (sh:sparql sh:deactivated) ;
 		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated.";
 		sh:maxCount 1 ;					# SPARQLConstraint-deactivated-maxCount
 	] ;
@@ -79,32 +84,36 @@ shsh:SparqlShapeShape
 
 shsh:DeclareShapeShape
 	a sh:NodeShape ;
-	sh:targetObjectsOf sh:declare ;    	# declare-nodeKind
-	sh:message "The values of the property sh:declare are IRIs or blank nodes.";
-	sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;
+	sh:targetSubjectsOf sh:declare ; 
 	
 	sh:property [
-		sh:path sh:prefix ;				
+		sh:path sh:declare ;				
+		sh:message "The values of the property sh:declare are IRIs or blank nodes.";
+		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# declare-nodeKind
+	] ;
+	
+	sh:property [
+		sh:path (sh:declare sh:prefix) ;				
 		sh:message "Prefix declarations have exactly one value for the property sh:prefix.";
 		sh:maxCount 1 ;					# prefix-count
 		sh:minCount 1 ;					# prefix-count
 	] ;
 	
 	sh:property [
-		sh:path sh:prefix ;
+		sh:path (sh:declare sh:prefix) ;
 		sh:message "The values of sh:prefix are literals of datatype xsd:string.";
 		sh:datatype xsd:string ; 		# prefix-datatype
 	] ;
 	
 	sh:property [
-		sh:path sh:namespace ;				
+		sh:path (sh:declare sh:namespace) ;				
 		sh:message "Prefix declarations have exactly one value for the property sh:namespace.";
 		sh:maxCount 1 ;					# namespace-count
 		sh:minCount 1 ;					# namespace-count
 	] ;
 	
 	sh:property [
-		sh:path sh:namespace ;
+		sh:path (sh:declare sh:namespace) ;
 		sh:message "The values of sh:namespace are literals of datatype xsd:anyURI.";
 		sh:datatype xsd:anyURI ; 		# namespace-datatype
 	] .
