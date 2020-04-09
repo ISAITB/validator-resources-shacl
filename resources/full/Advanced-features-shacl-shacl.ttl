@@ -8,4 +8,103 @@
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix shsh: <http://www.w3.org/ns/shacl-shacl#> .
+@prefix adsh: <http://www.w3.org/ns/advanced-shacl#> .
+
+adsh:
+	rdfs:label "Advanced Features for SHACL"@en ;
+	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of advanced features of SHACL."@en ;
+	sh:declare [
+		sh:prefix "adsh" ;
+		sh:namespace "http://www.w3.org/ns/advanced-shacl#" ;
+	] .
+
+adsh:TargetShape
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:target ;
+	
+	sh:property [
+		sh:path sh:target ;				
+		sh:message "The values of sh:target at a shape are IRIs or blank nodes.";
+		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# target-nodeKind
+	] .
+
+
+adsh:SPARQLTargetShape
+	a sh:NodeShape ;			
+	sh:targetClass sh:SPARQLTarget ;		
+	
+	sh:property [
+		sh:path sh:select ;
+		sh:message "SPARQL-based targets have exactly one value for the property sh:select.";
+		sh:maxCount 1 ;					# SPARQLTarget-select-count
+		sh:minCount 1 ;					# SPARQLTarget-select-count
+	] ;	
+	
+	sh:property [
+		sh:path sh:prefixes ;
+		sh:message "SPARQL-based targets may have values for the property sh:prefixes and these values are IRIs or blank nodes.";
+		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# SPARQLTarget-prefixes-nodeKind
+	] ;
+	
+	sh:property [
+		sh:path sh:select ;
+		sh:message "Using the values of sh:prefixes as defined by 5.2.1 Prefix Declarations for SPARQL Queries, the values of sh:select must be valid SPARQL 1.1 SELECT queries with a single result variable this.";
+		sh:pattern "^\\s*(SELECT)\\s+(\\?this)\\s+(WHERE)\\s+\\{.*" ;		# SPARQLTarget-select-sparql
+		sh:flags "si" ;		
+	] ;	
+	
+	sh:property [
+		sh:path sh:ask ;
+		sh:message "SPARQL-based targets have at most one value for the property sh:ask.";
+		sh:maxCount 1 ;					# SPARQLTarget-ask-count
+	] .
+
+	
+adsh:ResultAnnotationShape
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:resultAnnotation ;
+	
+	sh:property [
+		sh:path sh:resultAnnotation ;				
+		sh:message "The values of sh:resultAnnotation are called result annotations and are either IRIs or blank nodes.";
+		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# resultAnnotation-nodeKind
+	] ;
+	
+	sh:property [
+		sh:path (sh:resultAnnotation sh:annotationProperty) ;
+		sh:message "Each result annotation has exactly one value for the property sh:annotationProperty and this value is an IRI.";
+		sh:maxCount 1 ;					# annotationProperty
+		sh:minCount 1 ;					# annotationProperty
+	] ;
+	
+	sh:property [
+		sh:path (sh:resultAnnotation sh:annotationVarName) ;
+		sh:message "Each result annotation has at most 1 value for the property sh:annotationVarName.";
+		sh:maxCount 1 ;					# annotationVarName
+	] ;
+	
+	sh:property [
+		sh:path (sh:resultAnnotation sh:annotationVarName) ;
+		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string.";
+		sh:datatype xsd:string ;	 				# annotationVarName
+	] .
+	
+
+adsh:ReturnTypeShape
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:returnType ;	
+	
+	sh:property [
+		sh:path sh:returnType ;
+		sh:message "A function has at most one value for sh:returnType.";
+		sh:maxCount 1 ;					# returnType-maxCount
+	] ;
+	
+	sh:property [
+		sh:path sh:returnType ;				
+		sh:message "The values of sh:returnType are IRIs.";
+		sh:nodeKind sh:IRI ;		# returnType-nodeKind
+	] .
+	
+	
+	
