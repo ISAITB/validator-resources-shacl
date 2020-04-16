@@ -106,5 +106,76 @@ adsh:ReturnTypeShape
 		sh:nodeKind sh:IRI ;		# returnType-nodeKind
 	] .
 	
+adsh:SPARQLFunctionCountShape
+	a sh:NodeShape ;			
+	sh:targetClass sh:SPARQLFunction ;	
+	sh:message "SPARQL-based functions have exactly one value for either sh:ask or sh:select.";
+	
+	sh:xone (						# SPARQLFunction-query
+		[
+			sh:property [
+				sh:path sh:ask ;
+				sh:maxCount 1 ;	
+				sh:minCount 1 ;
+			]
+		]
+		[
+			sh:property [
+				sh:path sh:select ;
+				sh:maxCount 1 ;	
+				sh:minCount 1 ;
+			] 
+		]
+	)  .
+	
+# adsh:SPARQLFunctionSelectShape
+	# a sh:NodeShape ;			
+	# sh:targetClass sh:SPARQLFunction ;	
+	
+	# sh:property [					# SPARQLFunction-query
+	# 	sh:path sh:select ;
+	# 	sh:message "SELECT queries return exactly one result variable and do not use the SELECT * syntax.";
+	# 	sh:pattern "^\\s*(SELECT)\\s+(\\x{2a})\\s+(WHERE)\\s+\\{.*" ;		# SPARQLTarget-select-sparql
+	# 	sh:flags "si" ;		
+	# ] .
 	
 	
+adsh:FilterShapeExpressionShape			# FilterShapeExpression
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:filterShape ;
+	sh:message "A filter shape expression is a blank node with exactly one value for sh:filterShape (which is a well-formed shape) and exactly one value for sh:nodes (which is a well-formed node expression)." ;
+	
+	sh:and (
+		sh:property [
+			sh:path sh:filterShape ;
+			sh:maxCount 1 ;
+			sh:minCount 1 ;
+			sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;	
+		] 
+		sh:property [
+			sh:path sh:nodes ;
+			sh:maxCount 1 ;
+			sh:minCount 1 ;
+		] 
+	) .
+	
+	
+adsh:PathExpressionShape			# PathExpression
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:path ;
+	sh:message "A path expression is a blank node with exactly one value of the property sh:path (which are well-formed property paths) and at most one value for sh:nodes (which is a well-formed node expression)." ;
+	
+	sh:and (
+		sh:property [
+			sh:path sh:path ;
+			sh:maxCount 1 ;
+			sh:minCount 1 ;
+		] 
+		sh:property [
+			sh:path sh:nodes ;
+			sh:maxCount 1 ;
+		] 
+	) .	
+
+
+adsh:RueTypeShape					# Rule-type
