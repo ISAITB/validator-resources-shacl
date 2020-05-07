@@ -128,18 +128,6 @@ adsh:SPARQLFunctionCountShape
 		]
 	)  .
 	
-# adsh:SPARQLFunctionSelectShape
-	# a sh:NodeShape ;			
-	# sh:targetClass sh:SPARQLFunction ;	
-	
-	# sh:property [					# SPARQLFunction-query
-	# 	sh:path sh:select ;
-	# 	sh:message "SELECT queries return exactly one result variable and do not use the SELECT * syntax.";
-	# 	sh:pattern "^\\s*(SELECT)\\s+(\\x{2a})\\s+(WHERE)\\s+\\{.*" ;		# SPARQLTarget-select-sparql
-	# 	sh:flags "si" ;		
-	# ] .
-	
-	
 adsh:FilterShapeExpressionShape			# FilterShapeExpression
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:filterShape ;
@@ -179,3 +167,98 @@ adsh:PathExpressionShape			# PathExpression
 
 
 adsh:RueTypeShape					# Rule-type
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:rule ;
+	sh:message "Each SHACL rule has at least one rdf:type which is a IRI." ;
+	
+	sh:and (
+		sh:property [
+			sh:path (sh:rule rdf:type) ;
+			sh:maxCount 1 ;
+			sh:minCount 1 ;
+		] 
+		sh:property [
+			sh:path (sh:rule rdf:type) ;
+			sh:nodeKind sh:IRI ;
+		] 
+	) .	
+
+
+adsh:OrderShape					
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:order ;
+	
+	sh:property [					# rule-order-maxCount
+		sh:path sh:order ;
+		sh:maxCount 1 ;
+		sh:message "Each rule or shape may have at most one value for the property sh:order." ;
+	] ;
+	sh:property [					# rule-order-datatype
+		sh:path sh:order ;
+		sh:nodeKind sh:Literal ;
+		sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:integer ] [ sh:datatype xsd:byte ] [ sh:datatype xsd:int ] [ sh:datatype xsd:long ] [ sh:datatype xsd:negativeInteger ] [ sh:datatype xsd:nonNegativeInteger ] [ sh:datatype xsd:nonPositiveInteger ] [ sh:datatype xsd:positiveInteger ] [ sh:datatype xsd:shortunsignedLong ] [ sh:datatype xsd:unsignedInt ] [ sh:datatype xsd:unsignedShort ] [ sh:datatype xsd:unsignedByte ] ) ; 	
+		sh:message "The values of sh:order at rules and shapes are literals with a numeric datatype such as xsd:decimal." ;
+	] .
+	
+
+adsh:RuleTypeShape					
+	a sh:NodeShape ;
+	sh:targetSubjectsOf sh:rule ;
+	
+	sh:property [
+		sh:path (sh:rule sh:deactivated) ;		# deactivated-maxCount
+		sh:maxCount 1 ;
+		sh:message "Each rule may have at most one value for the property sh:deactivated." ;
+	] ;
+	
+	sh:property [								# deactivated-in
+		sh:path (sh:rule sh:deactivated) ;
+		sh:nodeKind sh:Literal ;
+		sh:datatype xsd:boolean ;
+		sh:message "The values of sh:deactivated are either of the xsd:boolean literals true or false." ;
+	] .
+	
+adsh:SPARQLRuleConstructShape					
+	a sh:NodeShape ;
+	sh:targetClass sh:SPARQLRule ;
+	
+	sh:property [								# construct-count
+		sh:path sh:construct ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:message "SPARQL rules must have exactly one value for the property sh:construct." ;
+	] ;
+	
+	sh:property [								# construct-count
+		sh:path sh:construct ;
+		sh:nodeKind sh:Literal ;
+		sh:datatype xsd:string ;
+		sh:message "The values of sh:construct are literals with datatype xsd:string." ;
+	] .
+
+
+adsh:TripleRuleShape
+	a sh:NodeShape ;
+	sh:targetClass sh:TripleRule ;
+	
+	sh:property [
+		sh:path sh:subject ;		# tripleRule-subject
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:message "Each triple rule must have exactly one value of the property sh:subject (which must be a well-formed node expression)." ;
+	] ;
+	
+	sh:property [
+		sh:path sh:predicate ;		# tripleRule-predicate
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:message "Each triple rule must have exactly one value of the property sh:predicate (which must be a well-formed node expression)." ;
+	] ;
+	
+	sh:property [
+		sh:path sh:object ;			# tripleRule-object
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:message "Each triple rule must have exactly one value of the property sh:object (which must be a well-formed node expression)." ;
+	] .
+	

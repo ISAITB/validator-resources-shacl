@@ -48,14 +48,6 @@ shsh:SparqlBasedShape
 		sh:flags "si" ;
 	] ;
 	
-	# sh:property [
-		# sh:path sh:select ;	
-		# sh:message "The only legal use of the variable PATH in the SPARQL queries of SPARQL-based constraints and SELECT-based validators is in the predicate position of a triple # pattern.";
-		# sh:pattern "((\\$|\\?|[A-Z]*:)[A-Z]*(\\s*)(\\$PATH)(\\s*)(\\$|\\?|[A-Z]*:)[A-Z]*(\\s*).)+" ;		# PATH-position
-		# sh:pattern "((\\$|\\?)[A-Z]*(\\s*)\\$PATH(\\s*)(\\$|\\?)[A-Z]*(\\s*).)+" ;		# PATH-position
-		# sh:flags "si" ;
-	# ] ;
-	
 	sh:property [
 		sh:path (sh:sparql sh:message) ;
 		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag.";
@@ -78,12 +70,11 @@ shsh:SelectShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:select ; 
 	
-	sh:property [
+	sh:property [						# select-query-valid
 		sh:path sh:select ;	
 		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query.";
-		sh:pattern "SELECT.*WHERE(\\s*)\\{.*\\}" ;		# select-query-valid
+		sh:pattern "\\s*SELECT\\s+(?:(?:DISTINCT)|(?:REDUCED))?\\s*.*(?:WHERE)\\s*\\{.*\\}" ;
 		sh:flags "si" ;
-		#\s*SELECT\s*(DISTINCT|REDUCED)?\s*(((\s*(\?|\$)(\S)+)|\s*\(\s*(\S)+ AS (\?|\$)(\S)+\s*\))+|\*)\s*(FROM\s*(NAMED)?(\S)+)*\s*(WHERE)?\s*\{
 	] .	
 
 shsh:DeclareShapeShape
@@ -142,14 +133,19 @@ shsh:ContstraintComponentShape
 		sh:path sh:labelTemplate ;
 		sh:message "The values of sh:labelTemplate are strings (possibly with language tag).";
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 				# labelTemplate-datatype
-	] .
+	] ;
 	
-	#sh:property [
-	#	sh:path sh:path ;
-	#	sh:message "Parameter names must not be one of the following: this, shapesGraph, currentShape, path, PATH, value.";
-	#	sh:pattern "((?!this).)*" ;		# parameter-name-not-in
-	#	sh:flags "s" ;
-	#] .
+	sh:property [						# parameter-name-VARNAME
+		sh:path (sh:parameter sh:path) ;
+		sh:message "Every parameter name is a valid SPARQL VARNAME.";
+		sh:pattern "^.*#[A-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD_0-9][A-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD_0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$" ;
+	] ;
+	
+	sh:property [
+		sh:path (sh:parameter sh:path) ;
+		sh:message "Parameter names must not be one of the following: this, shapesGraph, currentShape, path, PATH, value.";
+		sh:pattern "^.*#(?!this$)(?!shapesGraph$)(?!currentShape$)(?!path$)(?!PATH$)(?!value$).*$" ;					# parameter-name-not-in
+	] .
 
 shsh:ParameterShape
 	a sh:NodeShape ;
@@ -218,17 +214,6 @@ shsh:ASKBasedShapesClass
 	sh:property [
 		sh:path sh:ask ;	
 		sh:message "The value of sh:ask must be a valid SPARQL ASK query using the aforementioned prefix handling rules.";
-		sh:pattern "ASK(.*FROM.*>)*.*WHERE(\\s*)\\{.*\\}" ;		# ask-sparql
+		sh:pattern "\\s*ASK\\s+.*(?:WHERE)\\s*\\{.*\\}\\S$" ;		# ask-sparql
 		sh:flags "si" ;
 	] .
-
-# shsh:PreBoundShapes
-# 	a sh:NodeShape ;			
-# 	sh:targetSubjectsOf sh:select, sh:ask ;	
-	
-# 	sh:property [
-# 		sh:path sh:ask, sh:select ;	
-# 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause; SPARQL queries must not contain a federated query (SERVICE); SPARQL queries must not contain a VALUES clause; SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable; Subqueries must return all potentially pre-bound variables, except shapesGraph and currentShape which are optional as already mentioned in 5.3.1 Pre-bound Variables in SPARQL Constraints ($this, $shapesGraph, $currentShape).";
-# 		sh:pattern "^.*(WHERE)\\s*\\{.*((MINUS)|(SERVICE.*)|(VALUES.*)|(AS\\s*\\?VAR))\\s*\\{.*" ;		# pre-binding-limitations
-# 	] .
-	
