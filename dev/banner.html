@@ -42,7 +42,7 @@
                                         </li>
                                     </ul>
                                     <p>
-                                        <b>Disclaimer:</b> The SHACL shapes implementing the <a href="https://www.w3.org/TR/shacl-af/">SHACL advanced features</a> (see second option) as well as the list and implementation of best practices (see third option) result from the experience and work of the European Commission's DIGIT and specifically the <a href="https://joinup.ec.europa.eu/solution/interoperability-test-bed">Interoperability Test Bed team</a>. These are provided for the benefit of SHACL shape developers but should not be considered as endorsed by W3C nor be used for formal conformance testing.
+                                        <b>Disclaimer:</b> The SHACL shapes implementing the <a href="https://www.w3.org/TR/shacl-af/">SHACL advanced features</a> and remaining core rules (see second option) as well as the list and implementation of best practices (see third option) result from the experience and work of the European Commission's DIGIT and specifically the <a href="https://joinup.ec.europa.eu/solution/interoperability-test-bed">Interoperability Test Bed team</a>. These are provided for the benefit of SHACL shape developers but should not be considered as endorsed by W3C nor be used for formal conformance testing.
                                     </p>
                                     <div style="margin-top: 20px;">
                                         <button id="viewButton" class="btn btn-default" type="button">View best practice rules</button>
@@ -84,20 +84,32 @@
                                     <tr>
                                         <td>text-language</td>
                                         <td>sh:name / sh:description</td>
-                                        <td>Both sh:name and sh:description may have multiple values, but should only have one value per language tag.</td>
                                         <td>Warning</td>
+                                        <td>Both sh:name and sh:description may have multiple values, but should only have one value per language tag.</td>
                                     </tr>
                                     <tr>
                                         <td>message</td>
                                         <td>sh:message</td>
-                                        <td>A shape should have at least one value for sh:message in the shapes graph, then all validation results produced as a result of the shape will have exactly these messages (as natural language) as their value of sh:resultMessage.</td>
                                         <td>Warning</td>
+                                        <td>A shape should have at least one value for sh:message in the shapes graph, then all validation results produced as a result of the shape will have exactly these messages (as natural language) as their value of sh:resultMessage.</td>
                                     </tr>
                                     <tr>
                                         <td>message-language</td>
                                         <td>sh:message</td>
-                                        <td>A shape should not have more than one value for sh:message with the same language tag.</td>
                                         <td>Warning</td>
+                                        <td>A shape should not have more than one value for sh:message with the same language tag.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nodeShape-properties</td>
+                                        <td>sh:NodeShape</td>
+                                        <td>Warning</td>
+                                        <td>A Node Shape has values only for those properties that have been explicitly enumerated: sh:deactivated, sh:targetClass, sh:targetNode, sh:targetSubjectsOf, sh:targetObjectOf, sh:message, sh:severity, sh:sparql, sh:target, sh:rule, sh:property, sh:and, sh:not, sh:or, sh:xone, sh:closed, sh:ignoredProperties, sh:nodeKind, rdf:type, rdfs:label, rdfs:comment.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>propertyShape-properties</td>
+                                        <td>sh:PropertyShape, sh:property</td>
+                                        <td>Warning</td>
+                                        <td>A Property Shape has values only for those properties that have been explicitly enumerated: sh:deactivated, sh:targetClass, sh:targetNode, sh:targetSubjectsOf, sh:targetObjectOf, sh:message, sh:severity, sh:sparql, sh:target, sh:rule, sh:path, sh:defaultValue, sh:description, sh:group, sh:name, sh:order, sh:class, sh:in, sh:languageIn, sh:lessThan, sh:lessThanOrEquals, sh:maxCount, sh:maxExclusive, sh:maxInclusive, sh:maxLength, sh:minCount, sh:minExclusive, sh:minInclusive, sh:minLength, sh:hasValue, sh:equals, sh:disjoint, sh:node, sh:datatype, sh:flags, sh:pattern, sh.qualifiedMinCount, sh.qualifiedValueShapesDisjoint, sh:qualifiedValueShape, sh:uniqueLang, sh:and, sh:not, sh:or, sh:xone, sh:closed, sh:ignoredProperties, sh:nodeKind, rdf:type, rdfs:label, rdfs:comment.</td>
                                     </tr>
                                 </tbody>
                             </table>
