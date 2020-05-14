@@ -15,7 +15,7 @@ adsh:
 	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of advanced features of SHACL."@en ;
 	sh:declare [
 		sh:prefix "adsh" ;
-		sh:namespace "http://www.w3.org/ns/advanced-shacl#" ;
+		sh:namespace "http://www.w3.org/ns/advanced-shacl#"^^xsd:anyURI ;
 	] .
 
 adsh:TargetShape

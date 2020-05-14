@@ -84,7 +84,7 @@ bpsh:NodePropertyShape		# nodeShape-properties
 	a sh:NodeShape ;
 	sh:targetClass sh:NodeShape ;	
 	sh:closed true ;
-	sh:ignoredProperties ( rdf:type rdfs:label rdfs:comment ) ;
+	sh:ignoredProperties ( rdf:type rdfs:label rdfs:comment rdfs:seeAlso ) ;
 	sh:severity sh:Warning ;
 	
 	sh:property [
@@ -156,6 +156,10 @@ bpsh:NodePropertyShape		# nodeShape-properties
 	] ;
 	
 	sh:property [
+		sh:path sh:node ;
+	] ;
+	
+	sh:property [
 		sh:path sh:nodeKind ;
 	] .
 
@@ -164,7 +168,7 @@ bpsh:PropertyShapeShape		# propertyShape-properties
 	a sh:NodeShape ;
 	sh:targetClass sh:PropertyShape ;	
 	sh:targetObjectsOf sh:property ;
-	sh:ignoredProperties ( rdf:type rdfs:label rdfs:comment ) ;
+	sh:ignoredProperties ( rdf:type rdfs:label rdfs:comment rdfs:seeAlso ) ;
 	sh:closed true ;
 	sh:severity sh:Warning ;
 	

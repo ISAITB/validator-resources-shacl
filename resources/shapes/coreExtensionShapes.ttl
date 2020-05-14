@@ -15,7 +15,7 @@ shsh:
 	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
 	sh:declare [
 		sh:prefix "shsh" ;
-		sh:namespace "http://www.w3.org/ns/shacl-shacl#" ;
+		sh:namespace "http://www.w3.org/ns/shacl-shacl#"^^xsd:anyURI ;
 	] .
 
 shsh:SparqlBasedShape
@@ -47,7 +47,7 @@ shsh:SparqlBasedShape
 		sh:pattern "SELECT.*\\$this.*WHERE.*" ;		# select-query-this
 		sh:flags "si" ;
 	] ;
-	
+
 	sh:property [
 		sh:path (sh:sparql sh:message) ;
 		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag.";
@@ -147,16 +147,6 @@ shsh:ContstraintComponentShape
 		sh:pattern "^.*#(?!this$)(?!shapesGraph$)(?!currentShape$)(?!path$)(?!PATH$)(?!value$).*$" ;					# parameter-name-not-in
 	] .
 
-shsh:ParameterShape
-	a sh:NodeShape ;
-	sh:targetSubjectsOf sh:parameter ;
-	
-	sh:property [
-		sh:path sh:parameter ;
-		sh:message "TEST.";
-		rdfs:subClassOf sh:PropertyShape ;				# nodeValidator-class
-	] .
-
 shsh:SELECTBasedShapes
 	a sh:NodeShape ;	
 	sh:targetSubjectsOf sh:nodeValidator, sh:propertyValidator ;
@@ -217,3 +207,21 @@ shsh:ASKBasedShapesClass
 		sh:pattern "\\s*ASK\\s+.*(?:WHERE)\\s*\\{.*\\}\\S$" ;		# ask-sparql
 		sh:flags "si" ;
 	] .
+
+shsh:PreBoundShapes
+	a sh:NodeShape ;			
+ 	sh:targetSubjectsOf sh:select, sh:ask ;	
+	
+ 	sh:property [									# pre-binding-limitations-minus
+ 		sh:path sh:ask ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause.";
+ 		sh:pattern ".*(?:MINUS)\\s*\\{.*\\S$" ;	
+		sh:flags "si" ;	
+ 	] ;
+ 	sh:property [									# pre-binding-limitations-minus
+ 		sh:path sh:select ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause.";
+ 		sh:pattern ".*(?:MINUS)\\s*\\{.*\\S$" ;	
+		sh:flags "si" ;	
+ 	] .
+	
