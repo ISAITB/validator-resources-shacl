@@ -1,4 +1,4 @@
-# Validation resources for the SHACL validator od SHACL
+# Validation resources for the SHACL validator for SHACL shapes
 
 The `resources` folder contains the validator's configuration and SHACL shapes.
 The `dev` folder contains an HTML file that can be used for the easier processing the validator's banner HTML. Before use
