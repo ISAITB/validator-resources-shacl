@@ -215,13 +215,59 @@ shsh:PreBoundShapes
  	sh:property [									# pre-binding-limitations-minus
  		sh:path sh:ask ;	
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause.";
- 		sh:pattern ".*(?:MINUS)\\s*\\{.*\\S$" ;	
-		sh:flags "si" ;	
+ 		sh:pattern "^(?!.*MINUS\\b).*$" ;
+		sh:flags "s" ;	
  	] ;
  	sh:property [									# pre-binding-limitations-minus
  		sh:path sh:select ;	
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause.";
- 		sh:pattern ".*(?:MINUS)\\s*\\{.*\\S$" ;	
-		sh:flags "si" ;	
+ 		sh:pattern "^(?!.*MINUS\\b).*$" ;	
+		sh:flags "s" ;
+ 	] ;
+	
+ 	sh:property [									# pre-binding-limitations-service
+ 		sh:path sh:ask ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE).";
+ 		sh:pattern "^(?!.*SERVICE\\b).*$" ;
+		sh:flags "s" ;	
+ 	] ;
+ 	sh:property [									# pre-binding-limitations-service
+ 		sh:path sh:select ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE).";
+ 		sh:pattern "^(?!.*SERVICE\\b).*$" ;	
+		sh:flags "s" ;
+ 	] ;
+	
+ 	sh:property [									# pre-binding-limitations-values
+ 		sh:path sh:ask ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause.";
+ 		sh:pattern "^(?!.*VALUES\\b).*$" ;
+		sh:flags "s" ;	
+ 	] ;
+ 	sh:property [									# pre-binding-limitations-values
+ 		sh:path sh:select ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause.";
+ 		sh:pattern "^(?!.*VALUES\\b).*$" ;	
+		sh:flags "s" ;
+ 	] ;
+	
+ 	sh:property [									# pre-binding-limitations-variable
+ 		sh:path sh:ask ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable.";
+ 		sh:pattern "^(?!.*\\?var\\b).*$" ;
+		sh:flags "s" ;	
+ 	] ;
+ 	sh:property [									# pre-binding-limitations-variable
+ 		sh:path sh:select ;	
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable.";
+ 		sh:pattern "^(?!.*\\?var\\b).*$" ;	
+		sh:flags "s" ;
  	] .
+	
+ 	#sh:property [									# pre-binding-limitations-subquery
+ 	#	sh:path sh:select ;	
+ 	#	sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: Subqueries must return all potentially pre-bound variables, except shapesGraph and currentShape which are optional.";
+ 	#	sh:pattern "\\s*SELECT.*WHERE(((.*\\{\\s*SELECT.*\\$this.*WHERE\\s*\\{.*\\}.*)|(?!.*\\{\\s*SELECT.*WHERE\\s*\\{.*\\}.*))|.*)\\}" ;
+	#	sh:flags "s" ;
+ 	#] .
 	
