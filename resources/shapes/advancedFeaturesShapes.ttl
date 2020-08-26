@@ -22,41 +22,47 @@ adsh:
 adsh:TargetShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:target ;
+		
+	rdfs:comment "Requirements for subjects of sh:target class."@en ;
+	rdfs:label "Target Shape"@en ;
 	
 	sh:property [
 		sh:path sh:target ;				
-		sh:message "The values of sh:target at a shape are IRIs or blank nodes.";
+		sh:message "The values of sh:target at a shape are IRIs or blank nodes."@en;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# target-nodeKind
 	] .
 
 
 adsh:SPARQLTargetShape
 	a sh:NodeShape ;			
-	sh:targetClass sh:SPARQLTarget ;		
+	sh:targetClass sh:SPARQLTarget ;
+	
+	rdfs:comment "Requirements for sh:SPARQLTarget class."@en ;
+	rdfs:label "SPARQL Target Shape"@en ;
 	
 	sh:property [
 		sh:path sh:select ;
-		sh:message "SPARQL-based targets have exactly one value for the property sh:select.";
+		sh:message "SPARQL-based targets have exactly one value for the property sh:select."@en;
 		sh:maxCount 1 ;					# SPARQLTarget-select-count
 		sh:minCount 1 ;					# SPARQLTarget-select-count
 	] ;	
 	
 	sh:property [
 		sh:path sh:prefixes ;
-		sh:message "SPARQL-based targets may have values for the property sh:prefixes and these values are IRIs or blank nodes.";
+		sh:message "SPARQL-based targets may have values for the property sh:prefixes and these values are IRIs or blank nodes."@en;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# SPARQLTarget-prefixes-nodeKind
 	] ;
 	
 	sh:property [
 		sh:path sh:select ;
-		sh:message "Using the values of sh:prefixes as defined by 5.2.1 Prefix Declarations for SPARQL Queries, the values of sh:select must be valid SPARQL 1.1 SELECT queries with a single result variable this.";
+		sh:message "Using the values of sh:prefixes as defined by 5.2.1 Prefix Declarations for SPARQL Queries, the values of sh:select must be valid SPARQL 1.1 SELECT queries with a single result variable this."@en;
 		sh:pattern "^\\s*(SELECT)\\s+(\\?this)\\s+(WHERE)\\s+\\{.*" ;		# SPARQLTarget-select-sparql
 		sh:flags "si" ;		
 	] ;	
 	
 	sh:property [
 		sh:path sh:ask ;
-		sh:message "SPARQL-based targets have at most one value for the property sh:ask.";
+		sh:message "SPARQL-based targets have at most one value for the property sh:ask."@en;
 		sh:maxCount 1 ;					# SPARQLTarget-ask-count
 	] .
 
@@ -65,28 +71,31 @@ adsh:ResultAnnotationShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:resultAnnotation ;
 	
+	rdfs:comment "Requirements for subjects of sh:resultAnnotation class."@en ;
+	rdfs:label "Result Annotation Shape"@en ;
+	
 	sh:property [
 		sh:path sh:resultAnnotation ;				
-		sh:message "The values of sh:resultAnnotation are called result annotations and are either IRIs or blank nodes.";
+		sh:message "The values of sh:resultAnnotation are called result annotations and are either IRIs or blank nodes."@en ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# resultAnnotation-nodeKind
 	] ;
 	
 	sh:property [
 		sh:path (sh:resultAnnotation sh:annotationProperty) ;
-		sh:message "Each result annotation has exactly one value for the property sh:annotationProperty and this value is an IRI.";
+		sh:message "Each result annotation has exactly one value for the property sh:annotationProperty and this value is an IRI."@en ;
 		sh:maxCount 1 ;					# annotationProperty
 		sh:minCount 1 ;					# annotationProperty
 	] ;
 	
 	sh:property [
 		sh:path (sh:resultAnnotation sh:annotationVarName) ;
-		sh:message "Each result annotation has at most 1 value for the property sh:annotationVarName.";
+		sh:message "Each result annotation has at most 1 value for the property sh:annotationVarName."@en ;
 		sh:maxCount 1 ;					# annotationVarName
 	] ;
 	
 	sh:property [
 		sh:path (sh:resultAnnotation sh:annotationVarName) ;
-		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string.";
+		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string."@en ;
 		sh:datatype xsd:string ;	 				# annotationVarName
 	] .
 	
@@ -95,22 +104,28 @@ adsh:ReturnTypeShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:returnType ;	
 	
+	rdfs:comment "Requirements for subjects of sh:returnType class."@en ;
+	rdfs:label "Return Type Shape"@en ;
+	
 	sh:property [
 		sh:path sh:returnType ;
-		sh:message "A function has at most one value for sh:returnType.";
+		sh:message "A function has at most one value for sh:returnType."@en ;
 		sh:maxCount 1 ;					# returnType-maxCount
 	] ;
 	
 	sh:property [
 		sh:path sh:returnType ;				
-		sh:message "The values of sh:returnType are IRIs.";
+		sh:message "The values of sh:returnType are IRIs."@en ;
 		sh:nodeKind sh:IRI ;		# returnType-nodeKind
 	] .
 	
 adsh:SPARQLFunctionShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:SPARQLFunction ;	
-	sh:message "SPARQL-based functions have exactly one value for either sh:ask or sh:select.";
+	sh:message "SPARQL-based functions have exactly one value for either sh:ask or sh:select."@en ;
+	
+	rdfs:comment "Requirements for sh:SPARQLFunction class."@en ;
+	rdfs:label "SPARQL Function Shape"@en ;
 	
 	sh:xone (						# SPARQLFunction-query
 		[
@@ -132,7 +147,10 @@ adsh:SPARQLFunctionShape
 adsh:FilterShapeShape			# FilterShapeExpression
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:filterShape ;
-	sh:message "A filter shape expression is a blank node with exactly one value for sh:filterShape (which is a well-formed shape) and exactly one value for sh:nodes (which is a well-formed node expression)." ;
+	sh:message "A filter shape expression is a blank node with exactly one value for sh:filterShape (which is a well-formed shape) and exactly one value for sh:nodes (which is a well-formed node expression)."@en ;
+	
+	rdfs:comment "Requirements for subjects of sh:filterShape class."@en ;
+	rdfs:label "Filter Shape Shape"@en ;
 	
 	sh:and (
 		sh:property [
@@ -152,7 +170,10 @@ adsh:FilterShapeShape			# FilterShapeExpression
 adsh:PathExpressionShape			# PathExpression
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:path ;
-	sh:message "A path expression is a blank node with exactly one value of the property sh:path (which are well-formed property paths) and at most one value for sh:nodes (which is a well-formed node expression)." ;
+	sh:message "A path expression is a blank node with exactly one value of the property sh:path (which are well-formed property paths) and at most one value for sh:nodes (which is a well-formed node expression)."@en ;
+	
+	rdfs:comment "Requirements for subjects of sh:path class."@en ;
+	rdfs:label "Path Expression Shape"@en ;
 	
 	sh:and (
 		sh:property [
@@ -170,7 +191,10 @@ adsh:PathExpressionShape			# PathExpression
 adsh:RuleTypeShape					# Rule-type
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:rule ;
-	sh:message "Each SHACL rule has at least one rdf:type which is a IRI." ;
+	sh:message "Each SHACL rule has at least one rdf:type which is a IRI."@en ;
+	
+	rdfs:comment "Requirements for rdf:type property in sh:rule class."@en ;
+	rdfs:label "Rule Type Shape"@en ;
 	
 	sh:and (
 		sh:property [
@@ -189,16 +213,19 @@ adsh:OrderShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:order ;
 	
+	rdfs:comment "Requirements for subjects of sh:order class."@en ;
+	rdfs:label "Order Shape"@en ;
+	
 	sh:property [					# rule-order-maxCount
 		sh:path sh:order ;
 		sh:maxCount 1 ;
-		sh:message "Each rule or shape may have at most one value for the property sh:order." ;
+		sh:message "Each rule or shape may have at most one value for the property sh:order."@en ;
 	] ;
 	sh:property [					# rule-order-datatype
 		sh:path sh:order ;
 		sh:nodeKind sh:Literal ;
 		sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:integer ] [ sh:datatype xsd:byte ] [ sh:datatype xsd:int ] [ sh:datatype xsd:long ] [ sh:datatype xsd:negativeInteger ] [ sh:datatype xsd:nonNegativeInteger ] [ sh:datatype xsd:nonPositiveInteger ] [ sh:datatype xsd:positiveInteger ] [ sh:datatype xsd:shortunsignedLong ] [ sh:datatype xsd:unsignedInt ] [ sh:datatype xsd:unsignedShort ] [ sh:datatype xsd:unsignedByte ] ) ; 	
-		sh:message "The values of sh:order at rules and shapes are literals with a numeric datatype such as xsd:decimal." ;
+		sh:message "The values of sh:order at rules and shapes are literals with a numeric datatype such as xsd:decimal."@en ;
 	] .
 	
 
@@ -206,35 +233,41 @@ adsh:RuleDeactivatedShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:rule ;
 	
+	rdfs:comment "Requirements for sh:deactivated property in sh:rule class."@en ;
+	rdfs:label "Order Shape"@en ;
+	
 	sh:property [
 		sh:path (sh:rule sh:deactivated) ;		# deactivated-maxCount
 		sh:maxCount 1 ;
-		sh:message "Each rule may have at most one value for the property sh:deactivated." ;
+		sh:message "Each rule may have at most one value for the property sh:deactivated."@en ;
 	] ;
 	
 	sh:property [								# deactivated-in
 		sh:path (sh:rule sh:deactivated) ;
 		sh:nodeKind sh:Literal ;
 		sh:datatype xsd:boolean ;
-		sh:message "The values of sh:deactivated are either of the xsd:boolean literals true or false." ;
+		sh:message "The values of sh:deactivated are either of the xsd:boolean literals true or false."@en ;
 	] .
 	
 adsh:SPARQLRuleShape					
 	a sh:NodeShape ;
 	sh:targetClass sh:SPARQLRule ;
 	
+	rdfs:comment "Requirements for sh:SPARQLRule class."@en ;
+	rdfs:label "SPARQL Rule Shape"@en ;
+	
 	sh:property [								# construct-count
 		sh:path sh:construct ;
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
-		sh:message "SPARQL rules must have exactly one value for the property sh:construct." ;
+		sh:message "SPARQL rules must have exactly one value for the property sh:construct."@en ;
 	] ;
 	
 	sh:property [								# construct-count
 		sh:path sh:construct ;
 		sh:nodeKind sh:Literal ;
 		sh:datatype xsd:string ;
-		sh:message "The values of sh:construct are literals with datatype xsd:string." ;
+		sh:message "The values of sh:construct are literals with datatype xsd:string."@en ;
 	] .
 
 
@@ -242,24 +275,27 @@ adsh:TripleRuleShape
 	a sh:NodeShape ;
 	sh:targetClass sh:TripleRule ;
 	
+	rdfs:comment "Requirements for sh:TripleRule class."@en ;
+	rdfs:label "Triple Rule Shape"@en ;
+	
 	sh:property [
 		sh:path sh:subject ;		# tripleRule-subject
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
-		sh:message "Each triple rule must have exactly one value of the property sh:subject (which must be a well-formed node expression)." ;
+		sh:message "Each triple rule must have exactly one value of the property sh:subject (which must be a well-formed node expression)."@en ;
 	] ;
 	
 	sh:property [
 		sh:path sh:predicate ;		# tripleRule-predicate
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
-		sh:message "Each triple rule must have exactly one value of the property sh:predicate (which must be a well-formed node expression)." ;
+		sh:message "Each triple rule must have exactly one value of the property sh:predicate (which must be a well-formed node expression)."@en ;
 	] ;
 	
 	sh:property [
 		sh:path sh:object ;			# tripleRule-object
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
-		sh:message "Each triple rule must have exactly one value of the property sh:object (which must be a well-formed node expression)." ;
+		sh:message "Each triple rule must have exactly one value of the property sh:object (which must be a well-formed node expression)."@en ;
 	] .
 	
