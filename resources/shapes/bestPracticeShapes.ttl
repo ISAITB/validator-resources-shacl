@@ -1,7 +1,8 @@
 # baseURI: http://www.w3.org/ns/shacl-shacl#
 
 # A SHACL shapes graph to validate Best Practices on SHACL shapes graphs
-# Draft last edited 2020-03-12
+# First edited 2020-03-12
+# Last edited 2020-08-26
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,7 +11,7 @@
 
 @prefix bpsh: <http://itb.ec.europa.eu/ns/shacl-shacl-bp#> .
 
-bpsh:LanguageTagShape			# text-language
+bpsh:UniqueLangShape			# text-language
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:description, sh:name, sh:message ;
 	

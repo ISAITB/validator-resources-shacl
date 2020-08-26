@@ -1,7 +1,8 @@
 # baseURI: http://www.w3.org/ns/shacl-shacl#
 
 # A SHACL shapes graph to validate Best Practices on SHACL shapes graphs
-# Draft last edited 2020-03-12
+# First edited 2020-03-12
+# Last edited 2020-08-26
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -106,7 +107,7 @@ adsh:ReturnTypeShape
 		sh:nodeKind sh:IRI ;		# returnType-nodeKind
 	] .
 	
-adsh:SPARQLFunctionCountShape
+adsh:SPARQLFunctionShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:SPARQLFunction ;	
 	sh:message "SPARQL-based functions have exactly one value for either sh:ask or sh:select.";
@@ -128,7 +129,7 @@ adsh:SPARQLFunctionCountShape
 		]
 	)  .
 	
-adsh:FilterShapeExpressionShape			# FilterShapeExpression
+adsh:FilterShapeShape			# FilterShapeExpression
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:filterShape ;
 	sh:message "A filter shape expression is a blank node with exactly one value for sh:filterShape (which is a well-formed shape) and exactly one value for sh:nodes (which is a well-formed node expression)." ;
@@ -166,7 +167,7 @@ adsh:PathExpressionShape			# PathExpression
 	) .	
 
 
-adsh:RueTypeShape					# Rule-type
+adsh:RuleTypeShape					# Rule-type
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:rule ;
 	sh:message "Each SHACL rule has at least one rdf:type which is a IRI." ;
@@ -201,7 +202,7 @@ adsh:OrderShape
 	] .
 	
 
-adsh:RuleTypeShape					
+adsh:RuleDeactivatedShape					
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:rule ;
 	
@@ -218,7 +219,7 @@ adsh:RuleTypeShape
 		sh:message "The values of sh:deactivated are either of the xsd:boolean literals true or false." ;
 	] .
 	
-adsh:SPARQLRuleConstructShape					
+adsh:SPARQLRuleShape					
 	a sh:NodeShape ;
 	sh:targetClass sh:SPARQLRule ;
 	

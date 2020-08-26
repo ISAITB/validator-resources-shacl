@@ -1,7 +1,8 @@
 # baseURI: http://www.w3.org/ns/shacl-shacl#
 
 # A SHACL shapes graph to validate SHACL shapes graphs  (Extended)
-# Draft last edited 2020-03-13
+# First edited 2020-03-13
+# Last edited 2020-08-26
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,7 +19,7 @@ shsh:
 		sh:namespace "http://www.w3.org/ns/shacl-shacl#"^^xsd:anyURI ;
 	] .
 
-shsh:SparqlBasedShape
+shsh:SparqlShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:sparql ;
 	
@@ -77,7 +78,7 @@ shsh:SelectShape
 		sh:flags "si" ;
 	] .	
 
-shsh:DeclareShapeShape
+shsh:DeclareShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:declare ; 
 	
@@ -147,7 +148,7 @@ shsh:ContstraintComponentShape
 		sh:pattern "^.*#(?!this$)(?!shapesGraph$)(?!currentShape$)(?!path$)(?!PATH$)(?!value$).*$" ;					# parameter-name-not-in
 	] .
 
-shsh:SELECTBasedShapes
+shsh:NodeValidatorPropertyValidatorShape
 	a sh:NodeShape ;	
 	sh:targetSubjectsOf sh:nodeValidator, sh:propertyValidator ;
 	
@@ -163,7 +164,7 @@ shsh:SELECTBasedShapes
 		sh:class sh:SPARQLSelectValidator ;				# propertyValidator-class
 	] .
 	
-shsh:SELECTBasedShapesClass
+shsh:SPARQLSelectValidatorShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:SPARQLSelectValidator ;	
 	
@@ -174,7 +175,7 @@ shsh:SELECTBasedShapesClass
 		sh:minCount 1 ;	 				# SPARQLSelectValidator-select-count
 	] .
 
-shsh:ASKBasedShapes
+shsh:ValidatorShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:validator ;
 	
@@ -184,7 +185,7 @@ shsh:ASKBasedShapes
 		sh:class sh:SPARQLAskValidator ;				# validator-class
 	] .
 	
-shsh:ASKBasedShapesClass
+shsh:SPARQLAskValidatorShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:SPARQLAskValidator ;	
 	
@@ -208,7 +209,7 @@ shsh:ASKBasedShapesClass
 		sh:flags "si" ;
 	] .
 
-shsh:PreBoundShapes
+shsh:SelectAskShape
 	a sh:NodeShape ;			
  	sh:targetSubjectsOf sh:select, sh:ask ;	
 	
@@ -263,11 +264,4 @@ shsh:PreBoundShapes
  		sh:pattern "^(?!.*\\?var\\b).*$" ;	
 		sh:flags "s" ;
  	] .
-	
- 	#sh:property [									# pre-binding-limitations-subquery
- 	#	sh:path sh:select ;	
- 	#	sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: Subqueries must return all potentially pre-bound variables, except shapesGraph and currentShape which are optional.";
- 	#	sh:pattern "\\s*SELECT.*WHERE(((.*\\{\\s*SELECT.*\\$this.*WHERE\\s*\\{.*\\}.*)|(?!.*\\{\\s*SELECT.*WHERE\\s*\\{.*\\}.*))|.*)\\}" ;
-	#	sh:flags "s" ;
- 	#] .
 	
