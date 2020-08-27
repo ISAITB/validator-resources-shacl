@@ -27,7 +27,8 @@ adsh:TargetShape
 	rdfs:label "Target Shape"@en ;
 	
 	sh:property [
-		sh:name "Node Kind at Target class"@en ;
+		sh:name "Target NodeKind shape"@en ;
+		sh:description "NodeKind for sh:target class."@en ;
 		
 		sh:path sh:target ;				
 		sh:message "The values of sh:target at a shape are IRIs or blank nodes."@en;
@@ -43,7 +44,8 @@ adsh:SPARQLTargetShape
 	rdfs:label "SPARQL Target Shape"@en ;
 	
 	sh:property [
-		sh:name "Count Select at SPARQL Target class"@en ;
+		sh:name "Select count shape"@en ;
+		sh:description "Maximum and minimum count for sh:select class."@en ;
 		
 		sh:path sh:select ;
 		sh:message "SPARQL-based targets have exactly one value for the property sh:select."@en;
@@ -52,7 +54,8 @@ adsh:SPARQLTargetShape
 	] ;	
 	
 	sh:property [
-		sh:name "Node Kind at SPARQL Target class"@en ;
+		sh:name "Prefixes NodeKind shape"@en ;
+		sh:description "NodeKind for sh:prefixes class."@en ;
 		
 		sh:path sh:prefixes ;
 		sh:message "SPARQL-based targets may have values for the property sh:prefixes and these values are IRIs or blank nodes."@en;
@@ -60,7 +63,8 @@ adsh:SPARQLTargetShape
 	] ;
 	
 	sh:property [
-		sh:name "Pattern at SPARQL Target class"@en ;
+		sh:name "Select Pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
 		
 		sh:path sh:select ;
 		sh:message "Using the values of sh:prefixes as defined by 5.2.1 Prefix Declarations for SPARQL Queries, the values of sh:select must be valid SPARQL 1.1 SELECT queries with a single result variable this."@en;
@@ -69,7 +73,8 @@ adsh:SPARQLTargetShape
 	] ;	
 	
 	sh:property [
-		sh:name "Count Ask at SPARQL Target class"@en ;
+		sh:name "Ask Count shape"@en ;
+		sh:description "Maximum count for sh:ask class."@en ;
 		
 		sh:path sh:ask ;
 		sh:message "SPARQL-based targets have at most one value for the property sh:ask."@en;
@@ -85,7 +90,8 @@ adsh:ResultAnnotationShape
 	rdfs:label "Result Annotation Shape"@en ;
 	
 	sh:property [
-		sh:name "Node kind at Result Annotation class"@en ;
+		sh:name "ResultAnnotation NodeKind shape"@en ;
+		sh:description "NodeKind for sh:resultAnnotation class."@en ;
 		
 		sh:path sh:resultAnnotation ;				
 		sh:message "The values of sh:resultAnnotation are called result annotations and are either IRIs or blank nodes."@en ;
@@ -93,7 +99,8 @@ adsh:ResultAnnotationShape
 	] ;
 	
 	sh:property [
-		sh:name "Count AnnotationProperty at Result Annotation class"@en ;
+		sh:name "ResultAnnotation Count shape"@en ;
+		sh:description "Maximum and minimum count for sh:resultAnnotation class."@en ;
 		
 		sh:path (sh:resultAnnotation sh:annotationProperty) ;
 		sh:message "Each result annotation has exactly one value for the property sh:annotationProperty and this value is an IRI."@en ;
@@ -102,7 +109,8 @@ adsh:ResultAnnotationShape
 	] ;
 	
 	sh:property [
-		sh:name "Count AnnotationVarName at Result Annotation class"@en ;
+		sh:name "AnnotationVarName count shape"@en ;
+		sh:description "Maximum count for sh:annotationVarName class."@en ;
 		
 		sh:path (sh:resultAnnotation sh:annotationVarName) ;
 		sh:message "Each result annotation has at most 1 value for the property sh:annotationVarName."@en ;
@@ -110,7 +118,8 @@ adsh:ResultAnnotationShape
 	] ;
 	
 	sh:property [
-		sh:name "AnnotationVarName datatype at Result Annotation class"@en ;
+		sh:name "AnnotationVarName datatype shape"@en ;
+		sh:description "Datatype for sh:annotationVarName class."@en ;
 		
 		sh:path (sh:resultAnnotation sh:annotationVarName) ;
 		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string."@en ;
@@ -126,7 +135,8 @@ adsh:ReturnTypeShape
 	rdfs:label "Return Type Shape"@en ;
 	
 	sh:property [
-		sh:name "Count Return Type class"@en ;
+		sh:name "ReturnType count shape"@en ;
+		sh:description "Maximum count for sh:returnType class."@en ;
 		
 		sh:path sh:returnType ;
 		sh:message "A function has at most one value for sh:returnType."@en ;
@@ -134,7 +144,8 @@ adsh:ReturnTypeShape
 	] ;
 	
 	sh:property [
-		sh:name "Node Kind Return Type class"@en ;
+		sh:name "Return type NodeKind shape"@en ;
+		sh:description "NodeKind for sh:returnType class."@en ;
 		
 		sh:path sh:returnType ;				
 		sh:message "The values of sh:returnType are IRIs."@en ;
@@ -152,7 +163,8 @@ adsh:SPARQLFunctionShape
 	sh:xone (						# SPARQLFunction-query
 		[
 			sh:property [
-				sh:name "Count Ask at SPARQL Function class"@en ;
+				sh:name "Ask count shape"@en ;
+				sh:description "Maximum and minimum count for sh:ask class."@en ;
 				
 				sh:path sh:ask ;
 				sh:maxCount 1 ;	
@@ -161,7 +173,8 @@ adsh:SPARQLFunctionShape
 		]
 		[
 			sh:property [
-				sh:name "Count Select at SPARQL Function class"@en ;
+				sh:name "Select count shape"@en ;
+				sh:description "Maximum and minimum count for sh:select class."@en ;
 				
 				sh:path sh:select ;
 				sh:maxCount 1 ;	
@@ -180,7 +193,8 @@ adsh:FilterShapeShape			# FilterShapeExpression
 	
 	sh:and (
 		sh:property [
-			sh:name "Filter Shape requirements at Filter Shape class"@en ;
+			sh:name "FilterShape count and NodeKind shape"@en ;
+			sh:description "Maximum and minimum count and Node Kind for sh:filterShape class."@en ;
 			
 			sh:path sh:filterShape ;
 			sh:maxCount 1 ;
@@ -188,7 +202,8 @@ adsh:FilterShapeShape			# FilterShapeExpression
 			sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;	
 		] 
 		sh:property [
-			sh:name "Count Nodes at Filter Shape class"@en ;
+			sh:name "Nodes count shapes"@en ;
+			sh:description "Maximum and minimum count for sh:nodes class."@en ;
 		
 			sh:path sh:nodes ;
 			sh:maxCount 1 ;
@@ -207,14 +222,16 @@ adsh:PathExpressionShape			# PathExpression
 	
 	sh:and (
 		sh:property [
-			sh:name "Count Path class"@en ;
+			sh:name "Path count nodes"@en ;
+			sh:description "Maximum and minimum count for sh:path class."@en ;
 			
 			sh:path sh:path ;
 			sh:maxCount 1 ;
 			sh:minCount 1 ;
 		] 
 		sh:property [
-			sh:name "Count Nodes class"@en ;
+			sh:name "Nodes count shape"@en ;
+			sh:description "Maximum count for sh:nodes class."@en ;
 			
 			sh:path sh:nodes ;
 			sh:maxCount 1 ;
@@ -232,13 +249,17 @@ adsh:RuleTypeShape					# Rule-type
 	
 	sh:and (
 		sh:property [
-			sh:name "Count rdf type at Rule class"@en ;
+			sh:name "Type count shape"@en ;
+			sh:description "Maximum and minimum count for rdf:type class."@en ;
+			
 			sh:path (sh:rule rdf:type) ;
 			sh:maxCount 1 ;
 			sh:minCount 1 ;
 		] 
 		sh:property [
-			sh:name "Node kind of rdf type at Rule class"@en ;
+			sh:name "Type NodeKind shape"@en ;
+			sh:description "NodeKind for rdf:type class."@en ;
+			
 			sh:path (sh:rule rdf:type) ;
 			sh:nodeKind sh:IRI ;
 		] 
@@ -253,14 +274,16 @@ adsh:OrderShape
 	rdfs:label "Order Shape"@en ;
 	
 	sh:property [					# rule-order-maxCount
-		sh:name "Count Order class"@en ;
+		sh:name "Order count shape"@en ;
+		sh:description "Maximum count for sh:order class."@en ;
 		
 		sh:path sh:order ;
 		sh:maxCount 1 ;
 		sh:message "Each rule or shape may have at most one value for the property sh:order."@en ;
 	] ;
 	sh:property [					# rule-order-datatype
-		sh:name "Datatype Order class"@en ;
+		sh:name "Order datatype and NodeKind shape"@en ;
+		sh:description "Datatype and NodeKind for sh:order class."@en ;
 		
 		sh:path sh:order ;
 		sh:nodeKind sh:Literal ;
@@ -277,7 +300,8 @@ adsh:RuleDeactivatedShape
 	rdfs:label "Order Shape"@en ;
 	
 	sh:property [
-		sh:name "Count Deactivated at Rule class"@en ;
+		sh:name "Deactivated count shape"@en ;
+		sh:description "Maximum count for sh:deactivated class."@en ;
 		
 		sh:path (sh:rule sh:deactivated) ;		# deactivated-maxCount
 		sh:maxCount 1 ;
@@ -285,7 +309,8 @@ adsh:RuleDeactivatedShape
 	] ;
 	
 	sh:property [								# deactivated-in
-		sh:name "Datatype Deactivated at Rule class"@en ;
+		sh:name "Deactivated datatype and NodeKind shape"@en ;
+		sh:description "Datatype and NodeKind for sh:deactivated class."@en ;
 		
 		sh:path (sh:rule sh:deactivated) ;
 		sh:nodeKind sh:Literal ;
@@ -301,7 +326,8 @@ adsh:SPARQLRuleShape
 	rdfs:label "SPARQL Rule Shape"@en ;
 	
 	sh:property [								# construct-count
-		sh:name "Count Construct at SPARQL Rule class"@en ;
+		sh:name "Construct count shape"@en ;
+		sh:description "Maximum and minimum count for sh:construct class."@en ;
 		
 		sh:path sh:construct ;
 		sh:maxCount 1 ;
@@ -311,6 +337,7 @@ adsh:SPARQLRuleShape
 	
 	sh:property [								# construct-count
 		sh:name "Dataype construct at SPARQL Rule class"@en ;
+		sh:description "Datatype and NodeKind for sh:construct class."@en ;
 		
 		sh:path sh:construct ;
 		sh:nodeKind sh:Literal ;
@@ -327,7 +354,8 @@ adsh:TripleRuleShape
 	rdfs:label "Triple Rule Shape"@en ;
 	
 	sh:property [
-		sh:name "Count Subject at Triple Rule class"@en ;
+		sh:name "Subject count shape"@en ;
+		sh:description "Maximum and minimum count for sh:subject class."@en ;
 		
 		sh:path sh:subject ;		# tripleRule-subject
 		sh:maxCount 1 ;
@@ -336,7 +364,8 @@ adsh:TripleRuleShape
 	] ;
 	
 	sh:property [
-		sh:name "Count Predicate at Triple Rule class"@en ;
+		sh:name "Predicate count shape"@en ;
+		sh:description "Maximum and minimum count for sh:predicate class."@en ;
 		
 		sh:path sh:predicate ;		# tripleRule-predicate
 		sh:maxCount 1 ;
@@ -345,7 +374,8 @@ adsh:TripleRuleShape
 	] ;
 	
 	sh:property [
-		sh:name "Count Object at Triple Rule class"@en ;
+		sh:name "Object count shape"@en ;
+		sh:description "Maximum and minimum count for sh:object class."@en ;
 		
 		sh:path sh:object ;			# tripleRule-object
 		sh:maxCount 1 ;
