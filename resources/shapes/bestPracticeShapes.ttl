@@ -1,7 +1,8 @@
 # baseURI: http://www.w3.org/ns/shacl-shacl#
 
 # A SHACL shapes graph to validate Best Practices on SHACL shapes graphs
-# Draft last edited 2020-03-12
+# First edited 2020-03-12
+# Last edited 2020-08-26
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,63 +11,89 @@
 
 @prefix bpsh: <http://itb.ec.europa.eu/ns/shacl-shacl-bp#> .
 
-bpsh:LanguageTagShape			# text-language
+bpsh:UniqueLangShape			# text-language
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:description, sh:name, sh:message ;
 	
-	sh:property [
-		sh:path sh:description ;				
-		sh:message "Both sh:name and sh:description may have multiple values, but should only have one value per language tag.";
-		sh:uniqueLang true ;	
-		sh:severity sh:Warning ;
-	] ;
+	rdfs:comment "One value per language tag warning for sh:name, sh:description and sh:message properties."@en ;
+	rdfs:label "Unique Lang Shape"@en ;
 	
-	sh:property [
-		sh:path sh:name ;				
-		sh:message "Both sh:name and sh:description may have multiple values, but should only have one value per language tag.";
-		sh:uniqueLang true ;
-		sh:severity sh:Warning ;
-	] ;
+	sh:property bpsh:UniqueLangDescriptionShape ;
+	sh:property bpsh:UniqueLangNameShape ;
+	sh:property bpsh:UniqueLangMessageShape .
+
+
+bpsh:UniqueLangDescriptionShape 
+	a sh:PropertyShape ;
 	
-	sh:property [
-		sh:path sh:message ;				
-		sh:message "A shape should not have more than one value for sh:message with the same language tag.";
-		sh:uniqueLang true ;
-		sh:severity sh:Warning ;
-	] .
+	sh:name "Unique Lang Description property"@en ;
+	sh:description "One value per language tag warning for sh:description properties."@en ;
+		
+	sh:path sh:description ;				
+	sh:message "Both sh:name and sh:description may have multiple values, but should only have one value per language tag."@en;
+	sh:uniqueLang true ;	
+	sh:severity sh:Warning .
+
+
+bpsh:UniqueLangNameShape
+	a sh:PropertyShape ;
+	
+	sh:name "Unique Lang Name property"@en ;
+	sh:description "One value per language tag warning for sh:name properties."@en ;
+	
+	sh:path sh:name ;				
+	sh:message "Both sh:name and sh:description may have multiple values, but should only have one value per language tag."@en;
+	sh:uniqueLang true ;
+	sh:severity sh:Warning .
+
+
+bpsh:UniqueLangMessageShape
+	a sh:PropertyShape ;	
+	
+	sh:name "Unique Lang Message property"@en ;
+	sh:description "One value per language tag warning for sh:message properties."@en ;
+	
+	sh:path sh:message ;				
+	sh:message "A shape should not have more than one value for sh:message with the same language tag."@en;
+	sh:uniqueLang true ;
+	sh:severity sh:Warning .
+	
 	
 bpsh:MessageShape				# message
 	a sh:NodeShape ;
 	sh:targetClass sh:NodeShape ;
 	sh:targetClass sh:PropertyShape ;
 	
-	sh:message "A shape should have at least one value for sh:message in the shapes graph, then all validation results produced as a result of the shape will have exactly these messages as their value of sh:resultMessage." ;
+	rdfs:comment "Minimum requirements for sh:message property in SHACL."@en ;
+	rdfs:label "Message Shape"@en ;
+	
+	sh:property bpsh:MessageCountShape .
+
+
+bpsh:MessageCountShape
+	a sh:PropertyShape ;
+	
+	sh:name "Message Count Shape"@en ;
+	sh:description "Minimum count for sh:message property in SHACL."@en ;
+	
+	sh:message "A shape should have at least one value for sh:message in the shapes graph, then all validation results produced as a result of the shape will have exactly these messages as their value of sh:resultMessage."@en;
 	sh:severity sh:Warning ;
 		
 	sh:or (
 		[
-			sh:property [
 				sh:path sh:message ;
 				sh:minCount 1 ;
-			]
 		]
 		[
-			sh:property [
 				sh:path (sh:property sh:message) ;
 				sh:minCount 1 ;
-			] 
 		]
 		[
-			sh:property [
 				sh:path (sh:qualifiedValueShape sh:message) ;
 				sh:minCount 1 ;
-			] 
 		]
 		[
-			sh:property [
 				sh:path (sh:property sh:node) ;
 				sh:minCount 1 ;
-			] 
 		]
 	)  .
-

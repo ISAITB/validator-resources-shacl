@@ -1,7 +1,8 @@
 # baseURI: http://www.w3.org/ns/shacl-shacl#
 
 # A SHACL shapes graph to validate SHACL shapes graphs  (Extended)
-# Draft last edited 2020-03-13
+# First edited 2020-03-13
+# Last edited 2020-08-26
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,256 +19,375 @@ shsh:
 		sh:namespace "http://www.w3.org/ns/shacl-shacl#"^^xsd:anyURI ;
 	] .
 
-shsh:SparqlBasedShape
+shsh:SparqlShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:sparql ;
+		
+	rdfs:comment "Requirements for subjects of sh:sparql class."@en ;
+	rdfs:label "Sparql Shape"@en ;
 	
 	sh:property [
+		sh:name "Sparql NodeKind shape"@en ;
+		sh:description "NodeKind for sh:sparql class."@en ;
+		
 		sh:path sh:sparql ;				
-		sh:message "Shapes may have values for the property sh:sparql, and these values are either IRIs or blank nodes.";
+		sh:message "Shapes may have values for the property sh:sparql, and these values are either IRIs or blank nodes."@en ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# sparql-nodeKind
 	] ;
 	
 	sh:property [
+		sh:name "Select count shape"@en ;
+		sh:description "Maximum and minimum count for sh:select class."@en ;
+		
 		sh:path (sh:sparql sh:select) ;				
-		sh:message "SPARQL-based constraints have exactly one value for the property sh:select.";
+		sh:message "SPARQL-based constraints have exactly one value for the property sh:select."@en ;
 		sh:maxCount 1 ;					# SPARQLConstraint-select-count
 		sh:minCount 1 ;					# SPARQLConstraint-select-count
 	] ;
 	
 	sh:property [
+		sh:name "Select NodeKind shape"@en ;
+		sh:description "NodeKind for sh:select class."@en ;
+		
 		sh:path (sh:sparql sh:select) ;	
-		sh:message "The value of sh:select is a literal of datatype xsd:string.";
+		sh:message "The value of sh:select is a literal of datatype xsd:string."@en ;
 		sh:nodeKind sh:Literal ;		# SPARQLConstraint-select-datatype
 	] ;
 	
 	sh:property [
+		sh:name "Select pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
+		
 		sh:path (sh:sparql sh:select) ;	
-		sh:message "The SPARQL query derived from the value of sh:select projects the variable this in the SELECT clause.";
+		sh:message "The SPARQL query derived from the value of sh:select projects the variable this in the SELECT clause."@en ;
 		sh:pattern "SELECT.*\\$this.*WHERE.*" ;		# select-query-this
 		sh:flags "si" ;
 	] ;
 
 	sh:property [
+		sh:name "Message datatype shape"@en ;
+		sh:description "Datatype for sh:message class."@en ;
+		
 		sh:path (sh:sparql sh:message) ;
-		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag.";
+		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag."@en ;
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 		# SPARQLConstraint-message-datatype
 	] ;
 	
 	sh:property [
+		sh:name "Deactivated count shape"@en ;
+		sh:description "Maximum count for sh:deactivated class."@en ;
+		
 		sh:path (sh:sparql sh:deactivated) ;
-		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated.";
+		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated."@en ;
 		sh:maxCount 1 ;					# SPARQLConstraint-deactivated-maxCount
 	] ;
 	
 	sh:property [
+		sh:name "Prefixes nodeKind shape"@en ;
+		sh:description "NodeKind for sh:prefixes class."@en ;
+		
 		sh:path sh:prefixes ;
-		sh:message "The values of sh:prefixes are either IRIs or blank nodes.";
+		sh:message "The values of sh:prefixes are either IRIs or blank nodes."@en ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;				# prefixes-nodeKind
 	] . 
 	
 shsh:SelectShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:select ; 
+		
+	rdfs:comment "Requirements for subjects of sh:select class."@en ;
+	rdfs:label "Select Shape"@en ;
 	
 	sh:property [						# select-query-valid
+		sh:name "Select pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
+		
 		sh:path sh:select ;	
-		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query.";
+		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query."@en ;
 		sh:pattern "\\s*SELECT\\s+(?:(?:DISTINCT)|(?:REDUCED))?\\s*.*(?:WHERE)\\s*\\{.*\\}" ;
 		sh:flags "si" ;
 	] .	
 
-shsh:DeclareShapeShape
+shsh:DeclareShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:declare ; 
+		
+	rdfs:comment "Requirements for subjects of sh:declare class."@en ;
+	rdfs:label "Declare Shape"@en ;
 	
 	sh:property [
+		sh:name "Declare NodeKind shape"@en ;
+		sh:description "NodeKind for sh:declare class."@en ;
+		
 		sh:path sh:declare ;				
-		sh:message "The values of the property sh:declare are IRIs or blank nodes.";
+		sh:message "The values of the property sh:declare are IRIs or blank nodes."@en ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# declare-nodeKind
 	] ;
 	
 	sh:property [
+		sh:name "Prefix count shape"@en ;
+		sh:description "Maximum and minimum count for sh:prefix class."@en ;
+		
 		sh:path (sh:declare sh:prefix) ;				
-		sh:message "Prefix declarations have exactly one value for the property sh:prefix.";
+		sh:message "Prefix declarations have exactly one value for the property sh:prefix."@en ;
 		sh:maxCount 1 ;					# prefix-count
 		sh:minCount 1 ;					# prefix-count
 	] ;
 	
 	sh:property [
+		sh:name "Prefix datatype shape"@en ;
+		sh:description "Datatype for sh:prefix class."@en ;
+		
 		sh:path (sh:declare sh:prefix) ;
-		sh:message "The values of sh:prefix are literals of datatype xsd:string.";
+		sh:message "The values of sh:prefix are literals of datatype xsd:string."@en ;
 		sh:datatype xsd:string ; 		# prefix-datatype
 	] ;
 	
 	sh:property [
+		sh:name "Namespace count shape"@en ;
+		sh:description "Maximum and minimum count for sh:namespace class."@en ;
+		
 		sh:path (sh:declare sh:namespace) ;				
-		sh:message "Prefix declarations have exactly one value for the property sh:namespace.";
+		sh:message "Prefix declarations have exactly one value for the property sh:namespace."@en ;
 		sh:maxCount 1 ;					# namespace-count
 		sh:minCount 1 ;					# namespace-count
 	] ;
 	
 	sh:property [
+		sh:name "Namespace datatype shape"@en ;
+		sh:description "Datatype for sh:namespace class."@en ;
+		
 		sh:path (sh:declare sh:namespace) ;
-		sh:message "The values of sh:namespace are literals of datatype xsd:anyURI.";
+		sh:message "The values of sh:namespace are literals of datatype xsd:anyURI."@en ;
 		sh:datatype xsd:anyURI ; 		# namespace-datatype
 	] .
 
 shsh:ContstraintComponentShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:ConstraintComponent ;		# ConstraintComponent
+		
+	rdfs:comment "Requirements for sh:ConstraintComponent class."@en ;
+	rdfs:label "Constraint Component Shape"@en ;
 	
 	sh:property [
+		sh:name "Optional datatype shape"@en ;
+		sh:description "Datatype for sh:optional class."@en ;
+		
 		sh:path (sh:parameter sh:optional) ;
-		sh:message "The values of sh:optional must be literals with datatype xsd:boolean.";
+		sh:message "The values of sh:optional must be literals with datatype xsd:boolean."@en ;
 		sh:datatype xsd:boolean ;		# optional-datatype
 	] ;
 	
 	sh:property [
+		sh:name "Optional count shape"@en ;
+		sh:description "Maximum count for sh:optional class."@en ;
+		
 		sh:path (sh:parameter sh:optional) ;
-		sh:message "A parameter declaration can have at most one value for the property sh:optional.";
+		sh:message "A parameter declaration can have at most one value for the property sh:optional."@en ;
 		sh:maxCount 1 ;	 				# optional-maxCount
 	] ;
 	
 	sh:property [
+		sh:name "LabelTemplate datatype shape"@en ;
+		sh:description "Datatype for sh:labelTemplate class."@en ;
+		
 		sh:path sh:labelTemplate ;
-		sh:message "The values of sh:labelTemplate are strings (possibly with language tag).";
+		sh:message "The values of sh:labelTemplate are strings (possibly with language tag)."@en ;
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 				# labelTemplate-datatype
 	] ;
 	
 	sh:property [						# parameter-name-VARNAME
+		sh:name "Path pattern shape"@en ;
+		sh:description "Pattern for sh:path class."@en ;
+		
 		sh:path (sh:parameter sh:path) ;
-		sh:message "Every parameter name is a valid SPARQL VARNAME.";
+		sh:message "Every parameter name is a valid SPARQL VARNAME."@en ;
 		sh:pattern "^.*#[A-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD_0-9][A-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD_0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$" ;
 	] ;
 	
 	sh:property [
+		sh:name "Path pattern shape"@en ;
+		sh:description "Pattern for sh:path class."@en ;
+		
 		sh:path (sh:parameter sh:path) ;
-		sh:message "Parameter names must not be one of the following: this, shapesGraph, currentShape, path, PATH, value.";
+		sh:message "Parameter names must not be one of the following: this, shapesGraph, currentShape, path, PATH, value."@en ;
 		sh:pattern "^.*#(?!this$)(?!shapesGraph$)(?!currentShape$)(?!path$)(?!PATH$)(?!value$).*$" ;					# parameter-name-not-in
 	] .
 
-shsh:SELECTBasedShapes
+shsh:NodeValidatorPropertyValidatorShape
 	a sh:NodeShape ;	
 	sh:targetSubjectsOf sh:nodeValidator, sh:propertyValidator ;
+		
+	rdfs:comment "Requirements for subjects of sh:nodeValidator and sh:propertyValidator class."@en ;
+	rdfs:label "Node Validator Property Validator Shape"@en ;
 	
 	sh:property [
+		sh:name "NodeValidator class shape"@en ;
+		sh:description "Class for sh:nodeValidator class."@en ;
+		
 		sh:path sh:nodeValidator ;
-		sh:message "The values of sh:nodeValidator must be SELECT-based validators.";
+		sh:message "The values of sh:nodeValidator must be SELECT-based validators."@en ;
 		sh:class sh:SPARQLSelectValidator ;				# nodeValidator-class
 	] ;
 		
 	sh:property [
+		sh:name "PropertyValidator class shape"@en ;
+		sh:description "Class for sh:propertyValidator class."@en ;
+		
 		sh:path sh:propertyValidator ;
-		sh:message "The values of sh:propertyValidator must be SELECT-based validators.";
+		sh:message "The values of sh:propertyValidator must be SELECT-based validators."@en ;
 		sh:class sh:SPARQLSelectValidator ;				# propertyValidator-class
 	] .
 	
-shsh:SELECTBasedShapesClass
+shsh:SPARQLSelectValidatorShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:SPARQLSelectValidator ;	
+		
+	rdfs:comment "Requirements for sh:SPARQLSelectValidator class."@en ;
+	rdfs:label "SPARQL Select Validator Shape"@en ;
 	
 	sh:property [
+		sh:name "Select count shape"@en ;
+		sh:description "Maximum and minimum count for sh:select class."@en ;
+		
 		sh:path sh:select ;
-		sh:message "SELECT-based validators have exactly one value for the property sh:select.";
+		sh:message "SELECT-based validators have exactly one value for the property sh:select."@en ;
 		sh:maxCount 1 ;	 				# SPARQLSelectValidator-select-count
 		sh:minCount 1 ;	 				# SPARQLSelectValidator-select-count
 	] .
 
-shsh:ASKBasedShapes
+shsh:ValidatorShape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:validator ;
+		
+	rdfs:comment "Requirements for subjects of sh:validator class."@en ;
+	rdfs:label "Validator Shape"@en ;
 	
 	sh:property [
+		sh:name "Validator class shape"@en ;
+		sh:description "Class for sh:validator class."@en ;
+		
 		sh:path sh:validator ;
-		sh:message "The values of sh:validator must be ASK-based validators.";
+		sh:message "The values of sh:validator must be ASK-based validators."@en ;
 		sh:class sh:SPARQLAskValidator ;				# validator-class
 	] .
 	
-shsh:ASKBasedShapesClass
+shsh:SPARQLAskValidatorShape
 	a sh:NodeShape ;			
 	sh:targetClass sh:SPARQLAskValidator ;	
+		
+	rdfs:comment "Requirements for sh:SPARQLAskValidator class."@en ;
+	rdfs:label "SPARQL Ask Validator Shape"@en ;
 	
 	sh:property [
+		sh:name "Ask count shape"@en ;
+		sh:description "Maximum and minimum count for sh:ask class."@en ;
+		
 		sh:path sh:ask ;
-		sh:message "ASK-based validators have exactly one value for the property sh:ask.";
+		sh:message "ASK-based validators have exactly one value for the property sh:ask."@en ;
 		sh:maxCount 1 ;	 				# ask-count
 		sh:minCount 1 ;	 				# ask-count
 	] ;
 	
 	sh:property [
+		sh:name "Ask datatype shape"@en ;
+		sh:description "Datatype for sh:ask class."@en ;
+		
 		sh:path sh:ask ;
-		sh:message "The value of sh:ask must be a literal with datatype xsd:string.";
+		sh:message "The value of sh:ask must be a literal with datatype xsd:string."@en ;
 		sh:datatype xsd:string ;	 				# ask-datatype
 	] ;
 	
 	sh:property [
+		sh:name "Ask pattern shape"@en ;
+		sh:description "Pattern for sh:ask class."@en ;
+		
 		sh:path sh:ask ;	
-		sh:message "The value of sh:ask must be a valid SPARQL ASK query using the aforementioned prefix handling rules.";
+		sh:message "The value of sh:ask must be a valid SPARQL ASK query using the aforementioned prefix handling rules."@en ;
 		sh:pattern "\\s*ASK\\s+.*(?:WHERE)\\s*\\{.*\\}\\S$" ;		# ask-sparql
 		sh:flags "si" ;
 	] .
 
-shsh:PreBoundShapes
+shsh:SelectAskShape
 	a sh:NodeShape ;			
  	sh:targetSubjectsOf sh:select, sh:ask ;	
+		
+	rdfs:comment "Requirements for subjects of sh:select and sh:ask class."@en ;
+	rdfs:label "Select Ask Shape"@en ;
 	
  	sh:property [									# pre-binding-limitations-minus
+		sh:name "Ask pattern shape"@en ;
+		sh:description "Pattern for sh:ask class."@en ;
+		
  		sh:path sh:ask ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause.";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause."@en ;
  		sh:pattern "^(?!.*MINUS\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
  	sh:property [									# pre-binding-limitations-minus
+		sh:name "Select pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
+		
  		sh:path sh:select ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause.";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause."@en ;
  		sh:pattern "^(?!.*MINUS\\b).*$" ;	
 		sh:flags "s" ;
  	] ;
 	
  	sh:property [									# pre-binding-limitations-service
+		sh:name "Ask pattern shape"@en ;
+		sh:description "Pattern for sh:ask class."@en ;
+		
  		sh:path sh:ask ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE).";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE)."@en ;
  		sh:pattern "^(?!.*SERVICE\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
  	sh:property [									# pre-binding-limitations-service
+		sh:name "Select pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
+		
  		sh:path sh:select ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE).";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE)."@en ;
  		sh:pattern "^(?!.*SERVICE\\b).*$" ;	
 		sh:flags "s" ;
  	] ;
 	
  	sh:property [									# pre-binding-limitations-values
+		sh:name "Ask pattern shape"@en ;
+		sh:description "Pattern for sh:ask class."@en ;
+		
  		sh:path sh:ask ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause.";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause."@en ;
  		sh:pattern "^(?!.*VALUES\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
  	sh:property [									# pre-binding-limitations-values
+		sh:name "Select pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
+		
  		sh:path sh:select ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause.";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause."@en ;
  		sh:pattern "^(?!.*VALUES\\b).*$" ;	
 		sh:flags "s" ;
  	] ;
 	
  	sh:property [									# pre-binding-limitations-variable
+		sh:name "Ask pattern shape"@en ;
+		sh:description "Pattern for sh:ask class."@en ;
+		
  		sh:path sh:ask ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable.";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable."@en ;
  		sh:pattern "^(?!.*\\?var\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
  	sh:property [									# pre-binding-limitations-variable
+		sh:name "Select pattern shape"@en ;
+		sh:description "Pattern for sh:select class."@en ;
+		
  		sh:path sh:select ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable.";
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable."@en ;
  		sh:pattern "^(?!.*\\?var\\b).*$" ;	
 		sh:flags "s" ;
  	] .
-	
- 	#sh:property [									# pre-binding-limitations-subquery
- 	#	sh:path sh:select ;	
- 	#	sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: Subqueries must return all potentially pre-bound variables, except shapesGraph and currentShape which are optional.";
- 	#	sh:pattern "\\s*SELECT.*WHERE(((.*\\{\\s*SELECT.*\\$this.*WHERE\\s*\\{.*\\}.*)|(?!.*\\{\\s*SELECT.*WHERE\\s*\\{.*\\}.*))|.*)\\}" ;
-	#	sh:flags "s" ;
- 	#] .
 	
