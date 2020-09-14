@@ -99,10 +99,22 @@
                                         <td>Warning</td>
                                         <td>A shape should not have more than one value for sh:message with the same language tag.</td>
                                     </tr>
+                                    <tr>
+                                        <td>defaultvalue-datatype</td>
+                                        <td>sh:defaultValue</td>
+                                        <td>Warning</td>
+                                        <td>The value type of the sh:defaultValue should align with the specified sh:datatype or sh:class of the same shape.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lists</td>
+                                        <td>rdf:list</td>
+                                        <td>Warning</td>
+                                        <td>Avoid large rdf:list due to their inefficiency.</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-
+                        
                         <div>
                             <hr/>
                             <h4>Rules pending implementation</h4>
@@ -117,110 +129,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>PATH-position</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>The only legal use of the variable PATH in the SPARQL queries of SPARQL-based constraints and SELECT-based validators is in the predicate position of a triple pattern.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>prefixes-duplicates</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>A SHACL processor collects a set of prefix mappings as the union of all individual prefix mappings that are values of the SPARQL property path sh:prefixes/owl:imports*/sh:declare of the SPARQL-based constraint or validator. If such a collection of prefix declarations contains multiple namespaces for the same value of sh:prefix, then the shapes graph is ill-formed.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>ConstraintComponent</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>A SPARQL-based constraint component is an IRI that has SHACL type sh:ConstraintComponent in the shapes graph.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>parameter-name-unique</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>A constraint component where two or more parameter declarations use the same parameter names is ill-formed.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>ConstraintComponent-parameter</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>Every constraint component has at least one non-optional parameter.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced features</td>
-                                        <td>node-expressions-recursion</td>
-                                        <td>sh:nodes</td>
-                                        <td>Error</td>
-                                        <td>A node expression cannot recursively have itself as a "nested" node expression.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced features</td>
-                                        <td>intersection</td>
-                                        <td>sh:intersection</td>
-                                        <td>Error</td>
-                                        <td><ul>
-                                            <li>Intersection expression is a blank node with exactly one value for the property sh:intersection.</li>
-                                            <li>Intersection expression is a well-formed SHACL list with at least two members.</li></ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced features</td>
-                                        <td>union</td>
-                                        <td>sh:union</td>
-                                        <td>Error</td>
-                                        <td><ul>
-                                            <li>Union expression is a blank node with exactly one value for the property sh:union.</li>
-                                            <li>Union expression is a well-formed SHACL list with at least two members.</li>
-                                        </ul></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced features</td>
-                                        <td>Expression-scope</td>
-                                        <td>sh:expression</td>
-                                        <td>Error</td>
-                                        <td>The values of sh:expression at a shape must be well-formed node expressions.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced features</td>
-                                        <td>Condition-node</td>
-                                        <td>sh:condition</td>
-                                        <td>Error</td>
-                                        <td>The values of sh:condition at a rule must be well-formed shapes.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced features</td>
-                                        <td>FunctionExpression</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>A function expression is a blank node that does not fulfill any of the syntax rules of the other node expression types and which is the subject of exactly one triple T where the object is a well-formed SHACL list, and each member of that list is a well-formed node expression.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Best practices</td>
-                                        <td>order</td>
-                                        <td>sh:order</td>
-                                        <td>Warning</td>
-                                        <td>If present at property shapes, the recommended use of sh:order is to sort the property shapes in an ascending order, for example so that properties with smaller order are placed above (or to the left) of properties with larger order.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Best practices</td>
-                                        <td>defaultvalue-datatype</td>
-                                        <td>sh:defaultValue</td>
-                                        <td>Warning</td>
-                                        <td>The value type of the sh:defaultValue should align with the specified sh:datatype or sh:class of the same shape.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Best practices</td>
-                                        <td>lists</td>
-                                        <td>rdf:list</td>
-                                        <td>Warning</td>
-                                        <td>Avoid large rdf:list due to their inefficiency.</td>
-                                    </tr>
                                     <tr>
                                         <td>Best practices</td>
                                         <td>namespace-prefixes</td>
@@ -260,6 +168,56 @@
                             </table>
                         </div>
 
+                        <div>
+                            <hr/>
+                            <h4>Rules pending implementation</h4>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td>Core specification</td>
+                                        <td>ConstraintComponent</td>
+                                        <td>-</td>
+                                        <td>Error</td>
+                                        <td>A SPARQL-based constraint component is an IRI that has SHACL type sh:ConstraintComponent in the shapes graph.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Core specification</td>
+                                        <td>ConstraintComponent-parameter</td>
+                                        <td>-</td>
+                                        <td>Error</td>
+                                        <td>Every constraint component has at least one non-optional parameter.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advanced features</td>
+                                        <td>Expression-scope</td>
+                                        <td>sh:expression</td>
+                                        <td>Error</td>
+                                        <td>The values of sh:expression at a shape must be well-formed node expressions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advanced features</td>
+                                        <td>Condition-node</td>
+                                        <td>sh:condition</td>
+                                        <td>Error</td>
+                                        <td>The values of sh:condition at a rule must be well-formed shapes.</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>Advanced features</td>
+                                        <td>FunctionExpression</td>
+                                        <td>-</td>
+                                        <td>Error</td>
+                                        <td>A function expression is a blank node that does not fulfill any of the syntax rules of the other node expression types and which is the subject of exactly one triple T where the object is a well-formed SHACL list, and each member of that list is a well-formed node expression.</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>Best practices</td>
+                                        <td>order</td>
+                                        <td>sh:order</td>
+                                        <td>Warning</td>
+                                        <td>If present at property shapes, the recommended use of sh:order is to sort the property shapes in an ascending order, for example so that properties with smaller order are placed above (or to the left) of properties with larger order.</td>
+                                    </tr>
+                                </thead>
+                           </table>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
