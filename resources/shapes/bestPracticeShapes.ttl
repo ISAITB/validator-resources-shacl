@@ -96,8 +96,13 @@ bpsh:NodeShapeShape			# label-nodeshape
 	rdfs:comment "One value per language tag warning for rdfs:label, rdfs:comment properties."@en ;
 	rdfs:label "Nodeshape Shape"@en ;
 	
-	sh:property bpsh:UniqueLangLabelShape ;
-	sh:property bpsh:UniqueLangCommentShape .
+	sh:message "Every NodeShape SHOULD contain rdfs:label and rdfs:comment, and they SHOULD only have one value per language tag."@en;
+	sh:severity sh:Warning ;
+	
+	sh:and(
+		sh:property bpsh:UniqueLangLabelShape 
+		sh:property bpsh:UniqueLangCommentShape 
+	) .
 
 
 bpsh:UniqueLangCommentShape
@@ -106,8 +111,6 @@ bpsh:UniqueLangCommentShape
 	sh:name "Unique Lang Label property"@en ;
 	sh:description "One value per language tag warning for rdfs:comment propert."@en ;
 	
-	sh:message "Every NodeShape SHOULD contain rdfs:label and rdfs:comment, and they SHOULD only have one value per language tag."@en;
-	sh:severity sh:Warning ;
 	sh:path rdfs:comment ;				
 	sh:uniqueLang true ;
 	sh:minCount 1 .
@@ -119,8 +122,6 @@ bpsh:UniqueLangLabelShape
 	sh:name "Unique Lang Label property"@en ;
 	sh:description "One value per language tag warning for rdfs:label propert."@en ;
 	
-	sh:message "Every NodeShape SHOULD contain rdfs:label and rdfs:comment, and they SHOULD only have one value per language tag."@en;
-	sh:severity sh:Warning ;
 	sh:path rdfs:label ;				
 	sh:uniqueLang true ;
 	sh:minCount 1 .
