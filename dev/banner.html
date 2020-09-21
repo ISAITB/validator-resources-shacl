@@ -128,6 +128,12 @@
                                         <td>sh:property</td>
                                         <td>Warning</td>
                                         <td>Each property SHOULD have sh:description (in the context of the target where it appears) to provide further human-oriented details. This is the preferred solution over adding additional usage notes to fit the context.</td>
+                                    </tr>                                  
+                                    <tr>
+                                        <td>order</td>
+                                        <td>sh:order</td>
+                                        <td>Warning</td>
+                                        <td>If present at property shapes, the recommended use of sh:order is to sort the property shapes in an ascending order, for example so that properties with smaller order are placed above (or to the left) of properties with larger order.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -138,20 +144,6 @@
                             <h4>Rules not implemented</h4>
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>ConstraintComponent</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>A SPARQL-based constraint component is an IRI that has SHACL type sh:ConstraintComponent in the shapes graph.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Core specification</td>
-                                        <td>ConstraintComponent-parameter</td>
-                                        <td>-</td>
-                                        <td>Error</td>
-                                        <td>Every constraint component has at least one non-optional parameter.</td>
-                                    </tr>
                                     <tr>
                                         <td>Advanced features</td>
                                         <td>Expression-scope</td>
@@ -172,14 +164,7 @@
                                         <td>-</td>
                                         <td>Error</td>
                                         <td>A function expression is a blank node that does not fulfill any of the syntax rules of the other node expression types and which is the subject of exactly one triple T where the object is a well-formed SHACL list, and each member of that list is a well-formed node expression.</td>
-                                    </tr>                                    
-                                    <tr>
-                                        <td>Best practices</td>
-                                        <td>order</td>
-                                        <td>sh:order</td>
-                                        <td>Warning</td>
-                                        <td>If present at property shapes, the recommended use of sh:order is to sort the property shapes in an ascending order, for example so that properties with smaller order are placed above (or to the left) of properties with larger order.</td>
-                                    </tr>
+                                    </tr>  
                                 </thead>
                            </table>
                         </div>
