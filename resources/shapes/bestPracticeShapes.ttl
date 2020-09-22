@@ -11,11 +11,11 @@
 
 @prefix bpsh: <http://itb.ec.europa.eu/ns/shacl-shacl-bp#> .
 
-bpsh:UniqueLangShape			# text-language
+bpsh:UniqueLangShape			# text-language and label-nodeshape
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:description, sh:name, sh:message ;
 	
-	rdfs:comment "One value per language tag warning for sh:name, sh:description and sh:message properties."@en ;
+	rdfs:comment "One value per language tag warning for sh:name, sh:description, sh:message properties."@en ;
 	rdfs:label "Unique Lang Shape"@en ;
 	
 	sh:property bpsh:UniqueLangDescriptionShape ;
@@ -59,7 +59,7 @@ bpsh:UniqueLangMessageShape
 	sh:severity sh:Warning .
 	
 	
-bpsh:MessageShape				# message
+bpsh:MessageNodeShapePropertyShapeShape				# message
 	a sh:NodeShape ;
 	sh:targetClass sh:NodeShape ;
 	sh:targetClass sh:PropertyShape ;
@@ -67,33 +67,99 @@ bpsh:MessageShape				# message
 	rdfs:comment "Minimum requirements for sh:message property in SHACL."@en ;
 	rdfs:label "Message Shape"@en ;
 	
-	sh:property bpsh:MessageCountShape .
-
-
-bpsh:MessageCountShape
-	a sh:PropertyShape ;
-	
-	sh:name "Message Count Shape"@en ;
-	sh:description "Minimum count for sh:message property in SHACL."@en ;
-	
 	sh:message "A shape should have at least one value for sh:message in the shapes graph, then all validation results produced as a result of the shape will have exactly these messages as their value of sh:resultMessage."@en;
 	sh:severity sh:Warning ;
-		
+	
 	sh:or (
-		[
+		sh:property [
 				sh:path sh:message ;
 				sh:minCount 1 ;
 		]
-		[
+		sh:property [
 				sh:path (sh:property sh:message) ;
 				sh:minCount 1 ;
 		]
-		[
+		sh:property [
 				sh:path (sh:qualifiedValueShape sh:message) ;
 				sh:minCount 1 ;
 		]
-		[
+		sh:property [
 				sh:path (sh:property sh:node) ;
 				sh:minCount 1 ;
 		]
 	)  .
+	
+bpsh:NodeShapeShape			# label-nodeshape
+	a sh:NodeShape ;
+	sh:targetClass sh:NodeShape ;
+	
+	rdfs:comment "One value per language tag warning for rdfs:label, rdfs:comment properties."@en ;
+	rdfs:label "Nodeshape Shape"@en ;
+	
+	sh:message "Every NodeShape SHOULD contain rdfs:label and rdfs:comment, and they SHOULD only have one value per language tag."@en;
+	sh:severity sh:Warning ;
+	
+	sh:and(
+		sh:property bpsh:UniqueLangLabelShape 
+		sh:property bpsh:UniqueLangCommentShape 
+	) .
+
+
+bpsh:UniqueLangCommentShape
+	a sh:PropertyShape ;	
+	
+	sh:name "Unique Lang Label property"@en ;
+	sh:description "One value per language tag warning for rdfs:comment propert."@en ;
+	
+	sh:path rdfs:comment ;				
+	sh:uniqueLang true ;
+	sh:minCount 1 .
+
+
+bpsh:UniqueLangLabelShape
+	a sh:PropertyShape ;	
+	
+	sh:name "Unique Lang Label property"@en ;
+	sh:description "One value per language tag warning for rdfs:label propert."@en ;
+	
+	sh:path rdfs:label ;				
+	sh:uniqueLang true ;
+	sh:minCount 1 .
+	
+	
+bpsh:PropertyShapeShape			# name-property and description-property
+	a sh:NodeShape ;
+	sh:targetClass sh:PropertyShape ;
+	sh:targetObjectsOf sh:property ;
+	
+	rdfs:comment "Minimum count for sh:name and sh:description in sh:PropertyShape."@en ;
+	rdfs:label "PropertyShape Shape"@en ;
+	
+	sh:property bpsh:CountNameProperty ;
+	sh:property bpsh:CountDescriptionProperty .
+	
+
+bpsh:CountNameProperty 			# name-property 
+	a sh:PropertyShape ;
+	
+	sh:name "Name property"@en ;
+	sh:description "Minimum count for sh:name."@en ;
+		
+	sh:path sh:name ;				
+	sh:message "Each property SHALL have a sh:name (in the context of the target where it appears) to provide human-oriented labels. This is the preferred alternative to overwriting rdfs:labels coming from external foreign vocabularies to fit the context better."@en;
+	sh:minCount 1 ;
+	sh:severity sh:Warning .	
+	
+
+bpsh:CountDescriptionProperty 			# description-property 
+	a sh:PropertyShape ;
+	
+	sh:name "Description property"@en ;
+	sh:description "Minimum count for sh:description."@en ;
+		
+	sh:path sh:description ;				
+	sh:message "Each property SHOULD have sh:description (in the context of the target where it appears) to provide further human-oriented details. This is the preferred solution over adding additional usage notes to fit the context."@en;
+	sh:minCount 1 ;
+	sh:severity sh:Warning .	
+	
+	

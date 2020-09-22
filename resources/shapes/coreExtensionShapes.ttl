@@ -125,16 +125,6 @@ shsh:DeclareShape
 	] ;
 	
 	sh:property [
-		sh:name "Prefix count shape"@en ;
-		sh:description "Maximum and minimum count for sh:prefix class."@en ;
-		
-		sh:path (sh:declare sh:prefix) ;				
-		sh:message "Prefix declarations have exactly one value for the property sh:prefix."@en ;
-		sh:maxCount 1 ;					# prefix-count
-		sh:minCount 1 ;					# prefix-count
-	] ;
-	
-	sh:property [
 		sh:name "Prefix datatype shape"@en ;
 		sh:description "Datatype for sh:prefix class."@en ;
 		
@@ -144,22 +134,39 @@ shsh:DeclareShape
 	] ;
 	
 	sh:property [
-		sh:name "Namespace count shape"@en ;
-		sh:description "Maximum and minimum count for sh:namespace class."@en ;
-		
-		sh:path (sh:declare sh:namespace) ;				
-		sh:message "Prefix declarations have exactly one value for the property sh:namespace."@en ;
-		sh:maxCount 1 ;					# namespace-count
-		sh:minCount 1 ;					# namespace-count
-	] ;
-	
-	sh:property [
 		sh:name "Namespace datatype shape"@en ;
 		sh:description "Datatype for sh:namespace class."@en ;
 		
 		sh:path (sh:declare sh:namespace) ;
 		sh:message "The values of sh:namespace are literals of datatype xsd:anyURI."@en ;
 		sh:datatype xsd:anyURI ; 		# namespace-datatype
+	] .
+
+shsh:DeclareCountShape
+	a sh:NodeShape ;
+	sh:targetObjectsOf sh:declare ; 
+		
+	rdfs:comment "Constraints for objects of sh:declare class."@en ;
+	rdfs:label "Declare Shape"@en ;
+	
+	sh:property [
+		sh:name "Prefix count shape"@en ;
+		sh:description "Maximum and minimum count for sh:prefix class."@en ;
+		
+		sh:path sh:prefix ;				
+		sh:message "Prefix declarations have exactly one value for the property sh:prefix."@en ;
+		sh:maxCount 1 ;					# prefix-count
+		sh:minCount 1 ;					# prefix-count
+	] ;
+	
+	sh:property [
+		sh:name "Namespace count shape"@en ;
+		sh:description "Maximum and minimum count for sh:namespace class."@en ;
+		
+		sh:path sh:namespace ;				
+		sh:message "Prefix declarations have exactly one value for the property sh:namespace."@en ;
+		sh:maxCount 1 ;					# namespace-count
+		sh:minCount 1 ;					# namespace-count
 	] .
 
 shsh:ContstraintComponentShape
