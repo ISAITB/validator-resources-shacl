@@ -99,11 +99,29 @@ adsh:ResultAnnotationShape
 	] ;
 	
 	sh:property [
-		sh:name "ResultAnnotation Count shape"@en ;
-		sh:description "Maximum and minimum count for sh:resultAnnotation class."@en ;
+		sh:name "AnnotationVarName datatype shape"@en ;
+		sh:description "Datatype for sh:annotationVarName class."@en ;
 		
-		sh:path (sh:resultAnnotation sh:annotationProperty) ;
+		sh:path (sh:resultAnnotation sh:annotationVarName) ;
+		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string."@en ;
+		sh:datatype xsd:string ;	 				# annotationVarName
+	] .
+
+	
+adsh:ResultAnnotationCountShape
+	a sh:NodeShape ;
+	sh:targetObjectsOf sh:resultAnnotation ;
+	
+	rdfs:comment "Requirements for objects of sh:resultAnnotation class."@en ;
+	rdfs:label "Result Annotation Count Shape"@en ;
+		
+	sh:property [
+		sh:name "AnnotationProperty Count shape"@en ;
+		sh:description "Maximum and minimum count for sh:annotationProperty class."@en ;
+		
+		sh:path sh:annotationProperty ;
 		sh:message "Each result annotation has exactly one value for the property sh:annotationProperty and this value is an IRI."@en ;
+		sh:nodeKind sh:IRI ;	
 		sh:maxCount 1 ;					# annotationProperty
 		sh:minCount 1 ;					# annotationProperty
 	] ;
@@ -112,18 +130,9 @@ adsh:ResultAnnotationShape
 		sh:name "AnnotationVarName count shape"@en ;
 		sh:description "Maximum count for sh:annotationVarName class."@en ;
 		
-		sh:path (sh:resultAnnotation sh:annotationVarName) ;
+		sh:path sh:annotationVarName ;
 		sh:message "Each result annotation has at most 1 value for the property sh:annotationVarName."@en ;
 		sh:maxCount 1 ;					# annotationVarName
-	] ;
-	
-	sh:property [
-		sh:name "AnnotationVarName datatype shape"@en ;
-		sh:description "Datatype for sh:annotationVarName class."@en ;
-		
-		sh:path (sh:resultAnnotation sh:annotationVarName) ;
-		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string."@en ;
-		sh:datatype xsd:string ;	 				# annotationVarName
 	] .
 	
 
@@ -241,7 +250,7 @@ adsh:PathExpressionShape			# PathExpression
 
 adsh:RuleTypeShape					# Rule-type
 	a sh:NodeShape ;
-	sh:targetSubjectsOf sh:rule ;
+	sh:targetObjectsOf sh:rule ;
 	sh:message "Each SHACL rule has at least one rdf:type which is a IRI."@en ;
 	
 	rdfs:comment "Requirements for rdf:type property in sh:rule class."@en ;
@@ -252,7 +261,7 @@ adsh:RuleTypeShape					# Rule-type
 			sh:name "Type count shape"@en ;
 			sh:description "Maximum and minimum count for rdf:type class."@en ;
 			
-			sh:path (sh:rule rdf:type) ;
+			sh:path rdf:type ;
 			sh:maxCount 1 ;
 			sh:minCount 1 ;
 		] 
@@ -260,7 +269,7 @@ adsh:RuleTypeShape					# Rule-type
 			sh:name "Type NodeKind shape"@en ;
 			sh:description "NodeKind for rdf:type class."@en ;
 			
-			sh:path (sh:rule rdf:type) ;
+			sh:path rdf:type ;
 			sh:nodeKind sh:IRI ;
 		] 
 	) .	
@@ -294,7 +303,7 @@ adsh:OrderShape
 
 adsh:RuleDeactivatedShape					
 	a sh:NodeShape ;
-	sh:targetSubjectsOf sh:rule ;
+	sh:targetObjectsOf sh:rule ;
 	
 	rdfs:comment "Requirements for sh:deactivated property in sh:rule class."@en ;
 	rdfs:label "Order Shape"@en ;
@@ -303,7 +312,7 @@ adsh:RuleDeactivatedShape
 		sh:name "Deactivated count shape"@en ;
 		sh:description "Maximum count for sh:deactivated class."@en ;
 		
-		sh:path (sh:rule sh:deactivated) ;		# deactivated-maxCount
+		sh:path sh:deactivated ;		# deactivated-maxCount
 		sh:maxCount 1 ;
 		sh:message "Each rule may have at most one value for the property sh:deactivated."@en ;
 	] ;
@@ -312,7 +321,7 @@ adsh:RuleDeactivatedShape
 		sh:name "Deactivated datatype and NodeKind shape"@en ;
 		sh:description "Datatype and NodeKind for sh:deactivated class."@en ;
 		
-		sh:path (sh:rule sh:deactivated) ;
+		sh:path sh:deactivated ;
 		sh:nodeKind sh:Literal ;
 		sh:datatype xsd:boolean ;
 		sh:message "The values of sh:deactivated are either of the xsd:boolean literals true or false."@en ;

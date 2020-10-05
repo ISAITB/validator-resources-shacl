@@ -36,16 +36,6 @@ shsh:SparqlShape
 	] ;
 	
 	sh:property [
-		sh:name "Select count shape"@en ;
-		sh:description "Maximum and minimum count for sh:select class."@en ;
-		
-		sh:path (sh:sparql sh:select) ;				
-		sh:message "SPARQL-based constraints have exactly one value for the property sh:select."@en ;
-		sh:maxCount 1 ;					# SPARQLConstraint-select-count
-		sh:minCount 1 ;					# SPARQLConstraint-select-count
-	] ;
-	
-	sh:property [
 		sh:name "Select NodeKind shape"@en ;
 		sh:description "NodeKind for sh:select class."@en ;
 		
@@ -74,15 +64,6 @@ shsh:SparqlShape
 	] ;
 	
 	sh:property [
-		sh:name "Deactivated count shape"@en ;
-		sh:description "Maximum count for sh:deactivated class."@en ;
-		
-		sh:path (sh:sparql sh:deactivated) ;
-		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated."@en ;
-		sh:maxCount 1 ;					# SPARQLConstraint-deactivated-maxCount
-	] ;
-	
-	sh:property [
 		sh:name "Prefixes nodeKind shape"@en ;
 		sh:description "NodeKind for sh:prefixes class."@en ;
 		
@@ -106,7 +87,33 @@ shsh:SelectShape
 		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query."@en ;
 		sh:pattern "\\s*SELECT\\s+(?:(?:DISTINCT)|(?:REDUCED))?\\s*.*(?:WHERE)\\s*\\{.*\\}" ;
 		sh:flags "si" ;
-	] .	
+	] .
+	
+shsh:SparqlCountShape
+	a sh:NodeShape ;
+	sh:targetObjectsOf sh:sparql ; 
+		
+	rdfs:comment "Requirements for objects of sh:sparql class."@en ;
+	rdfs:label "SPARQL Select Shape"@en ;
+	
+	sh:property [
+		sh:name "Select count shape"@en ;
+		sh:description "Maximum and minimum count for sh:select class."@en ;
+		
+		sh:path sh:select ;				
+		sh:message "SPARQL-based constraints have exactly one value for the property sh:select."@en ;
+		sh:maxCount 1 ;					# SPARQLConstraint-select-count
+		sh:minCount 1 ;					# SPARQLConstraint-select-count
+	] ;
+	
+	sh:property [
+		sh:name "Deactivated count shape"@en ;
+		sh:description "Maximum count for sh:deactivated class."@en ;
+		
+		sh:path sh:deactivated ;
+		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated."@en ;
+		sh:maxCount 1 ;					# SPARQLConstraint-deactivated-maxCount
+	] .
 
 shsh:DeclareShape
 	a sh:NodeShape ;
@@ -169,18 +176,19 @@ shsh:DeclareCountShape
 		sh:minCount 1 ;					# namespace-count
 	] .
 
-shsh:ContstraintComponentShape
+
+shsh:ParameterShape
 	a sh:NodeShape ;			
-	sh:targetClass sh:ConstraintComponent ;		# ConstraintComponent
+	sh:targetObjectsOf sh:parameter ;
 		
-	rdfs:comment "Requirements for sh:ConstraintComponent class."@en ;
-	rdfs:label "Constraint Component Shape"@en ;
-	
+	rdfs:comment "Requirements for sh:parameter class."@en ;
+	rdfs:label "Parameter Shape"@en ;
+		
 	sh:property [
 		sh:name "Optional datatype shape"@en ;
 		sh:description "Datatype for sh:optional class."@en ;
 		
-		sh:path (sh:parameter sh:optional) ;
+		sh:path sh:optional ;
 		sh:message "The values of sh:optional must be literals with datatype xsd:boolean."@en ;
 		sh:datatype xsd:boolean ;		# optional-datatype
 	] ;
@@ -189,10 +197,18 @@ shsh:ContstraintComponentShape
 		sh:name "Optional count shape"@en ;
 		sh:description "Maximum count for sh:optional class."@en ;
 		
-		sh:path (sh:parameter sh:optional) ;
+		sh:path sh:optional ;
 		sh:message "A parameter declaration can have at most one value for the property sh:optional."@en ;
 		sh:maxCount 1 ;	 				# optional-maxCount
-	] ;
+	] .
+
+
+shsh:ContstraintComponentShape
+	a sh:NodeShape ;			
+	sh:targetClass sh:ConstraintComponent ;		# ConstraintComponent
+		
+	rdfs:comment "Requirements for sh:ConstraintComponent class."@en ;
+	rdfs:label "Constraint Component Shape"@en ;
 	
 	sh:property [
 		sh:name "LabelTemplate datatype shape"@en ;
