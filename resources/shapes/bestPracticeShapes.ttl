@@ -29,9 +29,32 @@ bpsh:UniqueLangDescriptionShape
 	sh:name "Unique Lang Description property"@en ;
 	sh:description "One value per language tag warning for sh:description properties."@en ;
 		
-	sh:path sh:description ;				
+	sh:path sh:description ;
+	sh:message "Както sh:name, така и sh:description може да имат множество стойности, но трябва да имат само една стойност за езиков етикет."@bg ;
+   	sh:message "sh:name i sh:description mohou mít více hodnot, ale měly by mít pouze jednu hodnotu na značku jazyka."@cs ;
+    sh:message "Både sh:name og sh:description kan have flere værdier, men bør kun have én værdi pr. sprogtag."@da ;
+    sh:message "Sowohl sh:name als auch sh:description können mehrere Werte haben, sollten aber nur einen Wert pro Sprach-Tag haben."@de ;
+    sh:message "Και το sh:name και το [sh:description μπορεί να έχουν πολλαπλές τιμές, αλλά θα πρέπει να έχουν μόνο μία τιμή ανά ετικέτα γλώσσας."@el ;
 	sh:message "Both sh:name and sh:description may have multiple values, but should only have one value per language tag."@en;
-	sh:uniqueLang true ;	
+	sh:message "Tanto sh:name como sh:description pueden tener varios valores, pero solo deben tener un valor por etiqueta de idioma."@es ;
+    sh:message "Nii sh:name kui ka sh:description võib sisaldada mitut väärtust, kuid keelemärgendi kohta peaks olema ainult üks väärtus."@et ;
+    sh:message "Sekä sh:name:llä ja sh:description:lla voi olla useita arvoja, mutta kielitagia kohden saa olla vain yksi arvo."@fi ;
+    sh:message "sh:name et sh:description peuvent avoir plusieurs valeurs, mais ne doivent avoir qu'une seule valeur par balise de langue."@fr ;
+    sh:message "D’fhéadfadh go mbeadh illuachanna ag sh:name agus sh:description, ach níor cheart go mbeadh ach luach amháin in aghaidh na clibeanna teanga acu."@ga ;
+    sh:message "I sh:name i sh:description mogu imati više vrijednosti, ali trebaju imati samo jednu vrijednost po jezičnoj oznaci."@hr ;
+    sh:message "Mind az sh:name, mind a sh:description több értékkel rendelkezhet, de nyelvi címkénként csak egy értékkel rendelkezhet."@hu ;
+    sh:message "Sia sh:name che sh:description possono avere più valori, ma dovrebbero avere un solo valore per tag di lingua."@it ;
+    sh:message "Ir sh:name, ir sh:description gali turėti kelias reikšmes, bet turi turėti tik vieną kiekvienos kalbos žymos reikšmę."@lt ;
+    sh:message "Gan sh:name, gan sh:description var būt vairākas vērtības, taču katrai valodas tagam drīkst būt tikai viena vērtība."@lv ;
+    sh:message "Kemm sh:name kif ukoll sh:description jista' jkollhom valuri multipli, iżda għandu jkollhom valur wieħed biss għal kull tag tal-lingwa."@mt ;
+    sh:message "Zowel sh:name als sh:description kunnen meerdere waarden hebben, maar mogen slechts één waarde per taaltag hebben."@nl ;
+    sh:message "Zarówno sh:name, jak i sh:description mogą mieć wiele wartości, ale powinny mieć tylko jedną wartość na tag języka."@pl ;
+    sh:message "Tanto sh:name quanto sh:description podem ter vários valores, mas devem ter apenas um valor por tag de idioma."@pt ;
+    sh:message "Atât sh:name, cât și sh:description pot avea mai multe valori, dar ar trebui să aibă o singură valoare pentru fiecare etichetă de limbă."@ro ;
+    sh:message "sh:name aj sh:description môžu mať viacero hodnôt, ale pre každú jazykovú značku by mali mať iba jednu hodnotu."@sk ;
+    sh:message "Tako sh:name kot sh:description imata lahko več vrednosti, vendar morata imeti samo eno vrednost na jezikovno oznako."@sl ;
+    sh:message "Både sh:name och sh:description kan ha flera värden, men bör bara ha ett värde per språktagg."@sv ;
+	sh:uniqueLang true ;
 	sh:severity sh:Warning .
 
 
@@ -41,8 +64,31 @@ bpsh:UniqueLangNameShape
 	sh:name "Unique Lang Name property"@en ;
 	sh:description "One value per language tag warning for sh:name properties."@en ;
 	
-	sh:path sh:name ;				
+	sh:path sh:name ;
+	sh:message "Както sh:name, така и sh:description може да имат множество стойности, но трябва да имат само една стойност за езиков етикет."@bg ;
+   	sh:message "sh:name i sh:description mohou mít více hodnot, ale měly by mít pouze jednu hodnotu na značku jazyka."@cs ;
+    sh:message "Både sh:name og sh:description kan have flere værdier, men bør kun have én værdi pr. sprogtag."@da ;
+    sh:message "Sowohl sh:name als auch sh:description können mehrere Werte haben, sollten aber nur einen Wert pro Sprach-Tag haben."@de ;
+    sh:message "Και το sh:name και το sh:description μπορεί να έχουν πολλαπλές τιμές, αλλά θα πρέπει να έχουν μόνο μία τιμή ανά ετικέτα γλώσσας."@el ;
 	sh:message "Both sh:name and sh:description may have multiple values, but should only have one value per language tag."@en;
+	sh:message "Tanto sh:name como sh:description pueden tener varios valores, pero solo deben tener un valor por etiqueta de idioma."@es ;
+    sh:message "Nii sh:name kui ka sh:description võib sisaldada mitut väärtust, kuid keelemärgendi kohta peaks olema ainult üks väärtus."@et ;
+    sh:message "Sekä sh:name:llä ja sh:description:lla voi olla useita arvoja, mutta kielitagia kohden saa olla vain yksi arvo."@fi ;
+    sh:message "sh:name et sh:description peuvent avoir plusieurs valeurs, mais ne doivent avoir qu'une seule valeur par balise de langue."@fr ;
+    sh:message "D’fhéadfadh go mbeadh illuachanna ag sh:name agus sh:description, ach níor cheart go mbeadh ach luach amháin in aghaidh na clibeanna teanga acu."@ga ;
+    sh:message "I sh:name i sh:description mogu imati više vrijednosti, ali trebaju imati samo jednu vrijednost po jezičnoj oznaci."@hr ;
+    sh:message "Mind az sh:name, mind a sh:description több értékkel rendelkezhet, de nyelvi címkénként csak egy értékkel rendelkezhet."@hu ;
+    sh:message "Sia sh:name che sh:description possono avere più valori, ma dovrebbero avere un solo valore per tag di lingua."@it ;
+    sh:message "Ir sh:name, ir sh:description gali turėti kelias reikšmes, bet turi turėti tik vieną kiekvienos kalbos žymos reikšmę."@lt ;
+    sh:message "Gan sh:name, gan sh:description var būt vairākas vērtības, taču katrai valodas tagam drīkst būt tikai viena vērtība."@lv ;
+    sh:message "Kemm sh:name kif ukoll sh:description jista' jkollhom valuri multipli, iżda għandu jkollhom valur wieħed biss għal kull tag tal-lingwa."@mt ;
+    sh:message "Zowel sh:name als sh:description kunnen meerdere waarden hebben, maar mogen slechts één waarde per taaltag hebben."@nl ;
+    sh:message "Zarówno sh:name, jak i sh:description mogą mieć wiele wartości, ale powinny mieć tylko jedną wartość na tag języka."@pl ;
+    sh:message "Tanto sh:name quanto sh:description podem ter vários valores, mas devem ter apenas um valor por tag de idioma."@pt ;
+    sh:message "Atât sh:name, cât și sh:description pot avea mai multe valori, dar ar trebui să aibă o singură valoare pentru fiecare etichetă de limbă."@ro ;
+    sh:message "sh:name aj sh:description môžu mať viacero hodnôt, ale pre každú jazykovú značku by mali mať iba jednu hodnotu."@sk ;
+    sh:message "Tako sh:name kot sh:description imata lahko več vrednosti, vendar morata imeti samo eno vrednost na jezikovno oznako."@sl ;
+    sh:message "Både sh:name och sh:description kan ha flera värden, men bör bara ha ett värde per språktagg."@sv ;
 	sh:uniqueLang true ;
 	sh:severity sh:Warning .
 
@@ -53,8 +99,31 @@ bpsh:UniqueLangMessageShape
 	sh:name "Unique Lang Message property"@en ;
 	sh:description "One value per language tag warning for sh:message properties."@en ;
 	
-	sh:path sh:message ;				
+	sh:path sh:message ;
+	sh:message "Една фигура не трябва да има повече от една стойност за sh:message със същия езиков таг."@bg ;
+   	sh:message "Tvar by neměl mít více než jednu hodnotu pro sh:message se stejným jazykovým tagem."@cs ;
+    sh:message "En form bør ikke have mere end én værdi for sh:message med det samme sprogtag."@da ;
+    sh:message "Eine Form sollte nicht mehr als einen Wert für sh:message mit demselben Sprach-Tag haben."@de ;
+    sh:message "Ένα σχήμα δεν πρέπει να έχει περισσότερες από μία τιμές για sh:message με την ίδια ετικέτα γλώσσας."@el ;
 	sh:message "A shape should not have more than one value for sh:message with the same language tag."@en;
+	sh:message "Una forma no debe tener más de un valor para sh:message con la misma etiqueta de idioma."@es ;
+    sh:message "Kujundil ei tohi olla rohkem kui üks väärtus sama keelesildiga sh:message jaoks."@et ;
+    sh:message "Muodon sh:message:lle ei saa olla enempää kuin yksi arvo samalla kielitunnisteella."@fi ;
+    sh:message "Une forme ne doit pas avoir plus d'une valeur pour sh:message avec la même balise de langue."@fr ;
+    sh:message "Níor cheart go mbeadh níos mó ná luach amháin ag cruth le haghaidh sh:message leis an gclib teanga céanna."@ga ;
+    sh:message "Oblik ne smije imati više od jedne vrijednosti za sh:message s istom jezičnom oznakom."@hr ;
+    sh:message "Egy alakzatnak nem lehet több értéke az sh:message-hez ugyanazzal a nyelvi címkével."@hu ;
+    sh:message "Una forma non deve avere più di un valore per sh:message con lo stesso tag di lingua."@it ;
+    sh:message "Forma negali turėti daugiau nei vienos sh:message reikšmės su ta pačia kalbos žyma."@lt ;
+    sh:message "Formā nedrīkst būt vairāk par vienu vērtību sh:message ar vienu un to pašu valodas tagu."@lv ;
+    sh:message "Forma m'għandux ikollha aktar minn valur wieħed għal sh:message bl-istess tikketta tal-lingwa."@mt ;
+    sh:message "Een vorm mag niet meer dan één waarde hebben voor sh:message met dezelfde taaltag."@nl ;
+    sh:message "Kształt nie powinien mieć więcej niż jednej wartości dla sh:message z tym samym znacznikiem języka."@pl ;
+    sh:message "Uma forma não deve ter mais de um valor para sh:message com a mesma tag de idioma."@pt ;
+    sh:message "O formă nu trebuie să aibă mai mult de o valoare pentru sh:message cu aceeași etichetă de limbă."@ro ;
+    sh:message "Tvar by nemal mať viac ako jednu hodnotu pre sh:message s rovnakou jazykovou značkou."@sk ;
+    sh:message "Oblika ne sme imeti več kot ene vrednosti za sh:message z isto jezikovno oznako."@sl ;
+    sh:message "En form bör inte ha mer än ett värde för sh:message med samma språktagg."@sv ;
 	sh:uniqueLang true ;
 	sh:severity sh:Warning .
 	
@@ -66,8 +135,31 @@ bpsh:MessageNodeShapePropertyShapeShape				# message
 	
 	rdfs:comment "Minimum requirements for sh:message property in SHACL."@en ;
 	rdfs:label "Message Shape"@en ;
-	
+
+	sh:message "Една форма трябва да има поне една стойност за sh:message в графиката на формите, тогава всички резултати от валидиране, получени в резултат на формата, ще имат точно тези съобщения като стойност на sh:resultMessage."@bg ;
+   	sh:message "Tvar by měl mít v grafu tvarů alespoň jednu hodnotu pro sh:message, pak všechny výsledky ověření vytvořené jako výsledek tvaru budou mít přesně tyto zprávy jako hodnotu sh:resultMessage."@cs ;
+    sh:message "En form skal have mindst én værdi for sh:message i figurgrafen, så vil alle valideringsresultater, der er produceret som et resultat af formen, have præcis disse meddelelser som deres værdi af sh:resultMessage."@da ;
+    sh:message "Eine Form sollte mindestens einen Wert für sh:message im Shapes-Diagramm haben, dann haben alle als Ergebnis der Form erzeugten Validierungsergebnisse genau diese Nachrichten als ihren Wert von sh:resultMessage."@de ;
+    sh:message "Ένα σχήμα πρέπει να έχει τουλάχιστον μία τιμή για το sh:message στο γράφημα των σχημάτων, τότε όλα τα αποτελέσματα επικύρωσης που παράγονται ως αποτέλεσμα του σχήματος θα έχουν ακριβώς αυτά τα μηνύματα ως την τιμή του sh:resultMessage."@el ;
 	sh:message "A shape should have at least one value for sh:message in the shapes graph, then all validation results produced as a result of the shape will have exactly these messages as their value of sh:resultMessage."@en;
+	sh:message "Una forma debe tener al menos un valor para sh:message en el gráfico de formas, luego todos los resultados de validación producidos como resultado de la forma tendrán exactamente estos mensajes como su valor de sh:resultMessage."@es ;
+    sh:message "Kujundil peab kujundite graafikus olema vähemalt üks väärtus sh:message, siis on kõikidel kujundi tulemusel saadud valideerimistulemustel sh:resultMessage väärtuseks täpselt need sõnumid."@et ;
+    sh:message "Muodolla tulee olla vähintään yksi arvo sh:message:lle muotokuvaajassa, jolloin kaikissa muodon tuloksena syntyneissä vahvistustuloksissa on täsmälleen nämä viestit sh:resultMessage-arvona."@fi ;
+    sh:message "Une forme doit avoir au moins une valeur pour sh:message dans le graphique des formes, puis tous les résultats de validation produits à la suite de la forme auront exactement ces messages comme valeur de sh:resultMessage."@fr ;
+    sh:message "Ba cheart go mbeadh luach amháin ar a laghad ag cruth le haghaidh sh:message sa ghraf cruthanna, ansin beidh na teachtaireachtaí seo go díreach mar luach sh:resultMessage ar gach toradh bailíochtaithe a tháirgtear mar thoradh ar an gcruth."@ga ;
+    sh:message "Oblik bi trebao imati barem jednu vrijednost za sh:message u grafikonu oblika, tada će svi rezultati provjere valjanosti proizvedeni kao rezultat oblika imati upravo te poruke kao vrijednost sh:resultMessage."@hr ;
+    sh:message "Egy alakzatnak legalább egy értékkel kell rendelkeznie az sh:message számára az alakzatok gráfjában, akkor az alakzat eredményeként kapott összes érvényesítési eredmény pontosan ezek az üzenetek az sh:resultMessage értéke."@hu ;
+    sh:message "Una forma deve avere almeno un valore per sh:message nel grafico delle forme, quindi tutti i risultati di convalida prodotti come risultato della forma avranno esattamente questi messaggi come valore di sh:resultMessage."@it ;
+    sh:message "Forma turi turėti bent vieną reikšmę sh:message formų diagramoje, tada visi patvirtinimo rezultatai, sukurti kaip formos rezultatas, turės būtent šiuos pranešimus kaip sh:resultMessage reikšmę."@lt ;
+    sh:message "Formas grafikā ir jābūt vismaz vienai sh:message vērtībai, tad visiem formas rezultātā iegūtajiem validācijas rezultātiem būs tieši šie ziņojumi kā sh:resultMessage vērtība."@lv ;
+    sh:message "Forma għandu jkollha mill-inqas valur wieħed għal sh:message fil-grafika tal-forom, allura r-riżultati kollha tal-validazzjoni prodotti bħala riżultat tal-forma jkollhom eżattament dawn il-messaġġi bħala l-valur tagħhom ta' sh:resultMessage."@mt ;
+    sh:message "Een vorm moet ten minste één waarde hebben voor sh:message in de vormengrafiek, dan zullen alle validatieresultaten die als resultaat van de vorm worden geproduceerd, exact deze berichten hebben als hun waarde van sh:resultMessage."@nl ;
+    sh:message "Kształt powinien mieć co najmniej jedną wartość dla sh:message na wykresie kształtów, wtedy wszystkie wyniki walidacji uzyskane w wyniku kształtu będą miały dokładnie te komunikaty jako ich wartość sh:resultMessage."@pl ;
+    sh:message "Uma forma deve ter pelo menos um valor para sh:message no gráfico de formas, então todos os resultados de validação produzidos como resultado da forma terão exatamente essas mensagens como seu valor de sh:resultMessage."@pt ;
+    sh:message "O formă ar trebui să aibă cel puțin o valoare pentru sh:message în graficul formelor, apoi toate rezultatele de validare produse ca urmare a formei vor avea exact aceste mesaje ca valoare de sh:resultMessage."@ro ;
+    sh:message "Tvar by mal mať v grafe tvarov aspoň jednu hodnotu pre sh:message, potom všetky výsledky overenia vytvorené ako výsledok tvaru budú mať presne tieto správy ako hodnotu sh:resultMessage."@sk ;
+    sh:message "Oblika mora imeti vsaj eno vrednost za sh:message v grafu oblik, potem bodo vsi rezultati preverjanja, ustvarjeni kot rezultat oblike, imeli natanko ta sporočila kot vrednost sh:resultMessage."@sl ;
+    sh:message "En form bör ha minst ett värde för sh:message i formdiagrammet, då kommer alla valideringsresultat som skapas som ett resultat av formen att ha exakt dessa meddelanden som deras värde på sh:resultMessage."@sv ;
 	sh:severity sh:Warning ;
 	
 	sh:or (
@@ -95,8 +187,31 @@ bpsh:NodeShapeShape			# label-nodeshape
 	
 	rdfs:comment "One value per language tag warning for rdfs:label, rdfs:comment properties."@en ;
 	rdfs:label "Nodeshape Shape"@en ;
-	
+
+	sh:message "Всеки NodeShape ТРЯБВА да съдържа rdfs:label rdfs:comment и ТРЯБВА да има само една стойност на езиков таг."@bg ;
+   	sh:message "Každý NodeShape BY MĚL obsahovat rdfs:label a rdfs:comment a MĚLY by mít pouze jednu hodnotu na značku jazyka."@cs ;
+    sh:message "Hver NodeShape SKAL indeholde rdfs:label en rdfs:comment, og de SKAL kun have én værdi pr. sprogtag."@da ;
+    sh:message "Jede NodeShape SOLLTE rdfs:label und rdfs:comment enthalten, und sie SOLLTEN nur einen Wert pro Sprach-Tag haben."@de ;
+    sh:message "Κάθε NodeShape ΠΡΕΠΕΙ να περιέχει rdfs:label ένα rdfs:comment και ΠΡΕΠΕΙ να έχει μόνο μία τιμή ανά ετικέτα γλώσσας."@el ;
 	sh:message "Every NodeShape SHOULD contain rdfs:label and rdfs:comment, and they SHOULD only have one value per language tag."@en;
+	sh:message "Cada NodeShape DEBERÍA contener rdfs:label y rdfs:comment, y solo DEBERÍA tener un valor por etiqueta de idioma."@es ;
+    sh:message "Iga NodeShape PEAKS sisaldama rdfs:label ja rdfs:comment ja neil PEAKS olema ainult üks väärtus keelesildi kohta."@et ;
+    sh:message "Jokaisessa NodeShapessa PITÄISI sisältää rdfs:label ja rdfs:comment, ja niillä PITÄÄ olla vain yksi arvo kielitunnistetta kohden."@fi ;
+    sh:message "Chaque NodeShape DEVRAIT contenir rdfs:label et rdfs:comment, et ils DEVRAIENT n'avoir qu'une seule valeur par balise de langue."@fr ;
+    sh:message "BA CHÓIR rdfs:label rdfs:comment a bheith i ngach NodeShape, agus NÍ CHÓIR ach luach amháin a bheith acu in aghaidh na clibe teanga."@ga ;
+    sh:message "Svaki NodeShape TREBA sadržavati rdfs:label i rdfs:comment, i TREBAJU imati samo jednu vrijednost po jezičnoj oznaci."@hr ;
+    sh:message "Minden NodeShape-nek tartalmaznia KELL az rdfs:label egy rdfs:comment-ot, és nyelvi címkénként csak egy értékkel KELL rendelkeznie."@hu ;
+    sh:message "Ogni NodeShape DOVREBBE contenere rdfs:label e rdfs:comment, e DOVREBBE avere solo un valore per tag di lingua."@it ;
+    sh:message "Kiekvienoje „NodeShape“ TURI būti rdfs:label ir rdfs:comment, ir jie TURI turėti tik vieną kiekvienos kalbos žymos reikšmę."@lt ;
+    sh:message "Katrā NodeShape BŪTĪT BŪTĪT jāietver rdfs:label un rdfs:comment, un katram valodas tagam BŪTĪT BŪTĪTA ir tikai viena vērtība."@lv ;
+    sh:message "Kull NodeShape GĦANDU jkun fih rdfs:label an rdfs:comment, u GĦANDU jkollhom biss valur wieħed għal kull tag tal-lingwa."@mt ;
+    sh:message "Elke NodeShape MOET rdfs:label en rdfs:comment bevatten, en ze MOETEN maar één waarde per taaltag hebben."@nl ;
+    sh:message "Każdy NodeShape POWINIEN zawierać rdfs:label i rdfs:comment i POWINNY mieć tylko jedną wartość na znacznik języka."@pl ;
+    sh:message "Cada NodeShape DEVE conter rdfs:label um rdfs:comment, e eles DEVEM ter apenas um valor por tag de idioma."@pt ;
+    sh:message "Fiecare NodeShape TREBUIE să conțină rdfs:label un rdfs:comment și TREBUIE să aibă o singură valoare pentru fiecare etichetă de limbă."@ro ;
+    sh:message "Každý NodeShape BY MAL obsahovať rdfs:label a rdfs:comment a MALI by mať iba jednu hodnotu na jazykovú značku."@sk ;
+    sh:message "Vsak NodeShape MORA vsebovati rdfs:label rdfs:comment, in MORAJO imeti samo eno vrednost na jezikovno oznako."@sl ;
+    sh:message "Varje NodeShape SKA innehålla rdfs:label en rdfs:comment, och de SKA bara ha ett värde per språktagg."@sv ;
 	sh:severity sh:Warning ;
 	
 	sh:and(
@@ -145,8 +260,31 @@ bpsh:CountNameProperty 			# name-property
 	sh:name "Name property"@en ;
 	sh:description "Minimum count for sh:name."@en ;
 		
-	sh:path sh:name ;				
+	sh:path sh:name ;
+	sh:message "Всяко свойство ТРЯБВА да има sh:name (в контекста на целта, където се появява), за да осигури ориентирани към човека етикети. Това е предпочитаната алтернатива на презаписването на rdfs:labels, идващи от външни чужди речници, за да пасне по-добре на контекста."@bg ;
+   	sh:message "Každá vlastnost BY MĚLA mít sh:name (v kontextu cíle, kde se vyskytuje), aby poskytovala popisky orientované na člověka. Toto je preferovaná alternativa k přepisování rdfs:labels pocházejících z externích cizích slovníků, aby lépe odpovídaly kontextu."@cs ;
+    sh:message "Hver egenskab SKAL have et sh:name (i sammenhæng med målet, hvor den vises) for at give menneskeorienterede etiketter. Dette er det foretrukne alternativ til at overskrive rdfs:labels fra eksterne udenlandske ordforråd for at passe bedre til konteksten."@da ;
+    sh:message "Jede Eigenschaft MUSS einen sh:name haben (im Kontext des Ziels, wo er erscheint), um auf den Menschen ausgerichtete Bezeichnungen bereitzustellen. Dies ist die bevorzugte Alternative zum Überschreiben von rdfs:labels aus externen Fremdvokabularien, um besser in den Kontext zu passen."@de ;
+    sh:message "Κάθε ιδιότητα ΠΡΕΠΕΙ να έχει ένα sh:name (στο πλαίσιο του στόχου όπου εμφανίζεται) για να παρέχει ετικέτες προσανατολισμένες στον άνθρωπο. Αυτή είναι η προτιμώμενη εναλλακτική για την αντικατάσταση rdfs:labels που προέρχονται από εξωτερικά ξένα λεξιλόγια για να ταιριάζει καλύτερα στο πλαίσιο."@el ;
 	sh:message "Each property SHALL have a sh:name (in the context of the target where it appears) to provide human-oriented labels. This is the preferred alternative to overwriting rdfs:labels coming from external foreign vocabularies to fit the context better."@en;
+	sh:message "Cada propiedad DEBE tener un sh:name (en el contexto del objetivo donde aparece) para proporcionar etiquetas orientadas a personas. Esta es la alternativa preferida para sobrescribir rdfs:labels provenientes de vocabularios extranjeros externos para adaptarse mejor al contexto."@es ;
+    sh:message "Igal atribuudil PEAB olema sh:name (sihtmärgi kontekstis, kus see kuvatakse), et pakkuda inimesele suunatud silte. See on eelistatud alternatiiv välistest võõrsõnavaradest pärit rdfs:labels ülekirjutamisele, et see sobiks paremini konteksti."@et ;
+    sh:message "Jokaisella omaisuudella PITÄÄ olla sh:name (kohteen yhteydessä, jossa se esiintyy), jotta voidaan tarjota ihmisille suunnattuja tunnisteita. Tämä on suositeltavin vaihtoehto ulkoisista vieraista sanastoista peräisin olevien rdfs:labels päällekirjoitukselle, jotta se sopii paremmin kontekstiin."@fi ;
+    sh:message "Chaque propriété DOIT avoir un sh:name (dans le contexte de la cible où il apparaît) pour fournir des étiquettes orientées vers l'humain. C'est l'alternative préférée à l'écrasement de rdfs:labels provenant de vocabulaires étrangers externes pour mieux s'adapter au contexte."@fr ;
+    sh:message "BEIDH sh:name ag gach airí (i gcomhthéacs na sprice mar a fheictear é) chun lipéid atá dírithe ar an duine a sholáthar. Is é seo an rogha rogha eile seachas forscríobh rdfs:labels a thagann ó stór focal eachtracha seachtracha chun an comhthéacs a oiriúnú níos fearr."@ga ;
+    sh:message "Svako svojstvo MREĆE imati sh:name (u kontekstu cilja gdje se pojavljuje) za pružanje oznaka usmjerenih na ljude. Ovo je poželjna alternativa prepisivanju rdfs:labels koji dolaze iz vanjskih stranih rječnika kako bi se bolje uklopili u kontekst."@hr ;
+    sh:message "Minden tulajdonságnak rendelkeznie KELL egy sh:name-vel (a cél kontextusában, ahol megjelenik), hogy emberorientált címkéket biztosítson. Ez a legjobb alternatíva a külső idegen szókincsekből származó rdfs:labels felülírására, hogy jobban illeszkedjen a kontextushoz."@hu ;
+    sh:message "Ogni proprietà DEVE avere un sh:name (nel contesto della destinazione in cui appare) per fornire etichette orientate all'uomo. Questa è l'alternativa preferita alla sovrascrittura di rdfs:labels provenienti da vocabolari esterni esterni per adattarsi meglio al contesto."@it ;
+    sh:message "Kiekviena nuosavybė TURI turėti sh:name (tikslo kontekste, kuriame jis rodomas), kad būtų pateiktos į žmogų skirtos etiketės. Tai yra tinkamiausia alternatyva perrašyti rdfs:labels iš išorinių užsienio žodynų, kad geriau atitiktų kontekstą."@lt ;
+    sh:message "Katram īpašumam IR jābūt sh:name (mērķa kontekstā, kur tas parādās), lai nodrošinātu uz cilvēkiem orientētas iezīmes. Šī ir vēlamā alternatīva rdfs:labels pārrakstīšanai, kas nāk no ārējām svešvārdnīcām, lai labāk atbilstu kontekstam."@lv ;
+    sh:message "Kull proprjetà GĦANDU jkollha sh:name (fil-kuntest tal-mira fejn tidher) biex tipprovdi tikketti orjentati lejn il-bniedem. Din hija l-alternattiva ppreferuta għall-kitba fuq rdfs:labels li ġejjin minn vokabularji barranin esterni biex taqbel aħjar mal-kuntest."@mt ;
+    sh:message "Elke eigenschap MOET een sh:name hebben (in de context van het doel waar het verschijnt) om mensgerichte labels te bieden. Dit is het voorkeursalternatief voor het overschrijven van rdfs:labels afkomstig van externe buitenlandse vocabulaires om beter in de context te passen."@nl ;
+    sh:message "Każda właściwość MUSI mieć sh:name (w kontekście celu, w którym się pojawia), aby zapewnić etykiety zorientowane na człowieka. Jest to preferowana alternatywa dla nadpisywania rdfs:labels pochodzących z zewnętrznych słowników obcych w celu lepszego dopasowania do kontekstu."@pl ;
+    sh:message "Cada propriedade DEVE ter um sh:name (no contexto do destino onde aparece) para fornecer rótulos orientados para humanos. Esta é a alternativa preferida para sobrescrever rdfs:labels provenientes de vocabulários externos externos para se adequar melhor ao contexto."@pt ;
+    sh:message "Fiecare proprietate TREBUIE să aibă un sh:name (în contextul țintei în care apare) pentru a furniza etichete orientate către om. Aceasta este alternativa preferată la suprascrierea rdfs:labels care provin din vocabulare externe externe pentru a se potrivi mai bine contextului."@ro ;
+    sh:message "Každá vlastnosť BY MALA mať sh:name (v kontexte cieľa, kde sa vyskytuje), aby poskytovala menovky orientované na človeka. Toto je preferovaná alternatíva k prepisovaniu rdfs:labels z externých cudzích slovníkov, aby lepšie zapadali do kontextu."@sk ;
+    sh:message "Vsaka lastnost MORA imeti sh:name (v kontekstu cilja, kjer se pojavi) za zagotavljanje oznak, usmerjenih v človeka. To je najprimernejša alternativa prepisovanju rdfs:labels, ki prihaja iz zunanjih tujih besedišč, da se bolje prilega kontekstu."@sl ;
+    sh:message "Varje egenskap SKA ha ett sh:name (i sammanhanget för målet där den förekommer) för att tillhandahålla människoorienterade etiketter. Detta är det föredragna alternativet till att skriva över rdfs:labels som kommer från externa utländska vokabulärer för att passa sammanhanget bättre."@sv ;
 	sh:minCount 1 ;
 	sh:severity sh:Warning .	
 	
@@ -157,9 +295,32 @@ bpsh:CountDescriptionProperty 			# description-property
 	sh:name "Description property"@en ;
 	sh:description "Minimum count for sh:description."@en ;
 		
-	sh:path sh:description ;				
+	sh:path sh:description ;
+	sh:message "Всяко свойство ТРЯБВА да има sh:description (в контекста на целта, където се появява), за да предостави допълнителни подробности, ориентирани към човека. Това е предпочитаното решение пред добавянето на допълнителни бележки за употреба, за да пасне на контекста."@bg ;
+   	sh:message "Každá vlastnost BY MĚLA mít sh:description (v kontextu cíle, kde se vyskytuje), aby poskytovala další detaily orientované na člověka. Toto je preferované řešení před přidáváním dalších poznámek k použití, aby odpovídaly kontextu."@cs ;
+    sh:message "Hver ejendom SKAL have sh:description (i sammenhæng med målet, hvor den vises) for at give yderligere menneskeorienterede detaljer. Dette er den foretrukne løsning frem for at tilføje yderligere brugsnoter, der passer til konteksten."@da ;
+    sh:message "Jede Eigenschaft SOLLTE sh:description (im Kontext des Ziels, wo es erscheint) haben, um weitere auf den Menschen ausgerichtete Details bereitzustellen. Dies ist die bevorzugte Lösung gegenüber dem Hinzufügen zusätzlicher Verwendungshinweise, um sie an den Kontext anzupassen."@de ;
+    sh:message "Κάθε ιδιότητα ΠΡΕΠΕΙ να έχει sh:description (στο πλαίσιο του στόχου όπου εμφανίζεται) για να παρέχει περαιτέρω λεπτομέρειες ανθρωποκεντρικές. Αυτή είναι η προτιμώμενη λύση από την προσθήκη πρόσθετων σημειώσεων χρήσης για να ταιριάζουν στο περιβάλλον."@el ;
 	sh:message "Each property SHOULD have sh:description (in the context of the target where it appears) to provide further human-oriented details. This is the preferred solution over adding additional usage notes to fit the context."@en;
-	sh:minCount 1 ;
+	sh:message "Cada propiedad DEBE tener sh:description (en el contexto del objetivo donde aparece) para proporcionar más detalles orientados a las personas. Esta es la solución preferida en lugar de agregar notas de uso adicionales para adaptarse al contexto."@es ;
+    sh:message "Igal atribuudil PEAKS olema sh:description (sihtmärgi kontekstis, kus see kuvatakse), et pakkuda täiendavaid inimesele suunatud üksikasju. See on eelistatavam lahendus konteksti sobitamiseks täiendavate kasutusmärkuste lisamise asemel."@et ;
+    sh:message "Jokaisella omaisuudella PITÄISI olla sh:description (kohteen yhteydessä, jossa se esiintyy), jotta saadaan lisää ihmiskohtaisia tietoja. Tämä on parempi ratkaisu kuin kontekstiin sopivien lisähuomautusten lisääminen."@fi ;
+    sh:message "Chaque propriété DEVRAIT avoir sh:description (dans le contexte de la cible où elle apparaît) pour fournir d'autres détails orientés vers l'humain. Il s'agit de la solution préférée par rapport à l'ajout de notes d'utilisation supplémentaires pour s'adapter au contexte."@fr ;
+    sh:message "BA CHÓIR sh:description a bheith ag gach airí (i gcomhthéacs na sprice mar a fheictear é) chun sonraí breise daonna-dhírithe a sholáthar. Is é seo an réiteach is fearr seachas nótaí úsáide breise a chur leis a d’oirfeadh don chomhthéacs."@ga ;
+    sh:message "Svako svojstvo TREBA imati sh:description (u kontekstu cilja gdje se pojavljuje) za pružanje daljnjih detalja usmjerenih na ljude. Ovo je preferirano rješenje u odnosu na dodavanje dodatnih napomena o upotrebi kako bi se uklopile u kontekst."@hr ;
+    sh:message "Minden tulajdonságnak rendelkeznie KELL sh:description-val (a cél kontextusában, ahol megjelenik), hogy további emberközpontú részleteket biztosítson. Ez az előnyben részesített megoldás a kontextushoz igazodó további használati megjegyzések hozzáadásával szemben."@hu ;
+    sh:message "Ogni proprietà DOVREBBE avere sh:description (nel contesto della destinazione in cui appare) per fornire ulteriori dettagli orientati all'uomo. Questa è la soluzione preferita rispetto all'aggiunta di ulteriori note sull'utilizzo per adattarsi al contesto."@it ;
+    sh:message "Kiekvienoje ypatybėje TURI būti sh:description (tikslo kontekste, kur jis rodomas), kad būtų pateikta daugiau į žmogų orientuotos informacijos. Tai yra tinkamiausias sprendimas, o ne pridėti papildomų naudojimo pastabų, kad atitiktų kontekstą."@lt ;
+    sh:message "Katram īpašumam JĀBŪT klāt sh:description (mērķa kontekstā, kur tas tiek rādīts), lai sniegtu papildu uz cilvēku orientētu informāciju. Šis ir vēlamais risinājums, nevis pievienot papildu lietošanas piezīmes, lai tas atbilstu kontekstam."@lv ;
+    sh:message "Kull proprjetà GĦANDU jkollha sh:description (fil-kuntest tal-mira fejn tidher) biex tipprovdi aktar dettalji orjentati lejn il-bniedem. Din hija s-soluzzjoni preferuta fuq iż-żieda ta 'noti ta' użu addizzjonali biex jaqblu mal-kuntest."@mt ;
+    sh:message "Elke eigenschap MOET sh:description hebben (in de context van het doel waar het verschijnt) om verdere mensgerichte details te bieden. Dit is de voorkeursoplossing boven het toevoegen van extra gebruiksnotities om in de context te passen."@nl ;
+    sh:message "Każda właściwość POWINNA mieć sh:description (w kontekście celu, w którym się pojawia), aby zapewnić dalsze szczegóły zorientowane na człowieka. Jest to preferowane rozwiązanie niż dodawanie dodatkowych uwag dotyczących użytkowania, aby dopasować je do kontekstu."@pl ;
+    sh:message "Cada propriedade DEVE ter sh:description (no contexto do destino onde aparece) para fornecer mais detalhes orientados para humanos. Esta é a solução preferida em vez de adicionar notas de uso adicionais para se adequar ao contexto."@pt ;
+    sh:message "Fiecare proprietate TREBUIE să aibă sh:description (în contextul țintei în care apare) pentru a oferi detalii suplimentare orientate spre om. Aceasta este soluția preferată față de adăugarea de note de utilizare suplimentare pentru a se potrivi contextului."@ro ;
+    sh:message "Každá vlastnosť BY MALA mať sh:description (v kontexte cieľa, kde sa vyskytuje), aby poskytovala ďalšie detaily orientované na človeka. Toto je uprednostňované riešenie pred pridávaním ďalších poznámok k použitiu, ktoré zodpovedajú kontextu."@sk ;
+    sh:message "Vsaka lastnost MORA imeti sh:description (v kontekstu cilja, kjer se pojavi), da zagotovi dodatne podrobnosti, usmerjene v človeka. To je boljša rešitev kot dodajanje dodatnih opomb o uporabi, ki ustrezajo kontekstu."@sl ;
+    sh:message "Varje egenskap BÖR ha sh:description (i sammanhanget för målet där den visas) för att ge ytterligare mänskligt orienterade detaljer. Detta är den föredragna lösningen framför att lägga till ytterligare användningsanteckningar för att passa sammanhanget."@sv ;
+    sh:minCount 1 ;
 	sh:severity sh:Warning .	
 	
 	

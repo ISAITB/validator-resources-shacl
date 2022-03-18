@@ -30,8 +30,31 @@ shsh:SparqlShape
 		sh:name "Sparql NodeKind shape"@en ;
 		sh:description "NodeKind for sh:sparql class."@en ;
 		
-		sh:path sh:sparql ;				
+		sh:path sh:sparql ;
+		sh:message "Формите може да имат стойности за свойството sh:sparql и тези стойности са или IRI, или празни възли."@bg ;
+		sh:message "Tvary mohou mít hodnoty pro vlastnost sh:sparql a tyto hodnoty jsou buď IRI nebo prázdné uzly."@cs ;
+		sh:message "Former kan have værdier for egenskaben sh:sparql, og disse værdier er enten IRI'er eller tomme noder."@da ;
+		sh:message "Formen können Werte für die Eigenschaft sh:sparql haben, und diese Werte sind entweder IRIs oder leere Knoten."@de ;
+		sh:message "Τα σχήματα μπορεί να έχουν τιμές για την ιδιότητα sh:sparql και αυτές οι τιμές είναι είτε IRI είτε κενοί κόμβοι."@el ;
 		sh:message "Shapes may have values for the property sh:sparql, and these values are either IRIs or blank nodes."@en ;
+        sh:message "Las formas pueden tener valores para la propiedad sh:sparql y estos valores son IRI o nodos en blanco."@es ;
+        sh:message "Kujunditel võivad olla atribuudi sh:sparql väärtused ja need väärtused on kas IRI-d või tühjad sõlmed."@et ;
+        sh:message "Muodoilla voi olla arvoja ominaisuudelle sh:sparql, ja nämä arvot ovat joko IRI:itä tai tyhjiä solmuja."@fi ;
+        sh:message "Les formes peuvent avoir des valeurs pour la propriété sh:sparql, et ces valeurs sont soit des IRI, soit des nœuds vides."@fr ;
+        sh:message "D’fhéadfadh luachanna a bheith ag cruthanna don airí sh:sparql, agus is IRIanna nó nóid bhána iad na luachanna seo."@ga ;
+        sh:message "Oblici mogu imati vrijednosti za svojstvo sh:sparql, a te vrijednosti su ili IRI ili prazni čvorovi."@hr ;
+        sh:message "Az alakzatoknak lehetnek értékei az sh:sparql tulajdonsághoz, és ezek az értékek IRI-k vagy üres csomópontok."@hu ;
+        sh:message "Le forme possono avere valori per la proprietà sh:sparql e questi valori sono IRI o nodi vuoti."@it ;
+        sh:message "Formos gali turėti ypatybės sh:sparql vertes ir šios reikšmės yra IRI arba tušti mazgai."@lt ;
+        sh:message "Formām var būt vērtības rekvizītam sh:sparql, un šīs vērtības ir vai nu IRI, vai tukši mezgli."@lv ;
+        sh:message "Il-forom jista' jkollhom valuri għall-proprjetà sh:sparql, u dawn il-valuri huma jew IRIs jew nodi vojta."@mt ;
+        sh:message "Shapes kunnen waarden hebben voor de eigenschap sh:sparql, en deze waarden zijn IRI's of lege knooppunten."@nl ;
+        sh:message "Kształty mogą mieć wartości właściwości sh:sparql, a te wartości są albo IRI, albo pustymi węzłami."@pl ;
+        sh:message "As formas podem ter valores para a propriedade sh:sparql, e esses valores são IRIs ou nós em branco."@pt ;
+        sh:message "Formele pot avea valori pentru proprietatea sh:sparql, iar aceste valori sunt fie IRI, fie noduri goale."@ro ;
+        sh:message "Tvary môžu mať hodnoty pre vlastnosť sh:sparql a tieto hodnoty sú buď IRI alebo prázdne uzly."@sk ;
+        sh:message "Oblike imajo lahko vrednosti za lastnost sh:sparql in te vrednosti so bodisi IRI-ji bodisi prazna vozlišča."@sl ;
+        sh:message "Former kan ha värden för egenskapen sh:sparql, och dessa värden är antingen IRI:er eller tomma noder."@sv ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# sparql-nodeKind
 	] ;
 	
@@ -39,8 +62,31 @@ shsh:SparqlShape
 		sh:name "Select NodeKind shape"@en ;
 		sh:description "NodeKind for sh:select class."@en ;
 		
-		sh:path (sh:sparql sh:select) ;	
-		sh:message "The value of sh:select is a literal of datatype xsd:string."@en ;
+		sh:path (sh:sparql sh:select) ;
+		sh:message "Стойността на sh:select е литерал на тип данни xsd:string."@bg ;
+        sh:message "Hodnota sh:select je literálem datového typu xsd:string."@cs ;
+        sh:message "Værdien af sh:select er en literal af datatype xsd:string."@da ;
+        sh:message "Der Wert von sh:select ist ein Literal des Datentyps xsd:string."@de ;
+        sh:message "Η τιμή του sh:select είναι μια κυριολεξία του τύπου δεδομένων xsd:string."@el ;
+        sh:message "The value of sh:select is a literal of datatype xsd:string."@en ;
+        sh:message "El valor de sh:select es un literal de tipo de datos xsd:string."@es ;
+        sh:message "sh:select väärtus on andmetüübi xsd:string literaal."@et ;
+        sh:message "Arvo sh:select on tietotyypin xsd:string literaali."@fi ;
+        sh:message "La valeur de sh:select est un littéral de type de données xsd:string."@fr ;
+        sh:message "Is éard atá i luach sh:select ná litir de chineál sonraí xsd:teaghrán."@ga ;
+        sh:message "Vrijednost sh:select je literal tipa podataka xsd:string."@hr ;
+        sh:message "Az sh:select értéke az xsd:string adattípus literálja."@hu ;
+        sh:message "Il valore di sh:select è un valore letterale di tipo di dati xsd:string."@it ;
+        sh:message "Sh:select reikšmė yra xsd:string duomenų tipo pažodžiui."@lt ;
+        sh:message "sh:select vērtība ir datu tipa xsd:string literāls."@lv ;
+        sh:message "Il-valur ta' sh:select huwa letterali tad-datatype xsd:string."@mt ;
+        sh:message "De waarde van sh:select is een letterlijke waarde van het datatype xsd:string."@nl ;
+        sh:message "Wartość sh:select jest literałem typu danych xsd:string."@pl ;
+        sh:message "O valor de sh:select é um literal do tipo de dados xsd:string."@pt ;
+        sh:message "Valoarea lui sh:select este un literal al tipului de date xsd:string."@ro ;
+        sh:message "Hodnota sh:select je doslovným údajom dátového typu xsd:string."@sk ;
+        sh:message "Vrednost sh:select je literal podatkovnega tipa xsd:string."@sl ;
+        sh:message "Värdet på sh:select är en literal av datatypen xsd:string."@sv ;
 		sh:nodeKind sh:Literal ;		# SPARQLConstraint-select-datatype
 	] ;
 	
@@ -48,8 +94,31 @@ shsh:SparqlShape
 		sh:name "Select pattern shape"@en ;
 		sh:description "Pattern for sh:select class."@en ;
 		
-		sh:path (sh:sparql sh:select) ;	
+		sh:path (sh:sparql sh:select) ;
+		sh:message "SPARQL заявката, получена от стойността на sh:select, проектира променливата this в клаузата SELECT."@bg ;
+        sh:message "Dotaz SPARQL odvozený z hodnoty sh:select promítá proměnnou this do klauzule SELECT."@cs ;
+        sh:message "SPARQL-forespørgslen afledt af værdien af sh:select projicerer variablen denne i SELECT-sætningen."@da ;
+        sh:message "Die aus dem Wert von sh:select abgeleitete SPARQL-Abfrage projiziert die Variable this in die SELECT-Klausel."@de ;
+        sh:message "Το ερώτημα SPARQL που προέρχεται από την τιμή του sh:select προβάλλει τη μεταβλητή αυτή στον όρο SELECT."@el ;
 		sh:message "The SPARQL query derived from the value of sh:select projects the variable this in the SELECT clause."@en ;
+        sh:message "La consulta SPARQL derivada del valor de sh:select proyecta la variable this en la cláusula SELECT."@es ;
+        sh:message "SPARQL-i päring, mis tuletatakse väärtuse sh:select väärtusest, projitseerib muutuja selle SELECT-klauslisse."@et ;
+        sh:message "sh:select:n arvosta johdettu SPARQL-kysely heijastaa tämän muuttujan SELECT-lauseeseen."@fi ;
+        sh:message "La requête SPARQL dérivée de la valeur de sh:select projette la variable this dans la clause SELECT."@fr ;
+        sh:message "Díorthaítear an cheist SPARQL ó luach sh:select an athróg seo a theilgean sa chlásal SELECT."@ga ;
+        sh:message "SPARQL upit izveden iz vrijednosti sh:select projicira varijablu this u klauzuli SELECT."@hr ;
+        sh:message "Az sh:select értékéből származtatott SPARQL lekérdezés ezt a változót vetíti ki a SELECT záradékban."@hu ;
+        sh:message "La query SPARQL derivata dal valore di sh:select proietta la variabile this nella clausola SELECT."@it ;
+        sh:message "SPARQL užklausa, gauta iš sh:select reikšmės, projektuoja kintamąjį tai į SELECT sąlygą."@lt ;
+        sh:message "SPARQL vaicājums, kas iegūts no sh:select vērtības, projicē mainīgo šo klauzulā SELECT."@lv ;
+        sh:message "Il-mistoqsija SPARQL derivata mill-valur ta' sh:select tipproġetta l-varjabbli dan fil-klawżola SELECT."@mt ;
+        sh:message "De SPARQL-query afgeleid van de waarde van sh:select projecteert de variabele this in de SELECT-component."@nl ;
+        sh:message "Zapytanie SPARQL wyprowadzone z wartości sh:select rzutuje zmienną this w klauzuli SELECT."@pl ;
+        sh:message "A consulta SPARQL derivada do valor de sh:select projeta a variável this na cláusula SELECT."@pt ;
+        sh:message "Interogarea SPARQL derivată din valoarea lui sh:select proiectează variabila this în clauza SELECT."@ro ;
+        sh:message "Dotaz SPARQL odvodený od hodnoty sh:select premietne premennú toto do klauzuly SELECT."@sk ;
+        sh:message "Poizvedba SPARQL, izpeljana iz vrednosti sh:select, projicira spremenljivko this v členu SELECT."@sl ;
+        sh:message "SPARQL-frågan härledd från värdet på sh:select projicerar variabeln detta i SELECT-satsen."@sv ;
 		sh:pattern "SELECT.*\\$this.*WHERE.*" ;		# select-query-this
 		sh:flags "si" ;
 	] ;
@@ -59,7 +128,30 @@ shsh:SparqlShape
 		sh:description "Datatype for sh:message class."@en ;
 		
 		sh:path (sh:sparql sh:message) ;
+		sh:message "Базираните на SPARQL ограничения може да имат стойности за свойството sh:message и това са или xsd:string литерали, или литерали с езиков таг."@bg ;
+		sh:message "Omezení založená na SPARQL mohou mít hodnoty pro vlastnost sh:message a jedná se buď o literály xsd:string nebo literály se značkou jazyka."@cs ;
+		sh:message "SPARQL-baserede begrænsninger kan have værdier for egenskaben sh:message, og disse er enten xsd:string bogstaver eller bogstaver med et sprogtag."@da ;
+		sh:message "SPARQL-basierte Einschränkungen können Werte für die Eigenschaft sh:message haben, und dies sind entweder xsd:string-Literale oder Literale mit einem Sprach-Tag."@de ;
+		sh:message "Οι περιορισμοί που βασίζονται σε SPARQL μπορεί να έχουν τιμές για την ιδιότητα sh:message και αυτές είναι είτε xsd:string literals είτε literals με ετικέτα γλώσσας."@el ;
 		sh:message "SPARQL-based constraints may have values for the property sh:message and these are either xsd:string literals or literals with a language tag."@en ;
+        sh:message "Las restricciones basadas en SPARQL pueden tener valores para la propiedad sh:message y estos son literales xsd:string o literales con una etiqueta de idioma."@es ;
+        sh:message "SPARQL-põhistel piirangutel võivad olla väärtused atribuudi sh:message jaoks ja need on kas xsd:string literaalid või keelesildiga literaalid."@et ;
+        sh:message "SPARQL-pohjaisilla rajoituksilla voi olla arvoja ominaisuudelle sh:message, ja nämä ovat joko xsd:string-literaaleja tai kielitunnisteen sisältäviä literaaleja."@fi ;
+        sh:message "Les contraintes basées sur SPARQL peuvent avoir des valeurs pour la propriété sh:message et ce sont soit des littéraux xsd:string soit des littéraux avec une balise de langue."@fr ;
+        sh:message "D’fhéadfadh go mbeadh luachanna ag srianta atá bunaithe ar SPARQL ar an airí sh:message agus is liteartha xsd:string nó liteartha a bhfuil clib teanga orthu iad seo."@ga ;
+        sh:message "Ograničenja temeljena na SPARQL-u mogu imati vrijednosti za svojstvo sh:message, a to su ili xsd:string literali ili literali s jezičnom oznakom."@hr ;
+        sh:message "A SPARQL-alapú megszorításoknak lehetnek értékei az sh:message tulajdonsághoz, és ezek vagy xsd:string literálok vagy nyelvi címkével ellátott literálok."@hu ;
+        sh:message "I vincoli basati su SPARQL possono avere valori per la proprietà sh:message e questi sono valori letterali xsd:string o letterali con un tag di lingua."@it ;
+        sh:message "SPARQL pagrįsti apribojimai gali turėti ypatybės sh:message vertes ir tai yra xsd:string literalai arba literalai su kalbos žyma."@lt ;
+        sh:message "Uz SPARQL balstītiem ierobežojumiem var būt vērtības rekvizītam sh:message, un tie ir vai nu xsd:string literāļi vai literāļi ar valodas tagu."@lv ;
+        sh:message "Limitazzjonijiet ibbażati fuq SPARQL jista' jkollhom valuri għall-proprjetà sh:message u dawn huma jew xsd:string letterali jew letterali b'tikketta tal-lingwa."@mt ;
+        sh:message "Op SPARQL gebaseerde beperkingen kunnen waarden hebben voor de eigenschap sh:message en dit zijn ofwel xsd:string letterlijke waarden of letterlijke waarden met een taaltag."@nl ;
+        sh:message "Ograniczenia oparte na SPARQL mogą mieć wartości właściwości sh:message i są to albo literały xsd:string, albo literały ze znacznikiem języka."@pl ;
+        sh:message "As restrições baseadas em SPARQL podem ter valores para a propriedade sh:message e são literais xsd:string ou literais com uma tag de idioma."@pt ;
+        sh:message "Constrângerile bazate pe SPARQL pot avea valori pentru proprietatea sh:message și acestea sunt fie xsd:string literale, fie literale cu o etichetă de limbă."@ro ;
+        sh:message "Obmedzenia založené na SPARQL môžu mať hodnoty pre vlastnosť sh:message a sú to literály xsd:string alebo literály s jazykovou značkou."@sk ;
+        sh:message "Omejitve, ki temeljijo na SPARQL, imajo lahko vrednosti za lastnost sh:message in to so bodisi xsd:string literali ali literali z jezikovno oznako."@sl ;
+        sh:message "SPARQL-baserade begränsningar kan ha värden för egenskapen sh:message och dessa är antingen xsd:string literals eller literals med en språktagg."@sv ;
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 		# SPARQLConstraint-message-datatype
 	] ;
 	
@@ -68,7 +160,30 @@ shsh:SparqlShape
 		sh:description "NodeKind for sh:prefixes class."@en ;
 		
 		sh:path sh:prefixes ;
+		sh:message "Стойностите на sh:prefixes са или IRI, или празни възли."@bg ;
+   		sh:message "Hodnoty sh:prefixes jsou buď IRI nebo prázdné uzly."@cs ;
+        sh:message "Værdierne af sh:prefixes er enten IRI'er eller tomme noder."@da ;
+        sh:message "Die Werte von sh:prefixes sind entweder IRIs oder leere Knoten."@de ;
+        sh:message "Οι τιμές του sh:prefixes είναι είτε IRI είτε κενοί κόμβοι."@el ;
 		sh:message "The values of sh:prefixes are either IRIs or blank nodes."@en ;
+        sh:message "Los valores de sh:prefixes son IRI o nodos en blanco."@es ;
+        sh:message "sh:prefixes väärtused on kas IRI-d või tühjad sõlmed."@et ;
+        sh:message "sh:prefixes:n arvot ovat joko IRI:itä tai tyhjiä solmuja."@fi ;
+        sh:message "Les valeurs de sh:prefixes sont soit des IRI, soit des nœuds vides."@fr ;
+        sh:message "Is iad luachanna sh:prefixes ná IRIanna nó nóid bhána."@ga ;
+        sh:message "Vrijednosti sh:prefixes su ili IRI ili prazni čvorovi."@hr ;
+        sh:message "Az sh:prefixes értékei vagy IRI-k vagy üres csomópontok."@hu ;
+        sh:message "I valori di sh:prefixes sono IRI o nodi vuoti."@it ;
+        sh:message "sh:prefixes reikšmės yra IRI arba tušti mazgai."@lt ;
+        sh:message "sh:prefixes vērtības ir vai nu IRI, vai tukši mezgli."@lv ;
+        sh:message "Il-valuri ta' sh:prefissi huma jew IRIs jew nodi vojta."@mt ;
+        sh:message "De waarden van sh:prefixes zijn IRI's of lege knooppunten."@nl ;
+        sh:message "Wartości sh:prefixes to albo IRI, albo puste węzły."@pl ;
+        sh:message "Os valores de sh:prefixes são IRIs ou nós em branco."@pt ;
+        sh:message "Valorile sh:prefixes sunt fie IRI, fie noduri goale."@ro ;
+        sh:message "Hodnoty sh:prefixes sú buď IRI alebo prázdne uzly."@sk ;
+        sh:message "Vrednosti sh:prefixes so bodisi IRI-ji bodisi prazna vozlišča."@sl ;
+        sh:message "Värdena för sh:prefixes är antingen IRI:er eller tomma noder."@sv ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;				# prefixes-nodeKind
 	] . 
 	
@@ -83,8 +198,31 @@ shsh:SelectShape
 		sh:name "Select pattern shape"@en ;
 		sh:description "Pattern for sh:select class."@en ;
 		
-		sh:path sh:select ;	
+		sh:path sh:select ;
+		sh:message "Използвайки правилата за обработка на префикса, стойността на sh:select не е валидна SPARQL 1.1 SELECT заявка."@bg ;
+   		sh:message "Při použití pravidel zpracování prefixů není hodnota sh:select platným dotazem SPARQL 1.1 SELECT."@cs ;
+        sh:message "Ved at bruge præfikshåndteringsreglerne er værdien af sh:select ikke en gyldig SPARQL 1.1 SELECT-forespørgsel."@da ;
+        sh:message "Unter Verwendung der Präfixbehandlungsregeln ist der Wert von sh:select keine gültige SPARQL 1.1 SELECT-Abfrage."@de ;
+        sh:message "Χρησιμοποιώντας τους κανόνες χειρισμού προθέματος, η τιμή του sh:select δεν είναι έγκυρο ερώτημα SPARQL 1.1 SELECT."@el ;
 		sh:message "Using the prefix handling rules, the value of sh:select is not a valid SPARQL 1.1 SELECT query."@en ;
+        sh:message "Usando las reglas de manejo de prefijos, el valor de sh:select no es una consulta SPARQL 1.1 SELECT válida."@es ;
+        sh:message "Prefiksi käsitlemise reegleid kasutades ei ole sh:select väärtus kehtiv SPARQL 1.1 SELECT päring."@et ;
+        sh:message "Etuliitteen käsittelysääntöjä käytettäessä sh:select:n arvo ei ole kelvollinen SPARQL 1.1 SELECT -kysely."@fi ;
+        sh:message "En utilisant les règles de gestion des préfixes, la valeur de sh:select n'est pas une requête SPARQL 1.1 SELECT valide."@fr ;
+        sh:message "Ag baint úsáide as na rialacha láimhseála réimíreanna, ní ceist bhailí SPARQL 1.1 SELECT é luach sh:select."@ga ;
+        sh:message "Koristeći pravila rukovanja prefiksom, vrijednost sh:select nije valjani SPARQL 1.1 SELECT upit."@hr ;
+        sh:message "Az előtagkezelési szabályokat használva az sh:select értéke nem érvényes SPARQL 1.1 SELECT lekérdezés."@hu ;
+        sh:message "Utilizzando le regole di gestione dei prefissi, il valore di sh:select non è una query SPARQL 1.1 SELECT valida."@it ;
+        sh:message "Naudojant priešdėlių tvarkymo taisykles, sh:select reikšmė nėra tinkama SPARQL 1.1 SELECT užklausa."@lt ;
+        sh:message "Izmantojot prefiksu apstrādes noteikumus, sh:select vērtība nav derīgs SPARQL 1.1 SELECT vaicājums."@lv ;
+        sh:message "Bl-użu tar-regoli tal-immaniġġjar tal-prefiss, il-valur ta' sh:select mhuwiex mistoqsija SPARQL 1.1 SELECT valida."@mt ;
+        sh:message "Bij gebruik van de regels voor het afhandelen van prefixen is de waarde van sh:select geen geldige SPARQL 1.1 SELECT-query."@nl ;
+        sh:message "Używając reguł obsługi prefiksów, wartość sh:select nie jest poprawnym zapytaniem SPARQL 1.1 SELECT."@pl ;
+        sh:message "Usando as regras de manipulação de prefixo, o valor de sh:select não é uma consulta SPARQL 1.1 SELECT válida."@pt ;
+        sh:message "Folosind regulile de gestionare a prefixelor, valoarea lui sh:select nu este o interogare SPARQL 1.1 SELECT validă."@ro ;
+        sh:message "Pri použití pravidiel spracovania prefixov hodnota sh:select nie je platným dotazom SPARQL 1.1 SELECT."@sk ;
+        sh:message "Z uporabo pravil za ravnanje s predpono vrednost sh:select ni veljavna poizvedba SPARQL 1.1 SELECT."@sl ;
+        sh:message "Genom att använda reglerna för hantering av prefix är värdet för sh:select inte en giltig SPARQL 1.1 SELECT-fråga."@sv ;
 		sh:pattern "\\s*SELECT\\s+(?:(?:DISTINCT)|(?:REDUCED))?\\s*.*(?:WHERE)\\s*\\{.*\\}" ;
 		sh:flags "si" ;
 	] .
@@ -100,8 +238,31 @@ shsh:SparqlCountShape
 		sh:name "Select count shape"@en ;
 		sh:description "Maximum and minimum count for sh:select class."@en ;
 		
-		sh:path sh:select ;				
+		sh:path sh:select ;
+		sh:message "Базираните на SPARQL ограничения имат точно една стойност за свойството sh:select."@bg ;
+   		sh:message "Omezení založená na SPARQL mají právě jednu hodnotu pro vlastnost sh:select."@cs ;
+        sh:message "SPARQL-baserede begrænsninger har præcis én værdi for egenskaben sh:select."@da ;
+        sh:message "SPARQL-basierte Einschränkungen haben genau einen Wert für die Eigenschaft sh:select."@de ;
+        sh:message "Οι περιορισμοί που βασίζονται σε SPARQL έχουν ακριβώς μία τιμή για την ιδιότητα sh:select."@el ;
 		sh:message "SPARQL-based constraints have exactly one value for the property sh:select."@en ;
+        sh:message "Las restricciones basadas en SPARQL tienen exactamente un valor para la propiedad sh:select."@es ;
+        sh:message "SPARQL-põhistel piirangutel on atribuudil sh:select täpselt üks väärtus."@et ;
+        sh:message "SPARQL-pohjaisilla rajoituksilla on täsmälleen yksi arvo ominaisuudelle sh:select."@fi ;
+        sh:message "Les contraintes basées sur SPARQL ont exactement une valeur pour la propriété sh:select."@fr ;
+        sh:message "Tá luach amháin go díreach ag srianta atá bunaithe ar SPARQL ar an maoin sh:select."@ga ;
+        sh:message "Ograničenja temeljena na SPARQL-u imaju točno jednu vrijednost za svojstvo sh:select."@hr ;
+        sh:message "A SPARQL-alapú megszorításoknak pontosan egy értéke van az sh:select tulajdonsághoz."@hu ;
+        sh:message "I vincoli basati su SPARQL hanno esattamente un valore per la proprietà sh:select."@it ;
+        sh:message "SPARQL pagrįsti apribojimai turi tiksliai vieną nuosavybės sh:select reikšmę."@lt ;
+        sh:message "Uz SPARQL balstītiem ierobežojumiem ir tieši viena vērtība rekvizītam sh:select."@lv ;
+        sh:message "Ir-restrizzjonijiet ibbażati fuq SPARQL għandhom eżattament valur wieħed għall-proprjetà sh:select."@mt ;
+        sh:message "Op SPARQL gebaseerde beperkingen hebben precies één waarde voor de eigenschap sh:select."@nl ;
+        sh:message "Ograniczenia oparte na SPARQL mają dokładnie jedną wartość dla właściwości sh:select."@pl ;
+        sh:message "As restrições baseadas em SPARQL têm exatamente um valor para a propriedade sh:select."@pt ;
+        sh:message "Constrângerile bazate pe SPARQL au exact o valoare pentru proprietatea sh:select."@ro ;
+        sh:message "Obmedzenia založené na SPARQL majú presne jednu hodnotu pre vlastnosť sh:select."@sk ;
+        sh:message "Omejitve, ki temeljijo na SPARQL, imajo natanko eno vrednost za lastnost sh:select."@sl ;
+        sh:message "SPARQL-baserade begränsningar har exakt ett värde för egenskapen sh:select."@sv ;
 		sh:maxCount 1 ;					# SPARQLConstraint-select-count
 		sh:minCount 1 ;					# SPARQLConstraint-select-count
 	] ;
@@ -111,7 +272,30 @@ shsh:SparqlCountShape
 		sh:description "Maximum count for sh:deactivated class."@en ;
 		
 		sh:path sh:deactivated ;
+		sh:message "Базираните на SPARQL ограничения може да имат най-много една стойност за свойството sh:deactivated."@bg ;
+   		sh:message "Omezení založená na SPARQL mohou mít maximálně jednu hodnotu pro vlastnost sh:deactivated."@cs ;
+        sh:message "SPARQL-baserede begrænsninger kan højst have én værdi for egenskaben sh:deactivated."@da ;
+        sh:message "SPARQL-basierte Einschränkungen dürfen höchstens einen Wert für die Eigenschaft sh:deactivated haben."@de ;
+        sh:message "Οι περιορισμοί που βασίζονται σε SPARQL μπορεί να έχουν το πολύ μία τιμή για την ιδιότητα sh:deactivated."@el ;
 		sh:message "SPARQL-based constraints may have at most one value for the property sh:deactivated."@en ;
+        sh:message "Las restricciones basadas en SPARQL pueden tener como máximo un valor para la propiedad sh:deactivated."@es ;
+        sh:message "SPARQL-põhistel piirangutel võib atribuudi sh:deactivated jaoks olla kuni üks väärtus."@et ;
+        sh:message "SPARQL-pohjaisilla rajoituksilla voi olla enintään yksi arvo ominaisuudelle sh:deactivated."@fi ;
+        sh:message "Les contraintes basées sur SPARQL peuvent avoir au plus une valeur pour la propriété sh:deactivated."@fr ;
+        sh:message "D’fhéadfadh go mbeadh luach amháin ar a laghad ag srianta atá bunaithe ar SPARQL ar an maoin sh:deactivated."@ga ;
+        sh:message "Ograničenja temeljena na SPARQL-u mogu imati najviše jednu vrijednost za svojstvo sh:deactivated."@hr ;
+        sh:message "A SPARQL-alapú megszorítások legfeljebb egy értékkel rendelkezhetnek az sh:deactivated tulajdonsághoz."@hu ;
+        sh:message "I vincoli basati su SPARQL possono avere al massimo un valore per la proprietà sh:deactivated."@it ;
+        sh:message "SPARQL pagrįsti apribojimai gali turėti ne daugiau kaip vieną nuosavybės sh:deactivated reikšmę."@lt ;
+        sh:message "Uz SPARQL balstītiem ierobežojumiem var būt ne vairāk kā viena vērtība rekvizītam sh:deactivated."@lv ;
+        sh:message "Limitazzjonijiet ibbażati fuq SPARQL jista' jkollhom l-iktar valur wieħed għall-proprjetà sh:deactivated."@mt ;
+        sh:message "Op SPARQL gebaseerde beperkingen mogen maximaal één waarde hebben voor de eigenschap sh:deactivated."@nl ;
+        sh:message "Ograniczenia oparte na SPARQL mogą mieć co najwyżej jedną wartość właściwości sh:deactivated."@pl ;
+        sh:message "As restrições baseadas em SPARQL podem ter no máximo um valor para a propriedade sh:deactivated."@pt ;
+        sh:message "Constrângerile bazate pe SPARQL pot avea cel mult o valoare pentru proprietatea sh:deactivated."@ro ;
+        sh:message "Obmedzenia založené na SPARQL môžu mať najviac jednu hodnotu pre vlastnosť sh:deactivated."@sk ;
+        sh:message "Omejitve, ki temeljijo na SPARQL, imajo lahko največ eno vrednost za lastnost sh:deactivated."@sl ;
+        sh:message "SPARQL-baserade begränsningar kan ha högst ett värde för egenskapen sh:deactivated."@sv ;
 		sh:maxCount 1 ;					# SPARQLConstraint-deactivated-maxCount
 	] .
 
@@ -126,8 +310,31 @@ shsh:DeclareShape
 		sh:name "Declare NodeKind shape"@en ;
 		sh:description "NodeKind for sh:declare class."@en ;
 		
-		sh:path sh:declare ;				
+		sh:path sh:declare ;
+		sh:message "Стойностите на свойството sh:declare са IRI или празни възли."@bg ;
+   		sh:message "Hodnoty vlastnosti sh:declare jsou IRI nebo prázdné uzly."@cs ;
+        sh:message "Værdierne af egenskaben sh:declare er IRI'er eller tomme noder."@da ;
+        sh:message "Die Werte der Eigenschaft sh:declare sind IRIs oder leere Knoten."@de ;
+        sh:message "Οι τιμές της ιδιότητας sh:declare είναι IRI ή κενοί κόμβοι."@el ;
 		sh:message "The values of the property sh:declare are IRIs or blank nodes."@en ;
+        sh:message "Los valores de la propiedad sh:declare son IRI o nodos en blanco."@es ;
+        sh:message "Atribuudi sh:declare väärtused on IRI-d või tühjad sõlmed."@et ;
+        sh:message "Ominaisuuden sh:declare arvot ovat IRI:itä tai tyhjiä solmuja."@fi ;
+        sh:message "Les valeurs de la propriété sh:declare sont des IRI ou des nœuds vides."@fr ;
+        sh:message "Is iad luachanna na maoine sh:declare IRIanna nó nóid bhána."@ga ;
+        sh:message "Vrijednosti svojstva sh:declare su IRI ili prazni čvorovi."@hr ;
+        sh:message "Az sh:declare tulajdonság értékei IRI-k vagy üres csomópontok."@hu ;
+        sh:message "I valori della proprietà sh:declare sono IRI o nodi vuoti."@it ;
+        sh:message "Ypatybės sh:declare reikšmės yra IRI arba tušti mazgai."@lt ;
+        sh:message "Rekvizīta sh:declare vērtības ir IRI vai tukši mezgli."@lv ;
+        sh:message "Il-valuri tal-proprjetà sh:declare huma IRIs jew nodi vojta."@mt ;
+        sh:message "De waarden van de eigenschap sh:declare zijn IRI's of lege knooppunten."@nl ;
+        sh:message "Wartości właściwości sh:declare to IRI lub puste węzły."@pl ;
+        sh:message "Os valores da propriedade sh:declare são IRIs ou nós em branco."@pt ;
+        sh:message "Valorile proprietății sh:declare sunt IRI-uri sau noduri goale."@ro ;
+        sh:message "Hodnoty vlastnosti sh:declare sú IRI alebo prázdne uzly."@sk ;
+        sh:message "Vrednosti lastnosti sh:declare so IRI ali prazna vozlišča."@sl ;
+        sh:message "Värdena för egenskapen sh:declare är IRI:er eller tomma noder."@sv ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# declare-nodeKind
 	] ;
 	
@@ -136,7 +343,30 @@ shsh:DeclareShape
 		sh:description "Datatype for sh:prefix class."@en ;
 		
 		sh:path (sh:declare sh:prefix) ;
+		sh:message "Стойностите на sh:prefix са литерали от тип данни xsd:string."@bg ;
+   		sh:message "Hodnoty sh:prefix jsou literály datového typu xsd:string."@cs ;
+        sh:message "Værdierne af sh:prefix er bogstaver af datatype xsd:string."@da ;
+        sh:message "Die Werte von sh:prefix sind Literale vom Datentyp xsd:string."@de ;
+        sh:message "Οι τιμές του sh:prefix είναι κυριολεκτικά του τύπου δεδομένων xsd:string."@el ;
 		sh:message "The values of sh:prefix are literals of datatype xsd:string."@en ;
+        sh:message "Los valores de sh:prefix son literales de tipo de datos xsd:string."@es ;
+        sh:message "sh:prefix väärtused on andmetüübi xsd:string literaalid."@et ;
+        sh:message "sh:prefix:n arvot ovat tietotyypin xsd:string literaaleja."@fi ;
+        sh:message "Les valeurs de sh:prefix sont des littéraux de type de données xsd:string."@fr ;
+        sh:message "Is ionann luachanna sh:prefix agus liteartha de chineál sonraí xsd:string."@ga ;
+        sh:message "Vrijednosti sh:prefix su literali tipa podataka xsd:string."@hr ;
+        sh:message "Az sh:prefix értékei az xsd:string adattípusú literálok."@hu ;
+        sh:message "I valori di sh:prefix sono letterali di tipo di dati xsd:string."@it ;
+        sh:message "sh:prefix reikšmės yra duomenų tipo xsd:string literalai."@lt ;
+        sh:message "sh:prefix vērtības ir datu tipa xsd:string literāļi."@lv ;
+        sh:message "Il-valuri ta' sh:prefix huma letterali ta' datatype xsd:string."@mt ;
+        sh:message "De waarden van sh:prefix zijn letterlijke waarden van datatype xsd:string."@nl ;
+        sh:message "Wartości sh:prefix są literałami typu danych xsd:string."@pl ;
+        sh:message "Os valores de sh:prefix são literais do tipo de dados xsd:string."@pt ;
+        sh:message "Valorile lui sh:prefix sunt literale ale tipului de date xsd:string."@ro ;
+        sh:message "Hodnoty sh:prefix sú literály typu údajov xsd:string."@sk ;
+        sh:message "Vrednosti sh:prefix so literali podatkovnega tipa xsd:string."@sl ;
+        sh:message "Värdena för sh:prefix är bokstavliga ord av datatypen xsd:string."@sv ;
 		sh:datatype xsd:string ; 		# prefix-datatype
 	] ;
 	
@@ -145,7 +375,30 @@ shsh:DeclareShape
 		sh:description "Datatype for sh:namespace class."@en ;
 		
 		sh:path (sh:declare sh:namespace) ;
+		sh:message "Стойностите на sh:namespace са литерали от тип данни xsd:anyURI."@bg ;
+   		sh:message "Hodnoty sh:namespace jsou literály datového typu xsd:anyURI."@cs ;
+        sh:message "Værdierne for sh:namespace er bogstaver af datatypen xsd:anyURI."@da ;
+        sh:message "Die Werte von sh:namespace sind Literale des Datentyps xsd:anyURI."@de ;
+        sh:message "Οι τιμές του sh:namespace είναι κυριολεκτικά του τύπου δεδομένων xsd:anyURI."@el ;
 		sh:message "The values of sh:namespace are literals of datatype xsd:anyURI."@en ;
+        sh:message "Los valores de sh:namespace son literales de tipo de datos xsd:anyURI."@es ;
+        sh:message "sh:namespace väärtused on andmetüübi xsd:anyURI literaalid."@et ;
+        sh:message "sh:namespace:n arvot ovat tietotyypin xsd:anyURI literaaleja."@fi ;
+        sh:message "Les valeurs de sh:namespace sont des littéraux de type de données xsd:anyURI."@fr ;
+        sh:message "Is ionann luachanna sh:namespace agus liteartha de chineál sonraí xsd:anyURI."@ga ;
+        sh:message "Vrijednosti sh:namespace su literali tipa podataka xsd:anyURI."@hr ;
+        sh:message "Az sh:namespace értékei az xsd:anyURI adattípusú literálok."@hu ;
+        sh:message "I valori di sh:namespace sono letterali di tipo di dati xsd:anyURI."@it ;
+        sh:message "sh:namespace reikšmės yra duomenų tipo xsd:anyURI literalai."@lt ;
+        sh:message "sh:namespace vērtības ir datu tipa xsd:anyURI literāļi."@lv ;
+        sh:message "Il-valuri ta' sh:namespace huma letterali ta' datatype xsd:anyURI."@mt ;
+        sh:message "De waarden van sh:namespace zijn letterlijke waarden van datatype xsd:anyURI."@nl ;
+        sh:message "Wartości sh:namespace są literałami typu danych xsd:anyURI."@pl ;
+        sh:message "Os valores de sh:namespace são literais do tipo de dados xsd:anyURI."@pt ;
+        sh:message "Valorile lui sh:namespace sunt literale ale tipului de date xsd:anyURI."@ro ;
+        sh:message "Hodnoty sh:namespace sú literály dátového typu xsd:anyURI."@sk ;
+        sh:message "Vrednosti sh:namespace so literali podatkovnega tipa xsd:anyURI."@sl ;
+        sh:message "Värdena för sh:namespace är bokstavliga ord av datatypen xsd:anyURI."@sv ;
 		sh:datatype xsd:anyURI ; 		# namespace-datatype
 	] .
 
@@ -160,8 +413,31 @@ shsh:DeclareCountShape
 		sh:name "Prefix count shape"@en ;
 		sh:description "Maximum and minimum count for sh:prefix class."@en ;
 		
-		sh:path sh:prefix ;				
+		sh:path sh:prefix ;
+		sh:message "Декларациите за префикси имат точно една стойност за свойството sh:prefix."@bg ;
+   		sh:message "Deklarace předpony mají právě jednu hodnotu pro vlastnost sh:prefix."@cs ;
+        sh:message "Præfikserklæringer har nøjagtig én værdi for egenskaben sh:prefix."@da ;
+        sh:message "Präfixdeklarationen haben genau einen Wert für die Eigenschaft sh:prefix."@de ;
+        sh:message "Οι δηλώσεις προθέματος έχουν ακριβώς μία τιμή για την ιδιότητα sh:prefix."@el ;
 		sh:message "Prefix declarations have exactly one value for the property sh:prefix."@en ;
+        sh:message "Las declaraciones de prefijo tienen exactamente un valor para la propiedad sh:prefix."@es ;
+        sh:message "Prefiksdeklaratsioonidel on atribuudi sh:prefix jaoks täpselt üks väärtus."@et ;
+        sh:message "Etuliiteilmoituksilla on täsmälleen yksi arvo ominaisuudelle sh:prefix."@fi ;
+        sh:message "Les déclarations de préfixe ont exactement une valeur pour la propriété sh:prefix."@fr ;
+        sh:message "Tá luach amháin go díreach ag dearbhuithe réimír don airí sh:prefix."@ga ;
+        sh:message "Deklaracije prefiksa imaju točno jednu vrijednost za svojstvo sh:prefix."@hr ;
+        sh:message "Az előtag-deklarációk pontosan egy értékkel rendelkeznek az sh:prefix tulajdonsághoz."@hu ;
+        sh:message "Le dichiarazioni di prefisso hanno esattamente un valore per la proprietà sh:prefix."@it ;
+        sh:message "Priešdėlio deklaracijos turi tiksliai vieną nuosavybės reikšmę sh:prefix."@lt ;
+        sh:message "Prefiksu deklarācijām ir tieši viena vērtība rekvizītam sh:prefix."@lv ;
+        sh:message "Id-dikjarazzjonijiet tal-prefiss għandhom eżattament valur wieħed għall-proprjetà sh:prefix."@mt ;
+        sh:message "Prefix-declaraties hebben precies één waarde voor de eigenschap sh:prefix."@nl ;
+        sh:message "Deklaracje prefiksów mają dokładnie jedną wartość dla właściwości sh:prefix."@pl ;
+        sh:message "As declarações de prefixo têm exatamente um valor para a propriedade sh:prefix."@pt ;
+        sh:message "Declarațiile de prefix au exact o valoare pentru proprietatea sh:prefix."@ro ;
+        sh:message "Prefixové deklarácie majú práve jednu hodnotu pre vlastnosť sh:prefix."@sk ;
+        sh:message "Deklaracije predpone imajo natanko eno vrednost za lastnost sh:prefix."@sl ;
+        sh:message "Prefixdeklarationer har exakt ett värde för egenskapen sh:prefix."@sv ;
 		sh:maxCount 1 ;					# prefix-count
 		sh:minCount 1 ;					# prefix-count
 	] ;
@@ -170,8 +446,31 @@ shsh:DeclareCountShape
 		sh:name "Namespace count shape"@en ;
 		sh:description "Maximum and minimum count for sh:namespace class."@en ;
 		
-		sh:path sh:namespace ;				
+		sh:path sh:namespace ;
+		sh:message "Декларациите за префикси имат точно една стойност за свойството sh:namespace."@bg ;
+   		sh:message "Deklarace prefixů mají právě jednu hodnotu pro vlastnost sh:namespace."@cs ;
+        sh:message "Præfikserklæringer har nøjagtig én værdi for egenskaben sh:namespace."@da ;
+        sh:message "Präfixdeklarationen haben genau einen Wert für die Eigenschaft sh:namespace."@de ;
+        sh:message "Οι δηλώσεις προθέματος έχουν ακριβώς μία τιμή για την ιδιότητα sh:namespace."@el ;
 		sh:message "Prefix declarations have exactly one value for the property sh:namespace."@en ;
+        sh:message "Las declaraciones de prefijo tienen exactamente un valor para la propiedad sh:namespace."@es ;
+        sh:message "Prefiksideklaratsioonidel on atribuudi sh:namespace jaoks täpselt üks väärtus."@et ;
+        sh:message "Etuliitteen ilmoituksilla on täsmälleen yksi arvo ominaisuudelle sh:namespace."@fi ;
+        sh:message "Les déclarations de préfixe ont exactement une valeur pour la propriété sh:namespace."@fr ;
+        sh:message "Tá luach amháin go díreach ag dearbhuithe réimír don airí sh:namespace."@ga ;
+        sh:message "Deklaracije prefiksa imaju točno jednu vrijednost za svojstvo sh:namespace."@hr ;
+        sh:message "Az előtag-deklarációk pontosan egy értékkel rendelkeznek az sh:namespace tulajdonsághoz."@hu ;
+        sh:message "Le dichiarazioni di prefisso hanno esattamente un valore per la proprietà sh:namespace."@it ;
+        sh:message "Priešdėlio deklaracijos turi tiksliai vieną ypatybės sh:namespace reikšmę."@lt ;
+        sh:message "Prefiksu deklarācijām ir tieši viena vērtība rekvizītam sh:namespace."@lv ;
+        sh:message "Id-dikjarazzjonijiet tal-prefiss għandhom eżattament valur wieħed għall-proprjetà sh:namespace."@mt ;
+        sh:message "Prefix-declaraties hebben precies één waarde voor de eigenschap sh:namespace."@nl ;
+        sh:message "Deklaracje przedrostków mają dokładnie jedną wartość właściwości sh:namespace."@pl ;
+        sh:message "Declarações de prefixo têm exatamente um valor para a propriedade sh:namespace."@pt ;
+        sh:message "Declarațiile de prefix au exact o valoare pentru proprietatea sh:namespace."@ro ;
+        sh:message "Prefixové deklarácie majú práve jednu hodnotu pre vlastnosť sh:namespace."@sk ;
+        sh:message "Deklaracije predpone imajo natanko eno vrednost za lastnost sh:namespace."@sl ;
+        sh:message "Prefixdeklarationer har exakt ett värde för egenskapen sh:namespace."@sv ;
 		sh:maxCount 1 ;					# namespace-count
 		sh:minCount 1 ;					# namespace-count
 	] .
@@ -189,7 +488,30 @@ shsh:ParameterShape
 		sh:description "Datatype for sh:optional class."@en ;
 		
 		sh:path sh:optional ;
+		sh:message "Стойностите на sh:optional трябва да бъдат литерали с тип данни xsd:boolean."@bg ;
+   		sh:message "Hodnoty sh:optional musí být literály s datovým typem xsd:boolean."@cs ;
+        sh:message "Værdierne for sh:optional skal være bogstaver med datatype xsd:boolean."@da ;
+        sh:message "Die Werte von sh:optional müssen Literale mit dem Datentyp xsd:boolean sein."@de ;
+        sh:message "Οι τιμές του sh:optional πρέπει να είναι κυριολεκτικές με τύπο δεδομένων xsd:boolean."@el ;
 		sh:message "The values of sh:optional must be literals with datatype xsd:boolean."@en ;
+        sh:message "Los valores de sh:opcional deben ser literales con tipo de datos xsd:boolean."@es ;
+        sh:message "sh:optional väärtused peavad olema andmetüübiga xsd:boolean literaalid."@et ;
+        sh:message "sh:optional:n arvojen on oltava literaaleja, joiden tietotyyppi on xsd:boolean."@fi ;
+        sh:message "Les valeurs de sh:optional doivent être des littéraux avec le type de données xsd:boolean."@fr ;
+        sh:message "Caithfidh luachanna sh:optional a bheith ina n-litreacha le cineál sonraí xsd:boolean."@ga ;
+        sh:message "Vrijednosti sh:optional moraju biti literali s tipom podataka xsd:boolean."@hr ;
+        sh:message "Az sh:optional értékeinek literáloknak kell lenniük xsd:boolean adattípussal."@hu ;
+        sh:message "I valori di sh:optional devono essere letterali con tipo di dati xsd:boolean."@it ;
+        sh:message "sh:optional reikšmės turi būti literalai su duomenų tipu xsd:boolean."@lt ;
+        sh:message "sh:optional vērtībām ir jābūt literāļiem ar datu tipu xsd:boolean."@lv ;
+        sh:message "Il-valuri ta' sh:optional għandhom ikunu letterali b'datatype xsd:boolean."@mt ;
+        sh:message "De waarden van sh:optional moeten letterlijke waarden zijn met datatype xsd:boolean."@nl ;
+        sh:message "Wartości sh:optional muszą być literałami o typie danych xsd:boolean."@pl ;
+        sh:message "Os valores de sh:opcional devem ser literais com tipo de dados xsd:boolean."@pt ;
+        sh:message "Valorile lui sh:optional trebuie să fie literale cu tipul de date xsd:boolean."@ro ;
+        sh:message "Hodnoty sh:optional musia byť literály s typom údajov xsd:boolean."@sk ;
+        sh:message "Vrednosti sh:optional morajo biti literali s podatkovnim tipom xsd:boolean."@sl ;
+        sh:message "Värdena för sh:optional måste vara bokstavliga med datatypen xsd:boolean."@sv ;
 		sh:datatype xsd:boolean ;		# optional-datatype
 	] ;
 	
@@ -198,7 +520,30 @@ shsh:ParameterShape
 		sh:description "Maximum count for sh:optional class."@en ;
 		
 		sh:path sh:optional ;
+		sh:message "Декларацията на параметър може да има най-много една стойност за свойството sh:optional."@bg ;
+   		sh:message "Deklarace parametru může mít nejvýše jednu hodnotu pro vlastnost sh:optional."@cs ;
+        sh:message "En parametererklæring kan højst have én værdi for egenskaben sh:optional."@da ;
+        sh:message "Eine Parameterdeklaration kann höchstens einen Wert für die Eigenschaft sh:optional haben."@de ;
+        sh:message "Μια δήλωση παραμέτρου μπορεί να έχει το πολύ μία τιμή για την ιδιότητα sh:optional."@el ;
 		sh:message "A parameter declaration can have at most one value for the property sh:optional."@en ;
+        sh:message "Una declaración de parámetro puede tener como máximo un valor para la propiedad sh:optional."@es ;
+        sh:message "Parameetri deklaratsioonil võib atribuudi sh:optional jaoks olla kuni üks väärtus."@et ;
+        sh:message "Parametrimäärityksessä voi olla enintään yksi arvo ominaisuudelle sh:optional."@fi ;
+        sh:message "Une déclaration de paramètre peut avoir au plus une valeur pour la propriété sh:optional."@fr ;
+        sh:message "Féadfaidh luach amháin ar a laghad a bheith ag dearbhú paraiméadar don mhaoin sh:optional."@ga ;
+        sh:message "Deklaracija parametra može imati najviše jednu vrijednost za svojstvo sh:optional."@hr ;
+        sh:message "A paraméterdeklaráció legfeljebb egy értéket tartalmazhat az sh:optional tulajdonsághoz."@hu ;
+        sh:message "Una dichiarazione di parametro può avere al massimo un valore per la proprietà sh:optional."@it ;
+        sh:message "Parametrų deklaracijoje gali būti ne daugiau kaip viena ypatybės sh:optional reikšmė."@lt ;
+        sh:message "Parametru deklarācijā var būt ne vairāk kā viena rekvizīta vērtība sh:optional."@lv ;
+        sh:message "Dikjarazzjoni ta' parametru jista' jkollha l-iktar valur wieħed għall-proprjetà sh:optional."@mt ;
+        sh:message "Een parameterdeclaratie kan maximaal één waarde hebben voor de eigenschap sh:optional."@nl ;
+        sh:message "Deklaracja parametru może mieć co najwyżej jedną wartość właściwości sh:optional."@pl ;
+        sh:message "Uma declaração de parâmetro pode ter no máximo um valor para a propriedade sh:optional."@pt ;
+        sh:message "O declarație de parametru poate avea cel mult o valoare pentru proprietatea sh:optional."@ro ;
+        sh:message "Deklarácia parametra môže mať najviac jednu hodnotu pre vlastnosť sh:optional."@sk ;
+        sh:message "Deklaracija parametra ima lahko največ eno vrednost za lastnost sh:optional."@sl ;
+        sh:message "En parameterdeklaration kan ha högst ett värde för egenskapen sh:optional."@sv ;
 		sh:maxCount 1 ;	 				# optional-maxCount
 	] .
 
@@ -215,7 +560,30 @@ shsh:ContstraintComponentShape
 		sh:description "Datatype for sh:labelTemplate class."@en ;
 		
 		sh:path sh:labelTemplate ;
+		sh:message "Стойностите на sh:labelTemplate са низове (евентуално с езиков таг)."@bg ;
+   		sh:message "Hodnoty sh:labelTemplate jsou řetězce (případně s tagem jazyka)."@cs ;
+        sh:message "Værdierne for sh:labelTemplate er strenge (eventuelt med sprogtag)."@da ;
+        sh:message "Die Werte von sh:labelTemplate sind Strings (evtl. mit Sprachkennzeichen)."@de ;
+        sh:message "Οι τιμές του sh:labelTemplate είναι συμβολοσειρές (πιθανώς με ετικέτα γλώσσας)."@el ;
 		sh:message "The values of sh:labelTemplate are strings (possibly with language tag)."@en ;
+        sh:message "Los valores de sh:labelTemplate son cadenas (posiblemente con etiqueta de idioma)."@es ;
+        sh:message "sh:labelTemplate väärtused on stringid (võimalik, et koos keelesildiga)."@et ;
+        sh:message "sh:labelTemplate:n arvot ovat merkkijonoja (mahdollisesti kielitunnisteen kanssa)."@fi ;
+        sh:message "Les valeurs de sh:labelTemplate sont des chaînes (éventuellement avec une balise de langue)."@fr ;
+        sh:message "Is teaghráin iad luachanna sh:labelTemplate (le clib teanga b'fhéidir)."@ga ;
+        sh:message "Vrijednosti sh:labelTemplate su nizovi (moguće s jezičnom oznakom)."@hr ;
+        sh:message "Az sh:labelTemplate értékei karakterláncok (esetleg nyelvi címkével)."@hu ;
+        sh:message "I valori di sh:labelTemplate sono stringhe (possibilmente con tag di lingua)."@it ;
+        sh:message "sh:labelTemplate reikšmės yra eilutės (galbūt su kalbos žyma)."@lt ;
+        sh:message "sh:labelTemplate vērtības ir virknes (iespējams, ar valodas tagu)."@lv ;
+        sh:message "Il-valuri ta' sh:labelTemplate huma strings (possibilment b'tikketta tal-lingwa)."@mt ;
+        sh:message "De waarden van sh:labelTemplate zijn strings (eventueel met taaltag)."@nl ;
+        sh:message "Wartości sh:labelTemplate to ciągi (prawdopodobnie ze znacznikiem języka)."@pl ;
+        sh:message "Os valores de sh:labelTemplate são strings (possivelmente com tag de idioma)."@pt ;
+        sh:message "Valorile lui sh:labelTemplate sunt șiruri de caractere (eventual cu etichetă de limbă)."@ro ;
+        sh:message "Hodnoty sh:labelTemplate sú reťazce (prípadne s jazykovou značkou)."@sk ;
+        sh:message "Vrednosti sh:labelTemplate so nizi (morda z oznako jezika)."@sl ;
+        sh:message "Värdena för sh:labelTemplate är strängar (eventuellt med språktagg)."@sv ;
 		sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ; 				# labelTemplate-datatype
 	] ;
 	
@@ -224,7 +592,30 @@ shsh:ContstraintComponentShape
 		sh:description "Pattern for sh:path class."@en ;
 		
 		sh:path (sh:parameter sh:path) ;
+		sh:message "Всяко име на параметър е валидно SPARQL VARNAME."@bg ;
+   		sh:message "Každý název parametru je platný SPARQL VARNAME."@cs ;
+        sh:message "Hvert parameternavn er et gyldigt SPARQL VARNAME."@da ;
+        sh:message "Jeder Parametername ist ein gültiger SPARQL VARNAME."@de ;
+        sh:message "Κάθε όνομα παραμέτρου είναι ένα έγκυρο SPARQL VARNAME."@el ;
 		sh:message "Every parameter name is a valid SPARQL VARNAME."@en ;
+        sh:message "Cada nombre de parámetro es un SPARQL VARNAME válido."@es ;
+        sh:message "Iga parameetri nimi on kehtiv SPARQL VARNAME."@et ;
+        sh:message "Jokainen parametrin nimi on kelvollinen SPARQL VARNAME."@fi ;
+        sh:message "Chaque nom de paramètre est un SPARQL VARNAME valide."@fr ;
+        sh:message "Is VARNAME SPARQL bailí é gach ainm paraiméadar."@ga ;
+        sh:message "Svaki naziv parametra je važeći SPARQL VARNAME."@hr ;
+        sh:message "Minden paraméternév egy érvényes SPARQL VARNAME."@hu ;
+        sh:message "Ogni nome di parametro è uno SPARQL VARNAME valido."@it ;
+        sh:message "Kiekvienas parametro pavadinimas yra galiojantis SPARQL VARNAME."@lt ;
+        sh:message "Katrs parametra nosaukums ir derīgs SPARQL VARNAME."@lv ;
+        sh:message "Kull isem tal-parametru huwa SPARQL VARNAME validu."@mt ;
+        sh:message "Elke parameternaam is een geldige SPARQL VARNAME."@nl ;
+        sh:message "Każda nazwa parametru jest prawidłową nazwą VARNAME SPARQL."@pl ;
+        sh:message "Cada nome de parâmetro é um SPARQL VARNAME válido."@pt ;
+        sh:message "Fiecare nume de parametru este un SPARQL VARNAME valid."@ro ;
+        sh:message "Každý názov parametra je platný SPARQL VARNAME."@sk ;
+        sh:message "Vsako ime parametra je veljaven SPARQL VARNAME."@sl ;
+        sh:message "Varje parameternamn är ett giltigt SPARQL VARNAME."@sv ;
 		sh:pattern "^.*#[A-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD_0-9][A-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD_0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$" ;
 	] ;
 	
@@ -233,7 +624,30 @@ shsh:ContstraintComponentShape
 		sh:description "Pattern for sh:path class."@en ;
 		
 		sh:path (sh:parameter sh:path) ;
+		sh:message "Имената на параметрите не трябва да са едно от следните: this, shapesGraph, currentShape, path, PATH, value."@bg ;
+   		sh:message "Názvy parametrů nesmí být jedno z následujících: this, shapesGraph, currentShape, path, PATH, value."@cs ;
+        sh:message "Parameternavne må ikke være et af følgende: this, shapesGraph, currentShape, path, PATH, value."@da ;
+        sh:message "Parameternamen dürfen nicht einer der folgenden sein: this, shapesGraph, currentShape, path, PATH, value."@de ;
+        sh:message "Τα ονόματα παραμέτρων δεν πρέπει να είναι ένα από τα ακόλουθα: this, shapesGraph, currentShape, path, PATH, value."@el ;
 		sh:message "Parameter names must not be one of the following: this, shapesGraph, currentShape, path, PATH, value."@en ;
+        sh:message "Los nombres de los parámetros no deben ser uno de los siguientes: this, shapesGraph, currentShape, path, PATH, value."@es ;
+        sh:message "Parameetrite nimed ei tohi olla üks järgmistest: this, shapesGraph, currentShape, path, PATH, value."@et ;
+        sh:message "Parametrien nimet eivät saa olla jotain seuraavista: this, shapesGraph, currentShape, path, PATH, value."@fi ;
+        sh:message "Les noms de paramètre ne doivent pas être l'un des suivants: this, shapesGraph, currentShape, path, PATH, value."@fr ;
+        sh:message "Ní féidir le hainmneacha paraiméadair a bheith mar cheann amháin díobh seo a leanas: this, shapesGraph, currentShape, path, PATH, value."@ga ;
+        sh:message "Nazivi parametara ne smiju biti jedan od sljedećih: this, shapesGraph, currentShape, path, PATH, value."@hr ;
+        sh:message "A paraméternevek nem lehetnek a következők: this, shapesGraph, currentShape, path, PATH, value."@hu ;
+        sh:message "I nomi dei parametri non devono essere uno dei seguenti: this, shapesGraph, currentShape, path, PATH, value."@it ;
+        sh:message "Parametrų pavadinimai negali būti vienas iš šių: this, shapesGraph, currentShape, path, PATH, value."@lt ;
+        sh:message "Parametru nosaukumi nedrīkst būt viens no šiem: this, shapesGraph, currentShape, path, PATH, value."@lv ;
+        sh:message "L-ismijiet tal-parametri m'għandhomx ikunu wieħed minn dawn li ġejjin: this, shapesGraph, currentShape, path, PATH, value."@mt ;
+        sh:message "Parameternamen mogen niet een van de volgende zijn: this, shapesGraph, currentShape, path, PATH, value."@nl ;
+        sh:message "Nazwy parametrów nie mogą być jedną z następujących: this, shapesGraph, currentShape, path, PATH, value."@pl ;
+        sh:message "Os nomes dos parâmetros não devem ser um dos seguintes: this, shapesGraph, currentShape, path, PATH, value."@pt ;
+        sh:message "Numele parametrilor nu trebuie să fie unul dintre următoarele: this, shapesGraph, currentShape, path, PATH, value."@ro ;
+        sh:message "Názvy parametrov nesmú byť jedným z nasledujúcich: this, shapesGraph, currentShape, path, PATH, value."@sk ;
+        sh:message "Imena parametrov ne smejo biti eno od naslednjih: this, shapesGraph, currentShape, path, PATH, value."@sl ;
+        sh:message "Parameternamn får inte vara något av följande: this, shapesGraph, currentShape, path, PATH, value."@sv ;
 		sh:pattern "^.*#(?!this$)(?!shapesGraph$)(?!currentShape$)(?!path$)(?!PATH$)(?!value$).*$" ;					# parameter-name-not-in
 	] .
 
@@ -249,7 +663,30 @@ shsh:NodeValidatorPropertyValidatorShape
 		sh:description "Class for sh:nodeValidator class."@en ;
 		
 		sh:path sh:nodeValidator ;
+		sh:message "Стойностите на [sh:nodeValidator] трябва да бъдат валидатори, базирани на SELECT."@bg ;
+   		sh:message "Hodnoty sh:nodeValidator musí být validátory založené na SELECTu."@cs ;
+        sh:message "Værdierne for sh:nodeValidator skal være SELECT-baserede validatorer."@da ;
+        sh:message "Die Werte von sh:nodeValidator müssen SELECT-basierte Validatoren sein."@de ;
+        sh:message "Οι τιμές του sh:nodeValidator πρέπει να είναι επικυρωτές που βασίζονται σε SELECT."@el ;
 		sh:message "The values of sh:nodeValidator must be SELECT-based validators."@en ;
+        sh:message "Los valores de sh:nodeValidator deben ser validadores basados en SELECT."@es ;
+        sh:message "sh:nodeValidator väärtused peavad olema SELECT-põhised validaatorid."@et ;
+        sh:message "sh:nodeValidator:n arvojen on oltava SELECT-pohjaisia validaattoreita."@fi ;
+        sh:message "Les valeurs de sh:nodeValidator doivent être des validateurs basés sur SELECT."@fr ;
+        sh:message "Ní mór do luachanna sh:nodeValidator a bheith ina mbailitheoirí bunaithe ar SELECT."@ga ;
+        sh:message "Vrijednosti sh:nodeValidator moraju biti validatori temeljeni na SELECT-u."@hr ;
+        sh:message "Az sh:nodeValidator értékeinek SELECT alapú érvényesítőknek kell lenniük."@hu ;
+        sh:message "I valori di sh:nodeValidator devono essere validatori basati su SELECT."@it ;
+        sh:message "sh:nodeValidator reikšmės turi būti SELECT pagrįstos tikrinimo priemonės."@lt ;
+        sh:message "sh:nodeValidator vērtībām ir jābūt uz SELECT balstītiem pārbaudītājiem."@lv ;
+        sh:message "Il-valuri ta' sh:nodeValidator iridu jkunu validaturi bbażati fuq SELECT."@mt ;
+        sh:message "De waarden van sh:nodeValidator moeten op SELECT gebaseerde validators zijn."@nl ;
+        sh:message "Wartości sh:nodeValidator muszą być walidatorami opartymi na SELECT."@pl ;
+        sh:message "Os valores de sh:nodeValidator devem ser validadores baseados em SELECT."@pt ;
+        sh:message "Valorile lui sh:nodeValidator trebuie să fie validatoare bazate pe SELECT."@ro ;
+        sh:message "Hodnoty sh:nodeValidator musia byť validátory založené na SELECT."@sk ;
+        sh:message "Vrednosti sh:nodeValidator morajo biti validatorji, ki temeljijo na SELECT."@sl ;
+        sh:message "Värdena för sh:nodeValidator måste vara SELECT-baserade validatorer."@sv ;
 		sh:class sh:SPARQLSelectValidator ;				# nodeValidator-class
 	] ;
 		
@@ -258,7 +695,30 @@ shsh:NodeValidatorPropertyValidatorShape
 		sh:description "Class for sh:propertyValidator class."@en ;
 		
 		sh:path sh:propertyValidator ;
+		sh:message "Стойностите на sh:propertyValidator трябва да бъдат валидатори, базирани на SELECT."@bg ;
+   		sh:message "Hodnoty sh:propertyValidator musí být validátory založené na SELECTu."@cs ;
+        sh:message "Værdierne for sh:propertyValidator skal være SELECT-baserede validatorer."@da ;
+        sh:message "Die Werte von sh:propertyValidator müssen SELECT-basierte Validatoren sein."@de ;
+        sh:message "Οι τιμές του sh:propertyValidator πρέπει να είναι επικυρωτές που βασίζονται σε SELECT."@el ;
 		sh:message "The values of sh:propertyValidator must be SELECT-based validators."@en ;
+        sh:message "Los valores de sh:propertyValidator deben ser validadores basados en SELECT."@es ;
+        sh:message "sh:propertyValidator väärtused peavad olema SELECT-põhised validaatorid."@et ;
+        sh:message "sh:propertyValidator:n arvojen on oltava SELECT-pohjaisia validaattoreita."@fi ;
+        sh:message "Les valeurs de sh:propertyValidator doivent être des validateurs basés sur SELECT."@fr ;
+        sh:message "Ní mór do luachanna sh:propertyValidator a bheith ina mbailitheoirí atá bunaithe ar SELECT."@ga ;
+        sh:message "Vrijednosti sh:propertyValidator moraju biti validatori temeljeni na SELECT-u."@hr ;
+        sh:message "Az sh:propertyValidator értékeinek SELECT-alapú érvényesítőknek kell lenniük."@hu ;
+        sh:message "I valori di sh:propertyValidator devono essere validatori basati su SELECT."@it ;
+        sh:message "sh:propertyValidator reikšmės turi būti SELECT pagrįstos tikrinimo priemonės."@lt ;
+        sh:message "sh:propertyValidator vērtībām ir jābūt uz SELECT balstītiem pārbaudītājiem."@lv ;
+        sh:message "Il-valuri ta' sh:propertyValidator iridu jkunu validaturi bbażati fuq SELECT."@mt ;
+        sh:message "De waarden van sh:propertyValidator moeten op SELECT gebaseerde validators zijn."@nl ;
+        sh:message "Wartości sh:propertyValidator muszą być walidatorami opartymi na SELECT."@pl ;
+        sh:message "Os valores de sh:propertyValidator devem ser validadores baseados em SELECT."@pt ;
+        sh:message "Valorile lui sh:propertyValidator trebuie să fie validatoare bazate pe SELECT."@ro ;
+        sh:message "Hodnoty sh:propertyValidator musia byť validátory založené na SELECT."@sk ;
+        sh:message "Vrednosti sh:propertyValidator morajo biti validatorji, ki temeljijo na SELECT."@sl ;
+        sh:message "Värdena för sh:propertyValidator måste vara SELECT-baserade validatorer."@sv ;
 		sh:class sh:SPARQLSelectValidator ;				# propertyValidator-class
 	] .
 	
@@ -274,7 +734,30 @@ shsh:SPARQLSelectValidatorShape
 		sh:description "Maximum and minimum count for sh:select class."@en ;
 		
 		sh:path sh:select ;
+		sh:message "Базираните на SELECT валидатори имат точно една стойност за свойството sh:select."@bg ;
+   		sh:message "Validátory založené na SELECT mají právě jednu hodnotu pro vlastnost sh:select."@cs ;
+        sh:message "SELECT-baserede validatorer har præcis én værdi for egenskaben sh:select."@da ;
+        sh:message "SELECT-basierte Validatoren haben genau einen Wert für die Eigenschaft sh:select."@de ;
+        sh:message "Οι συσκευές επικύρωσης που βασίζονται σε SELECT έχουν ακριβώς μία τιμή για την ιδιότητα sh:select."@el ;
 		sh:message "SELECT-based validators have exactly one value for the property sh:select."@en ;
+        sh:message "Los validadores basados en SELECT tienen exactamente un valor para la propiedad sh:select."@es ;
+        sh:message "SELECT-põhistel validaatoritel on atribuudil sh:select täpselt üks väärtus."@et ;
+        sh:message "SELECT-pohjaisilla validaattoreilla on täsmälleen yksi arvo ominaisuudelle sh:select."@fi ;
+        sh:message "Les validateurs basés sur SELECT ont exactement une valeur pour la propriété sh:select."@fr ;
+        sh:message "Tá luach amháin go díreach ag bailíochtóirí atá bunaithe ar SELECT ar an airí sh:select."@ga ;
+        sh:message "Validatori temeljeni na SELECT-u imaju točno jednu vrijednost za svojstvo sh:select."@hr ;
+        sh:message "A SELECT alapú érvényesítőknek pontosan egy értéke van a sh:select tulajdonsághoz."@hu ;
+        sh:message "I validatori basati su SELECT hanno esattamente un valore per la proprietà sh:select."@it ;
+        sh:message "SELECT pagrįsti tikrintuvai turi tiksliai vieną nuosavybės reikšmę sh:select."@lt ;
+        sh:message "Uz SELECT balstītiem pārbaudītājiem ir tieši viena vērtība rekvizītam sh:select."@lv ;
+        sh:message "Il-validaturi bbażati fuq SELECT għandhom eżattament valur wieħed għall-proprjetà sh:select."@mt ;
+        sh:message "Op SELECT gebaseerde validators hebben precies één waarde voor de eigenschap sh:select."@nl ;
+        sh:message "Walidatory oparte na SELECT mają dokładnie jedną wartość dla właściwości sh:select."@pl ;
+        sh:message "Os validadores baseados em SELECT têm exatamente um valor para a propriedade sh:select."@pt ;
+        sh:message "Validatoarele bazate pe SELECT au exact o valoare pentru proprietatea sh:select."@ro ;
+        sh:message "Validátory založené na SELECT majú práve jednu hodnotu pre vlastnosť sh:select."@sk ;
+        sh:message "Validatorji, ki temeljijo na SELECT, imajo natanko eno vrednost za lastnost sh:select."@sl ;
+        sh:message "SELECT-baserade validerare har exakt ett värde för egenskapen sh:select."@sv ;
 		sh:maxCount 1 ;	 				# SPARQLSelectValidator-select-count
 		sh:minCount 1 ;	 				# SPARQLSelectValidator-select-count
 	] .
@@ -291,7 +774,30 @@ shsh:ValidatorShape
 		sh:description "Class for sh:validator class."@en ;
 		
 		sh:path sh:validator ;
+		sh:message "Стойностите на sh:validator трябва да са базирани на ASK валидатори."@bg ;
+   		sh:message "Hodnoty sh:validator musí být validátory založené na ASK."@cs ;
+        sh:message "Værdierne for sh:validator skal være ASK-baserede validatorer."@da ;
+        sh:message "Die Werte von sh:validator müssen ASK-basierte Validatoren sein."@de ;
+        sh:message "Οι τιμές του sh:validator πρέπει να είναι επικυρωτές βάσει ASK."@el ;
 		sh:message "The values of sh:validator must be ASK-based validators."@en ;
+        sh:message "Los valores de sh:validator deben ser validadores basados en ASK."@es ;
+        sh:message "sh:validator väärtused peavad olema ASK-põhised validaatorid."@et ;
+        sh:message "sh:validator:n arvojen on oltava ASK-pohjaisia validaattoreita."@fi ;
+        sh:message "Les valeurs de sh:validator doivent être des validateurs basés sur ASK."@fr ;
+        sh:message "Caithfidh luachanna sh:validator a bheith bunaithe ar bhailíochtóirí CEIST."@ga ;
+        sh:message "Vrijednosti sh:validator moraju biti validatori temeljeni na ASK-u."@hr ;
+        sh:message "Az sh:validator értékeinek ASK-alapú érvényesítőknek kell lenniük."@hu ;
+        sh:message "I valori di sh:validator devono essere validatori basati su ASK."@it ;
+        sh:message "sh:validator reikšmės turi būti ASK pagrįstos tikrinimo priemonės."@lt ;
+        sh:message "sh:validator vērtībām ir jābūt uz ASK balstītiem pārbaudītājiem."@lv ;
+        sh:message "Il-valuri ta' sh:validator iridu jkunu validaturi bbażati fuq ASK."@mt ;
+        sh:message "De waarden van sh:validator moeten op ASK gebaseerde validators zijn."@nl ;
+        sh:message "Wartości sh:validator muszą być walidatorami opartymi na ASK."@pl ;
+        sh:message "Os valores de sh:validator devem ser validadores baseados em ASK."@pt ;
+        sh:message "Valorile lui sh:validator trebuie să fie validatoare bazate pe ASK."@ro ;
+        sh:message "Hodnoty sh:validator musia byť validátory založené na ASK."@sk ;
+        sh:message "Vrednosti sh:validator morajo biti validatorji, ki temeljijo na ASK."@sl ;
+        sh:message "Värdena för sh:validator måste vara ASK-baserade validatorer."@sv ;
 		sh:class sh:SPARQLAskValidator ;				# validator-class
 	] .
 	
@@ -307,7 +813,30 @@ shsh:SPARQLAskValidatorShape
 		sh:description "Maximum and minimum count for sh:ask class."@en ;
 		
 		sh:path sh:ask ;
+		sh:message "Базираните на ASK валидатори имат точно една стойност за свойството sh:ask."@bg ;
+   		sh:message "Validátory založené na ASK mají právě jednu hodnotu pro vlastnost sh:ask."@cs ;
+        sh:message "ASK-baserede validatorer har præcis én værdi for egenskaben sh:ask."@da ;
+        sh:message "ASK-basierte Validatoren haben genau einen Wert für die Eigenschaft sh:ask."@de ;
+        sh:message "Οι συσκευές επικύρωσης που βασίζονται σε ASK έχουν ακριβώς μία τιμή για την ιδιότητα sh:ask."@el ;
 		sh:message "ASK-based validators have exactly one value for the property sh:ask."@en ;
+        sh:message "Los validadores basados en ASK tienen exactamente un valor para la propiedad sh:ask."@es ;
+        sh:message "ASK-põhistel validaatoritel on atribuudil sh:ask täpselt üks väärtus."@et ;
+        sh:message "I validatori basati su ASK hanno esattamente un valore per la proprietà sh:ask."@fi ;
+        sh:message "Les validateurs basés sur ASK ont exactement une valeur pour la propriété sh:ask."@fr ;
+        sh:message "Tá luach amháin go díreach ag bailíochtóirí bunaithe ar ASK ar an maoin sh:ask."@ga ;
+        sh:message "Validatori temeljeni na ASK-u imaju točno jednu vrijednost za svojstvo sh:ask."@hr ;
+        sh:message "Az ASK-alapú érvényesítőknek pontosan egy értéke van az sh:ask tulajdonsághoz."@hu ;
+        sh:message "I validatori basati su ASK hanno esattamente un valore per la proprietà sh:ask."@it ;
+        sh:message "ASK pagrįsti tikrintuvai turi tiksliai vieną nuosavybės reikšmę sh:ask."@lt ;
+        sh:message "Uz ASK balstītiem pārbaudītājiem ir tieši viena vērtība rekvizītam sh:ask."@lv ;
+        sh:message "Il-validaturi bbażati fuq ASK għandhom eżattament valur wieħed għall-proprjetà sh:ask."@mt ;
+        sh:message "Op ASK gebaseerde validators hebben precies één waarde voor de eigenschap sh:ask."@nl ;
+        sh:message "Walidatory oparte na ASK mają dokładnie jedną wartość dla właściwości sh:ask."@pl ;
+        sh:message "Os validadores baseados em ASK têm exatamente um valor para a propriedade sh:ask."@pt ;
+        sh:message "Validatoarele bazate pe ASK au exact o valoare pentru proprietatea sh:ask."@ro ;
+        sh:message "Validátory založené na ASK majú práve jednu hodnotu pre vlastnosť sh:ask."@sk ;
+        sh:message "Validatorji, ki temeljijo na ASK, imajo natanko eno vrednost za lastnost sh:ask."@sl ;
+        sh:message "ASK-baserade validerare har exakt ett värde för egenskapen sh:ask."@sv ;
 		sh:maxCount 1 ;	 				# ask-count
 		sh:minCount 1 ;	 				# ask-count
 	] ;
@@ -317,7 +846,30 @@ shsh:SPARQLAskValidatorShape
 		sh:description "Datatype for sh:ask class."@en ;
 		
 		sh:path sh:ask ;
+		sh:message "Стойността на sh:ask трябва да бъде литерал с тип данни xsd:string."@bg ;
+   		sh:message "Hodnota sh:ask musí být literál s datovým typem xsd:string."@cs ;
+        sh:message "Værdien af sh:ask skal være en literal med datatype xsd:string."@da ;
+        sh:message "Der Wert von sh:ask muss ein Literal mit dem Datentyp xsd:string sein."@de ;
+        sh:message "Η τιμή του sh:ask πρέπει να είναι κυριολεκτική με τύπο δεδομένων xsd:string."@el ;
 		sh:message "The value of sh:ask must be a literal with datatype xsd:string."@en ;
+        sh:message "El valor de sh:ask debe ser un literal con tipo de datos xsd:string."@es ;
+        sh:message "sh:ask väärtus peab olema andmetüübiga xsd:string literaal."@et ;
+        sh:message "sh:ask:n arvon on oltava literaali, jonka tietotyyppi on xsd:string."@fi ;
+        sh:message "La valeur de sh:ask doit être un littéral avec le type de données xsd:string."@fr ;
+        sh:message "Caithfidh luach sh:ask a bheith ina litir le cineál sonraí xsd:string."@ga ;
+        sh:message "Vrijednost sh:ask mora biti literal s tipom podataka xsd:string."@hr ;
+        sh:message "Az sh:ask értékének literálnak kell lennie xsd:string adattípussal."@hu ;
+        sh:message "Il valore di sh:ask deve essere un valore letterale con tipo di dati xsd:string."@it ;
+        sh:message "sh:ask reikšmė turi būti literalė su duomenų tipu xsd:string."@lt ;
+        sh:message "sh:ask vērtībai ir jābūt literālam ar datu tipu xsd:string."@lv ;
+        sh:message "Il-valur ta' sh:ask għandu jkun litterali b'datatype xsd:string."@mt ;
+        sh:message "De waarde van sh:ask moet een letterlijke waarde zijn met datatype xsd:string."@nl ;
+        sh:message "Wartość sh:ask musi być literałem o typie danych xsd:string."@pl ;
+        sh:message "O valor de sh:ask deve ser um literal com tipo de dados xsd:string."@pt ;
+        sh:message "Valoarea lui sh:ask trebuie să fie un literal cu tipul de date xsd:string."@ro ;
+        sh:message "Hodnota sh:ask musí byť literál s typom údajov xsd:string."@sk ;
+        sh:message "Vrednost sh:ask mora biti literal s podatkovnim tipom xsd:string."@sl ;
+        sh:message "Värdet på sh:ask måste vara en literal med datatypen xsd:string."@sv ;
 		sh:datatype xsd:string ;	 				# ask-datatype
 	] ;
 	
@@ -325,8 +877,31 @@ shsh:SPARQLAskValidatorShape
 		sh:name "Ask pattern shape"@en ;
 		sh:description "Pattern for sh:ask class."@en ;
 		
-		sh:path sh:ask ;	
+		sh:path sh:ask ;
+		sh:message "Стойността на sh:ask трябва да бъде валидна SPARQL ASK заявка, използваща гореспоменатите правила за обработка на префикси."@bg ;
+   		sh:message "Hodnota sh:ask musí být platný dotaz SPARQL ASK využívající výše uvedená pravidla pro zpracování předpon."@cs ;
+        sh:message "Værdien af sh:ask skal være en gyldig SPARQL ASK-forespørgsel ved hjælp af de førnævnte præfikshåndteringsregler."@da ;
+        sh:message "Der Wert von sh:ask muss eine gültige SPARQL ASK-Abfrage sein, die die oben genannten Regeln zur Präfixbehandlung verwendet."@de ;
+        sh:message "Η τιμή του sh:ask πρέπει να είναι ένα έγκυρο ερώτημα SPARQL ASK χρησιμοποιώντας τους προαναφερθέντες κανόνες χειρισμού προθέματος."@el ;
 		sh:message "The value of sh:ask must be a valid SPARQL ASK query using the aforementioned prefix handling rules."@en ;
+        sh:message "El valor de sh:ask debe ser una consulta SPARQL ASK válida utilizando las reglas de manejo de prefijos antes mencionadas."@es ;
+        sh:message "sh:ask väärtus peab olema kehtiv SPARQL ASK päring, mis kasutab ülalnimetatud eesliidete käsitlemise reegleid."@et ;
+        sh:message "sh:ask:n arvon on oltava kelvollinen SPARQL ASK -kysely käyttäen edellä mainittuja etuliitteiden käsittelysääntöjä."@fi ;
+        sh:message "La valeur de sh:ask doit être une requête SPARQL ASK valide utilisant les règles de gestion des préfixes susmentionnées."@fr ;
+        sh:message "Caithfidh luach sh:ask a bheith ina cheist bailí SPARQL ASK ag baint úsáide as rialacha láimhseála na réimírí réamhluaite."@ga ;
+        sh:message "Vrijednost sh:ask mora biti valjani SPARQL ASK upit koji koristi gore spomenuta pravila rukovanja prefiksom."@hr ;
+        sh:message "Az sh:ask értékének érvényes SPARQL ASK-lekérdezésnek kell lennie, amely a fent említett előtagkezelési szabályokat használja."@hu ;
+        sh:message "Il valore di sh:ask deve essere una query SPARQL ASK valida utilizzando le regole di gestione dei prefissi sopra menzionate."@it ;
+        sh:message "sh:ask reikšmė turi būti tinkama SPARQL ASK užklausa, naudojant anksčiau minėtas priešdėlių tvarkymo taisykles."@lt ;
+        sh:message "sh:ask vērtībai ir jābūt derīgam SPARQL ASK vaicājumam, izmantojot iepriekš minētos prefiksu apstrādes noteikumus."@lv ;
+        sh:message "Il-valur ta' sh:ask għandu jkun mistoqsija SPARQL ASK valida bl-użu tar-regoli tal-immaniġġjar tal-prefissi msemmija hawn fuq."@mt ;
+        sh:message "De waarde van sh:ask moet een geldige SPARQL ASK-query zijn met gebruik van de bovengenoemde regels voor het afhandelen van prefixen."@nl ;
+        sh:message "Wartość sh:ask musi być prawidłowym zapytaniem SPARQL ASK przy użyciu wyżej wymienionych reguł obsługi prefiksów."@pl ;
+        sh:message "O valor de sh:ask deve ser uma consulta SPARQL ASK válida usando as regras de manipulação de prefixo acima mencionadas."@pt ;
+        sh:message "Valoarea sh:ask trebuie să fie o interogare SPARQL ASK validă, folosind regulile de gestionare a prefixelor menționate mai sus."@ro ;
+        sh:message "Hodnota sh:ask musí byť platný dotaz SPARQL ASK využívajúci vyššie uvedené pravidlá spracovania prefixov."@sk ;
+        sh:message "Vrednost sh:ask mora biti veljavna poizvedba SPARQL ASK z uporabo prej omenjenih pravil za ravnanje s predpono."@sl ;
+        sh:message "Värdet på sh:ask måste vara en giltig SPARQL ASK-fråga som använder de tidigare nämnda reglerna för hantering av prefix."@sv ;
 		sh:pattern "\\s*ASK\\s+.*(?:WHERE)\\s*\\{.*\\}\\S$" ;		# ask-sparql
 		sh:flags "si" ;
 	] .
@@ -342,8 +917,31 @@ shsh:SelectAskShape
 		sh:name "Ask pattern shape"@en ;
 		sh:description "Pattern for sh:ask class."@en ;
 		
- 		sh:path sh:ask ;	
+ 		sh:path sh:ask ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да съдържат клауза MINUS."@bg ;
+   		sh:message "Definice předběžné vazby používaná SHACL vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí obsahovat klauzuli MINUS."@cs ;
+        sh:message "Definitionen af præ-binding, der bruges af SHACL, kræver følgende begrænsninger for SPARQL-forespørgsler: SPARQL-forespørgsler må ikke indeholde en MINUS-sætning."@da ;
+        sh:message "Die von SHACL verwendete Definition der Vorabbindung erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen keine MINUS-Klausel enthalten."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να περιέχουν όρο MINUS."@el ;
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause."@en ;
+        sh:message "La definición de vinculación previa utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben contener una cláusula MINUS."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-i päringud ei tohi sisaldada MINUS-klauslit."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä vaatii seuraavat rajoitukset SPARQL-kyselyille: SPARQL-kyselyt eivät saa sisältää MINUS-lausetta."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL requiert les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas contenir de clause MINUS."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangal a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach clásal MINUS a bheith i gceisteanna SPARQL."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju sadržavati MINUS klauzulu."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat követeli meg a SPARQL lekérdezésekre vonatkozóan: A SPARQL lekérdezések nem tartalmazhatnak MINUS záradékot."@hu ;
+        sh:message "La definizione di pre-vincolo utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: le query SPARQL non devono contenere una clausola MINUS."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausose neturi būti sąlygos MINUS."@lt ;
+        sh:message "SHACL izmantotajai iepriekšējas saistīšanas definīcijai ir nepieciešami šādi SPARQL vaicājumu ierobežojumi: SPARQL vaicājumi nedrīkst saturēt klauzulu MINUS."@lv ;
+        sh:message "Id-definizzjoni ta' pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandux ikun fihom klawżola MINUS."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen voor SPARQL-query's: SPARQL-query's mogen geen MINUS-clausule bevatten."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą zawierać klauzuli MINUS."@pl ;
+        sh:message "A definição de pré-ligação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem conter uma cláusula MINUS."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să conțină o clauză MINUS."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú obsahovať klauzulu MINUS."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: Poizvedbe SPARQL ne smejo vsebovati klavzule MINUS."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte innehålla en MINUS-sats."@sv ;
  		sh:pattern "^(?!.*MINUS\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
@@ -351,9 +949,32 @@ shsh:SelectAskShape
 		sh:name "Select pattern shape"@en ;
 		sh:description "Pattern for sh:select class."@en ;
 		
- 		sh:path sh:select ;	
+ 		sh:path sh:select ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да съдържат клауза MINUS."@bg ;
+   		sh:message "Definice předběžné vazby používaná SHACL vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí obsahovat klauzuli MINUS."@cs ;
+        sh:message "Definitionen af præ-binding, der bruges af SHACL, kræver følgende begrænsninger for SPARQL-forespørgsler: SPARQL-forespørgsler må ikke indeholde en MINUS-sætning."@da ;
+        sh:message "Die von SHACL verwendete Definition der Vorabbindung erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen keine MINUS-Klausel enthalten."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να περιέχουν όρο MINUS."@el ;
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a MINUS clause."@en ;
- 		sh:pattern "^(?!.*MINUS\\b).*$" ;	
+        sh:message "La definición de vinculación previa utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben contener una cláusula MINUS."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-i päringud ei tohi sisaldada MINUS-klauslit."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä vaatii seuraavat rajoitukset SPARQL-kyselyille: SPARQL-kyselyt eivät saa sisältää MINUS-lausetta."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL requiert les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas contenir de clause MINUS."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangal a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach clásal MINUS a bheith i gceisteanna SPARQL."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju sadržavati MINUS klauzulu."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat követeli meg a SPARQL lekérdezésekre vonatkozóan: A SPARQL lekérdezések nem tartalmazhatnak MINUS záradékot."@hu ;
+        sh:message "La definizione di pre-vincolo utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: Le query SPARQL non devono contenere una clausola MINUS."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausose neturi būti sąlygos MINUS."@lt ;
+        sh:message "SHACL izmantotajai iepriekšējas saistīšanas definīcijai ir nepieciešami šādi SPARQL vaicājumu ierobežojumi: SPARQL vaicājumi nedrīkst saturēt klauzulu MINUS."@lv ;
+        sh:message "Id-definizzjoni ta' pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandux ikun fihom klawżola MINUS."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen voor SPARQL-query's: SPARQL-query's mogen geen MINUS-clausule bevatten."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą zawierać klauzuli MINUS."@pl ;
+        sh:message "A definição de pré-ligação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem conter uma cláusula MINUS."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să conțină o clauză MINUS."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú obsahovať klauzulu MINUS."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: Poizvedbe SPARQL ne smejo vsebovati klavzule MINUS."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte innehålla en MINUS-sats."@sv ;
+ 		sh:pattern "^(?!.*MINUS\\b).*$" ;
 		sh:flags "s" ;
  	] ;
 	
@@ -361,8 +982,31 @@ shsh:SelectAskShape
 		sh:name "Ask pattern shape"@en ;
 		sh:description "Pattern for sh:ask class."@en ;
 		
- 		sh:path sh:ask ;	
+ 		sh:path sh:ask ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да съдържат обединена заявка (SERVICE)."@bg ;
+   		sh:message "Definice předběžné vazby používaná SHACL vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí obsahovat federovaný dotaz (SERVICE)."@cs ;
+        sh:message "Definitionen af præ-binding, der bruges af SHACL, kræver følgende begrænsninger for SPARQL-forespørgsler: SPARQL-forespørgsler må ikke indeholde en fødereret forespørgsel (SERVICE)."@da ;
+        sh:message "Die von SHACL verwendete Definition der Vorabbindung erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen keine föderierte Abfrage (SERVICE) enthalten."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να περιέχουν ομοσπονδιακό ερώτημα (SERVICE)."@el ;
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE)."@en ;
+        sh:message "La definición de enlace previo utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben contener una consulta federada (SERVICE)."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-päringud ei tohi sisaldada liitpäringut (SERVICE)."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä edellyttää seuraavat rajoitukset SPARQL-kyselyille: SPARQL-kyselyt eivät saa sisältää hajautettua kyselyä (SERVICE)."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL requiert les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas contenir de requête fédérée (SERVICE)."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangal a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach ceist chónasctha (SERVICE) a bheith i gceisteanna SPARQL."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju sadržavati federalni upit (SERVICE)."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat írja elő a SPARQL-lekérdezésekre vonatkozóan: A SPARQL-lekérdezések nem tartalmazhatnak egyesített lekérdezést (SERVICE)."@hu ;
+        sh:message "La definizione di pre-associazione utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: Le query SPARQL non devono contenere una query federata (SERVICE)."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausose neturi būti susietos užklausos (SERVICE)."@lt ;
+        sh:message "SHACL izmantotajai iepriekšējas saistīšanas definīcijai ir nepieciešami šādi SPARQL vaicājumu ierobežojumi: SPARQL vaicājumos nedrīkst būt ietverts apvienotais vaicājums (SERVICE)."@lv ;
+        sh:message "Id-definizzjoni ta' pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandux ikun fihom mistoqsija federata (SERVICE)."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen voor SPARQL-query's: SPARQL-query's mogen geen federatieve query (SERVICE) bevatten."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą zawierać zapytania federacyjnego (SERVICE)."@pl ;
+        sh:message "A definição de pré-ligação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem conter uma consulta federada (SERVICE)."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să conțină o interogare federată (SERVICE)."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú obsahovať federatívny dotaz (SERVICE)."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: Poizvedbe SPARQL ne smejo vsebovati zvezne poizvedbe (SERVICE)."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte innehålla en federerad fråga (SERVICE)."@sv ;
  		sh:pattern "^(?!.*SERVICE\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
@@ -370,9 +1014,32 @@ shsh:SelectAskShape
 		sh:name "Select pattern shape"@en ;
 		sh:description "Pattern for sh:select class."@en ;
 		
- 		sh:path sh:select ;	
+ 		sh:path sh:select ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да съдържат обединена заявка (SERVICE)."@bg ;
+   		sh:message "Definice předběžné vazby používaná SHACL vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí obsahovat federovaný dotaz (SERVICE)."@cs ;
+        sh:message "Definitionen af præ-binding, der bruges af SHACL, kræver følgende begrænsninger for SPARQL-forespørgsler: SPARQL-forespørgsler må ikke indeholde en fødereret forespørgsel (SERVICE)."@da ;
+        sh:message "Die von SHACL verwendete Definition der Vorabbindung erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen keine föderierte Abfrage (SERVICE) enthalten."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να περιέχουν ομοσπονδιακό ερώτημα (SERVICE)."@el ;
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a federated query (SERVICE)."@en ;
- 		sh:pattern "^(?!.*SERVICE\\b).*$" ;	
+        sh:message "La definición de enlace previo utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben contener una consulta federada (SERVICE)."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-päringud ei tohi sisaldada liitpäringut (SERVICE)."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä edellyttää seuraavat rajoitukset SPARQL-kyselyille: SPARQL-kyselyt eivät saa sisältää hajautettua kyselyä (SERVICE)."@fi ;
+        sh:message "La définition de pré-liaison utilisée par SHACL requiert les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas contenir de requête fédérée (SERVICE)."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangal a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach ceist chónasctha (SERVICE) a bheith i gceisteanna SPARQL."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju sadržavati federalni upit (SERVICE)."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat írja elő a SPARQL-lekérdezésekre vonatkozóan: A SPARQL-lekérdezések nem tartalmazhatnak egyesített lekérdezést (SERVICE)."@hu ;
+        sh:message "La definizione di pre-associazione utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: Le query SPARQL non devono contenere una query federata (SERVICE)."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausose neturi būti susietos užklausos (SERVICE)."@lt ;
+        sh:message "SHACL izmantotajai iepriekšējas saistīšanas definīcijai ir nepieciešami šādi SPARQL vaicājumu ierobežojumi: SPARQL vaicājumos nedrīkst būt ietverts apvienotais vaicājums (SERVICE)."@lv ;
+        sh:message "Id-definizzjoni ta' pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandux ikun fihom mistoqsija federata (SERVICE)."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen voor SPARQL-query's: SPARQL-query's mogen geen federatieve query (SERVICE) bevatten."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą zawierać zapytania federacyjnego (SERVICE)."@pl ;
+        sh:message "A definição de pré-ligação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem conter uma consulta federada (SERVICE)."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să conțină o interogare federată (SERVICE)."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú obsahovať federatívny dotaz (SERVICE)."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: Poizvedbe SPARQL ne smejo vsebovati zvezne poizvedbe (SERVICE)."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte innehålla en federerad fråga (SERVICE)."@sv ;
+ 		sh:pattern "^(?!.*SERVICE\\b).*$" ;
 		sh:flags "s" ;
  	] ;
 	
@@ -380,8 +1047,31 @@ shsh:SelectAskShape
 		sh:name "Ask pattern shape"@en ;
 		sh:description "Pattern for sh:ask class."@en ;
 		
- 		sh:path sh:ask ;	
+ 		sh:path sh:ask ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да съдържат клауза VALUES."@bg ;
+   		sh:message "Definice předběžné vazby používaná SHACL vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí obsahovat klauzuli VALUES."@cs ;
+        sh:message "Definitionen af præ-binding, der bruges af SHACL, kræver følgende begrænsninger for SPARQL-forespørgsler: SPARQL-forespørgsler må ikke indeholde en VALUES-sætning."@da ;
+        sh:message "Die von SHACL verwendete Definition der Vorabbindung erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen keine VALUES-Klausel enthalten."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να περιέχουν ρήτρα VALUES."@el ;
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause."@en ;
+        sh:message "La definición de vinculación previa utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben contener una cláusula VALUES."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-i päringud ei tohi sisaldada klauslit VALUES."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä vaatii seuraavat rajoitukset SPARQL-kyselyille: SPARQL-kyselyt eivät saa sisältää VALUES-lausetta."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL requiert les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas contenir de clause VALUES."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangal a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach clásal VALUES a bheith i gceisteanna SPARQL."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju sadržavati klauzulu VALUES."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat követeli meg a SPARQL-lekérdezésekre vonatkozóan: A SPARQL-lekérdezések nem tartalmazhatnak VALUES záradékot."@hu ;
+        sh:message "La definizione di pre-vincolo utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: le query SPARQL non devono contenere una clausola VALUES."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausose neturi būti sąlygos VALUES."@lt ;
+        sh:message "SHACL izmantotā iepriekšējas saistīšanas definīcija pieprasa šādus SPARQL vaicājumu ierobežojumus: SPARQL vaicājumi nedrīkst saturēt klauzulu VALUES."@lv ;
+        sh:message "Id-definizzjoni ta' pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandux ikun fihom klawżola VALUES."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen voor SPARQL-query's: SPARQL-query's mogen geen VALUES-clausule bevatten."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą zawierać klauzuli VALUES."@pl ;
+        sh:message "A definição de pré-ligação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem conter uma cláusula VALUES."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să conțină o clauză VALUES."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú obsahovať klauzulu VALUES."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: Poizvedbe SPARQL ne smejo vsebovati stavka VALUES."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte innehålla en VALUES-sats."@sv ;
  		sh:pattern "^(?!.*VALUES\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
@@ -389,9 +1079,32 @@ shsh:SelectAskShape
 		sh:name "Select pattern shape"@en ;
 		sh:description "Pattern for sh:select class."@en ;
 		
- 		sh:path sh:select ;	
+ 		sh:path sh:select ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да съдържат клауза VALUES."@bg ;
+   		sh:message "Definice předběžné vazby používaná SHACL vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí obsahovat klauzuli VALUES."@cs ;
+        sh:message "Definitionen af præ-binding, der bruges af SHACL, kræver følgende begrænsninger for SPARQL-forespørgsler: SPARQL-forespørgsler må ikke indeholde en VALUES-sætning."@da ;
+        sh:message "Die von SHACL verwendete Definition der Vorabbindung erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen keine VALUES-Klausel enthalten."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να περιέχουν ρήτρα VALUES."@el ;
  		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not contain a VALUES clause."@en ;
- 		sh:pattern "^(?!.*VALUES\\b).*$" ;	
+        sh:message "La definición de vinculación previa utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben contener una cláusula VALUES."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-i päringud ei tohi sisaldada klauslit VALUES."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä vaatii seuraavat rajoitukset SPARQL-kyselyille: SPARQL-kyselyt eivät saa sisältää VALUES-lausetta."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL requiert les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas contenir de clause VALUES."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangal a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach clásal VALUES a bheith i gceisteanna SPARQL."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju sadržavati klauzulu VALUES."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat követeli meg a SPARQL-lekérdezésekre vonatkozóan: A SPARQL-lekérdezések nem tartalmazhatnak VALUES záradékot."@hu ;
+        sh:message "La definizione di pre-vincolo utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: le query SPARQL non devono contenere una clausola VALUES."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausose neturi būti sąlygos VALUES."@lt ;
+        sh:message "SHACL izmantotā iepriekšējas saistīšanas definīcija pieprasa šādus SPARQL vaicājumu ierobežojumus: SPARQL vaicājumi nedrīkst saturēt klauzulu VALUES."@lv ;
+        sh:message "Id-definizzjoni ta' pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandux ikun fihom klawżola VALUES."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen voor SPARQL-query's: SPARQL-query's mogen geen VALUES-clausule bevatten."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą zawierać klauzuli VALUES."@pl ;
+        sh:message "A definição de pré-ligação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem conter uma cláusula VALUES."@pt ;
+        sh:message "Definiția de pre-legare utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să conțină o clauză VALUES."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú obsahovať klauzulu VALUES."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: Poizvedbe SPARQL ne smejo vsebovati stavka VALUES."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte innehålla en VALUES-sats."@sv ;
+ 		sh:pattern "^(?!.*VALUES\\b).*$" ;
 		sh:flags "s" ;
  	] ;
 	
@@ -399,8 +1112,31 @@ shsh:SelectAskShape
 		sh:name "Ask pattern shape"@en ;
 		sh:description "Pattern for sh:ask class."@en ;
 		
- 		sh:path sh:ask ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable."@en ;
+ 		sh:path sh:ask ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявки: SPARQL заявките не трябва да използват синтактичния формуляр AS ?var за която и да е потенциално предварително обвързана променлива."@bg ;
+   		sh:message "Definice předběžné vazby, kterou používá SHACL, vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí používat formu syntaxe AS ?var pro žádnou potenciálně předem navázanou proměnnou."@cs ;
+        sh:message "Definitionen af præ-binding brugt af SHACL kræver følgende begrænsninger på SPARQL-forespørgsler: SPARQL-forespørgsler må ikke bruge syntaksformen AS ?var for nogen potentielt forudbundet variabel."@da ;
+        sh:message "Die von SHACL verwendete Definition von Pre-Binding erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen nicht die Syntaxform AS ?var für potenziell vorab gebundene Variablen verwenden."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να χρησιμοποιούν τη συντακτική φόρμα AS ?var για οποιαδήποτε δυνητικά προδεσμευμένη μεταβλητή."@el ;
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form AS ?var for any potentially pre-bound variable."@en ;
+        sh:message "La definición de vinculación previa utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben usar la forma de sintaxis AS ?var para ninguna variable potencialmente vinculada previamente."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-i päringud ei tohi ühegi potentsiaalselt eelseotud muutuja jaoks kasutada süntaksivormi AS ?var."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä edellyttää seuraavia rajoituksia SPARQL-kyselyille: SPARQL-kyselyt eivät saa käyttää syntaksimuotoa AS ?var millekään mahdollisesti esisidottulle muuttujalle."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL nécessite les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas utiliser la forme syntaxique AS ?var pour toute variable potentiellement pré-liée."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangail a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach do cheisteanna SPARQL an fhoirm chomhréire AS ?var a úsáid le haghaidh aon athróg réamhcheangailte a d’fhéadfadh a bheith ann."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju koristiti sintaktički oblik AS ?var za bilo koju potencijalno unaprijed vezanu varijablu."@hr ;
+        sh:message "Az SHACL által használt előzetes összerendelés definíciója a következő korlátozásokat követeli meg a SPARQL-lekérdezésekre vonatkozóan: A SPARQL-lekérdezések nem használhatják az AS ?var szintaktikai formát egyetlen potenciálisan előre kötött változóhoz sem."@hu ;
+        sh:message "La definizione di pre-vincolo utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: Le query SPARQL non devono utilizzare la forma della sintassi AS ?var per qualsiasi variabile potenzialmente pre-vincolata."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausos neturi naudoti sintaksės formos AS ?var jokiam galimai iš anksto susietam kintamajam."@lt ;
+        sh:message "SHACL izmantotajai iepriekšējas saistīšanas definīcijai ir nepieciešami šādi SPARQL vaicājumu ierobežojumi: SPARQL vaicājumos nedrīkst izmantot sintakses formu AS ?var nevienam potenciāli iepriekš saistītam mainīgajam."@lv ;
+        sh:message "Id-definizzjoni ta 'pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandhomx jużaw il-forma ta' sintassi AS ?var għal kwalunkwe varjabbli potenzjalment marbuta minn qabel."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen op SPARQL-query's: SPARQL-query's mogen de syntaxisvorm AS ?var niet gebruiken voor een mogelijk pre-gebonden variabele."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą używać składni AS ?var dla jakiejkolwiek potencjalnie wstępnie powiązanej zmiennej."@pl ;
+        sh:message "A definição de pré-vinculação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem usar a forma de sintaxe AS ?var para qualquer variável potencialmente pré-vinculada."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să utilizeze forma de sintaxă AS ?var pentru orice variabilă potențial prelegată."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú používať formu syntaxe AS ?var pre žiadnu potenciálne vopred viazanú premennú."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: poizvedbe SPARQL ne smejo uporabljati sintaksnega obrazca AS ?var za katero koli potencialno vnaprej vezano spremenljivko."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte använda syntaxformen AS ?var för någon potentiellt förbunden variabel."@sv ;
  		sh:pattern "^(?!.*\\?var\\b).*$" ;
 		sh:flags "s" ;	
  	] ;
@@ -408,9 +1144,32 @@ shsh:SelectAskShape
 		sh:name "Select pattern shape"@en ;
 		sh:description "Pattern for sh:select class."@en ;
 		
- 		sh:path sh:select ;	
- 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form ​​AS ?var for any potentially pre-bound variable."@en ;
- 		sh:pattern "^(?!.*\\?var\\b).*$" ;	
+ 		sh:path sh:select ;
+		sh:message "Дефиницията на предварителното свързване, използвана от SHACL, изисква следните ограничения за SPARQL заявките: SPARQL заявките не трябва да използват синтактичния формуляр AS ?var за която и да е потенциално предварително обвързана променлива."@bg ;
+   		sh:message "Definice předběžné vazby, kterou používá SHACL, vyžaduje následující omezení pro dotazy SPARQL: Dotazy SPARQL nesmí používat formu syntaxe AS ?var pro žádnou potenciálně předem navázanou proměnnou."@cs ;
+        sh:message "Definitionen af præ-binding brugt af SHACL kræver følgende begrænsninger på SPARQL-forespørgsler: SPARQL-forespørgsler må ikke bruge syntaksformen AS ?var for nogen potentielt forudbundet variabel."@da ;
+        sh:message "Die von SHACL verwendete Definition von Pre-Binding erfordert die folgenden Einschränkungen für SPARQL-Abfragen: SPARQL-Abfragen dürfen nicht die Syntaxform AS ?var für potenziell vorab gebundene Variablen verwenden."@de ;
+        sh:message "Ο ορισμός της προδέσμευσης που χρησιμοποιείται από το SHACL απαιτεί τους ακόλουθους περιορισμούς στα ερωτήματα SPARQL: Τα ερωτήματα SPARQL δεν πρέπει να χρησιμοποιούν τη συντακτική φόρμα AS ?var για οποιαδήποτε δυνητικά προδεσμευμένη μεταβλητή."@el ;
+ 		sh:message "The definition of pre-binding used by SHACL requires the following restrictions on SPARQL queries: SPARQL queries must not use the syntax form AS ?var for any potentially pre-bound variable."@en ;
+        sh:message "La definición de vinculación previa utilizada por SHACL requiere las siguientes restricciones en las consultas SPARQL: Las consultas SPARQL no deben usar la forma de sintaxis AS ?var para ninguna variable potencialmente vinculada previamente."@es ;
+        sh:message "SHACL-i kasutatav eelsidumise definitsioon nõuab SPARQL-i päringutele järgmisi piiranguid: SPARQL-i päringud ei tohi ühegi potentsiaalselt eelseotud muutuja jaoks kasutada süntaksivormi AS ?var."@et ;
+        sh:message "SHACL:n käyttämä esisidoksen määritelmä edellyttää seuraavia rajoituksia SPARQL-kyselyille: SPARQL-kyselyt eivät saa käyttää syntaksimuotoa AS ?var millekään mahdollisesti esisidottulle muuttujalle."@fi ;
+        sh:message "La définition de la pré-liaison utilisée par SHACL nécessite les restrictions suivantes sur les requêtes SPARQL : Les requêtes SPARQL ne doivent pas utiliser la forme syntaxique AS ?var pour toute variable potentiellement pré-liée."@fr ;
+        sh:message "Éilíonn an sainmhíniú ar réamhcheangail a úsáideann SHACL na srianta seo a leanas ar cheisteanna SPARQL: Ní ceadmhach do cheisteanna SPARQL an fhoirm chomhréire AS ?var a úsáid le haghaidh aon athróg réamhcheangailte a d’fhéadfadh a bheith ann."@ga ;
+        sh:message "Definicija predvezivanja koju koristi SHACL zahtijeva sljedeća ograničenja na SPARQL upite: SPARQL upiti ne smiju koristiti sintaktički oblik AS ?var za bilo koju potencijalno unaprijed vezanu varijablu."@hr ;
+        sh:message "Az SHACL által használt előzetes kötés definíciója a következő korlátozásokat követeli meg a SPARQL-lekérdezésekre vonatkozóan: A SPARQL-lekérdezések nem használhatják az AS ?var szintaktikai formát egyetlen potenciálisan előre kötött változóhoz sem."@hu ;
+        sh:message "La definizione di pre-vincolo utilizzata da SHACL richiede le seguenti restrizioni sulle query SPARQL: Le query SPARQL non devono utilizzare la forma della sintassi AS ?var per qualsiasi variabile potenzialmente pre-vincolata."@it ;
+        sh:message "SHACL naudojamas išankstinio susiejimo apibrėžimas reikalauja šių SPARQL užklausų apribojimų: SPARQL užklausos neturi naudoti sintaksės formos AS ?var jokiam galimai iš anksto susietam kintamajam."@lt ;
+        sh:message "SHACL izmantotajai iepriekšējas saistīšanas definīcijai ir nepieciešami šādi SPARQL vaicājumu ierobežojumi: SPARQL vaicājumos nedrīkst izmantot sintakses formu AS ?var nevienam potenciāli iepriekš saistītam mainīgajam."@lv ;
+        sh:message "Id-definizzjoni ta 'pre-binding użata minn SHACL teħtieġ ir-restrizzjonijiet li ġejjin fuq mistoqsijiet SPARQL: mistoqsijiet SPARQL m'għandhomx jużaw il-forma ta' sintassi AS ?var għal kwalunkwe varjabbli potenzjalment marbuta minn qabel."@mt ;
+        sh:message "De definitie van pre-binding die door SHACL wordt gebruikt, vereist de volgende beperkingen op SPARQL-query's: SPARQL-query's mogen de syntaxisvorm AS ?var niet gebruiken voor een mogelijk pre-gebonden variabele."@nl ;
+        sh:message "Definicja wstępnego wiązania używana przez SHACL wymaga następujących ograniczeń dotyczących zapytań SPARQL: Zapytania SPARQL nie mogą używać składni AS ?var dla jakiejkolwiek potencjalnie wstępnie powiązanej zmiennej."@pl ;
+        sh:message "A definição de pré-vinculação usada pelo SHACL requer as seguintes restrições nas consultas SPARQL: As consultas SPARQL não devem usar a forma de sintaxe AS ?var para qualquer variável potencialmente pré-vinculada."@pt ;
+        sh:message "Definiția pre-legarii utilizată de SHACL necesită următoarele restricții privind interogările SPARQL: Interogările SPARQL nu trebuie să utilizeze forma de sintaxă AS ?var pentru orice variabilă potențial prelegată."@ro ;
+        sh:message "Definícia predbežnej väzby, ktorú používa SHACL, vyžaduje nasledujúce obmedzenia pre dotazy SPARQL: Dotazy SPARQL nesmú používať formu syntaxe AS ?var pre žiadnu potenciálne vopred viazanú premennú."@sk ;
+        sh:message "Definicija vnaprejšnje vezave, ki jo uporablja SHACL, zahteva naslednje omejitve za poizvedbe SPARQL: poizvedbe SPARQL ne smejo uporabljati sintaksnega obrazca AS ?var za katero koli potencialno vnaprej vezano spremenljivko."@sl ;
+        sh:message "Definitionen av förbindning som används av SHACL kräver följande begränsningar för SPARQL-frågor: SPARQL-frågor får inte använda syntaxformen AS ?var för någon potentiellt förbunden variabel."@sv ;
+ 		sh:pattern "^(?!.*\\?var\\b).*$" ;
 		sh:flags "s" ;
  	] .
 	
