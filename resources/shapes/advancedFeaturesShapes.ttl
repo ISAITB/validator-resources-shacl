@@ -30,8 +30,31 @@ adsh:TargetShape
 		sh:name "Target NodeKind shape"@en ;
 		sh:description "NodeKind for sh:target class."@en ;
 		
-		sh:path sh:target ;				
+		sh:path sh:target ;
+		sh:message "Стойностите на [sh:target] във форма са IRI или празни възли"@bg ;
+       	sh:message "Hodnoty sh:target u tvaru jsou IRI nebo prázdné uzly"@cs ;
+        sh:message "Værdierne for sh:target ved en form er IRI'er eller tomme noder"@da ;
+        sh:message "Die Werte von sh:target an einer Form sind IRIs oder leere Knoten"@de ;
+        sh:message "Οι τιμές του sh:target σε ένα σχήμα είναι IRI ή κενοί κόμβοι"@el ;
 		sh:message "The values of sh:target at a shape are IRIs or blank nodes."@en;
+	    sh:message "Los valores de sh:target en una forma son IRI o nodos en blanco"@es ;
+        sh:message "Kujundi sh:target väärtused on IRI-d või tühjad sõlmed"@et ;
+        sh:message "sh:target:n arvot muodossa ovat IRI:itä tai tyhjiä solmuja"@fi ;
+        sh:message "Les valeurs de sh:target à une forme sont des IRI ou des nœuds vides"@fr ;
+        sh:message "Is iad na luachanna atá ag sh:target ag cruth ná IRIanna nó nóid bhána"@ga ;
+        sh:message "Vrijednosti sh:target u obliku su IRI ili prazni čvorovi"@hr ;
+        sh:message "Az sh:target értékei egy alakzatnál IRI-k vagy üres csomópontok"@hu ;
+        sh:message "I valori di sh:target in una forma sono IRI o nodi vuoti"@it ;
+        sh:message "Formos sh:target reikšmės yra IRI arba tušti mazgai"@lt ;
+        sh:message "Formas sh:target vērtības ir IRI vai tukši mezgli"@lv ;
+        sh:message "Il-valuri ta' sh:target f'forma huma IRIs jew nodi vojta"@mt ;
+        sh:message "De waarden van sh:target bij een vorm zijn IRI's of lege knooppunten"@nl ;
+        sh:message "Wartości sh:target w kształcie to IRI lub puste węzły"@pl ;
+        sh:message "Os valores de sh:target em uma forma são IRIs ou nós em branco"@pt ;
+        sh:message "Valorile sh:target la o formă sunt IRI-uri sau noduri goale"@ro ;
+        sh:message "Hodnoty sh:target v tvare sú IRI alebo prázdne uzly"@sk ;
+        sh:message "Vrednosti sh:target pri obliki so IRI ali prazna vozlišča"@sl ;
+        sh:message "Värdena för sh:target vid en form är IRI:er eller tomma noder"@sv ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# target-nodeKind
 	] .
 
@@ -48,7 +71,30 @@ adsh:SPARQLTargetShape
 		sh:description "Maximum and minimum count for sh:select class."@en ;
 		
 		sh:path sh:select ;
+		sh:message "Базираните на SPARQL цели имат точно една стойност за свойството sh:select."@bg ;
+       	sh:message "Cíle založené na SPARQL mají právě jednu hodnotu pro vlastnost sh:select."@cs ;
+        sh:message "SPARQL-baserede mål har nøjagtig én værdi for egenskaben sh:select."@da ;
+        sh:message "SPARQL-basierte Ziele haben genau einen Wert für die Eigenschaft sh:select."@de ;
+        sh:message "Οι στόχοι που βασίζονται σε SPARQL έχουν ακριβώς μία τιμή για την ιδιότητα sh:select."@el ;
 		sh:message "SPARQL-based targets have exactly one value for the property sh:select."@en;
+	    sh:message "Los destinos basados en SPARQL tienen exactamente un valor para la propiedad sh:select."@es ;
+        sh:message "SPARQL-põhistel sihtmärkidel on atribuudil sh:select täpselt üks väärtus."@et ;
+        sh:message "SPARQL-pohjaisilla kohteilla on täsmälleen yksi arvo ominaisuudelle sh:select."@fi ;
+        sh:message "Les cibles basées sur SPARQL ont exactement une valeur pour la propriété sh:select."@fr ;
+        sh:message "Tá luach amháin go díreach ag spriocanna atá bunaithe ar SPARQL don mhaoin sh:select."@ga ;
+        sh:message "Ciljevi temeljeni na SPARQL-u imaju točno jednu vrijednost za svojstvo sh:select."@hr ;
+        sh:message "A SPARQL-alapú céloknak pontosan egy értéke van a sh:select tulajdonsághoz."@hu ;
+        sh:message "I target basati su SPARQL hanno esattamente un valore per la proprietà sh:select."@it ;
+        sh:message "SPARQL pagrįsti tikslai turi tiksliai vieną nuosavybės reikšmę sh:select."@lt ;
+        sh:message "Uz SPARQL balstītiem mērķiem ir tieši viena vērtība īpašumam sh:select."@lv ;
+        sh:message "Il-miri bbażati fuq SPARQL għandhom eżattament valur wieħed għall-proprjetà sh:select."@mt ;
+        sh:message "Op SPARQL gebaseerde doelen hebben precies één waarde voor de eigenschap sh:select."@nl ;
+        sh:message "Cele oparte na SPARQL mają dokładnie jedną wartość właściwości sh:select."@pl ;
+        sh:message "Os destinos baseados em SPARQL têm exatamente um valor para a propriedade sh:select."@pt ;
+        sh:message "Țintele bazate pe SPARQL au exact o valoare pentru proprietatea sh:select."@ro ;
+        sh:message "Ciele založené na SPARQL majú presne jednu hodnotu pre vlastnosť sh:select."@sk ;
+        sh:message "Cilji, ki temeljijo na SPARQL, imajo natanko eno vrednost za lastnost sh:select."@sl ;
+        sh:message "SPARQL-baserade mål har exakt ett värde för egenskapen sh:select."@sv ;
 		sh:maxCount 1 ;					# SPARQLTarget-select-count
 		sh:minCount 1 ;					# SPARQLTarget-select-count
 	] ;	
@@ -58,7 +104,30 @@ adsh:SPARQLTargetShape
 		sh:description "NodeKind for sh:prefixes class."@en ;
 		
 		sh:path sh:prefixes ;
+		sh:message "Базираните на SPARQL цели може да имат стойности за свойството sh:prefixes и тези стойности са IRI или празни възли."@bg ;
+       	sh:message "Cíle založené na SPARQL mohou mít hodnoty pro vlastnost sh:prefixes a tyto hodnoty jsou IRI nebo prázdné uzly."@cs ;
+        sh:message "SPARQL-baserede mål kan have værdier for egenskaben sh:prefixes, og disse værdier er IRI'er eller tomme noder."@da ;
+        sh:message "SPARQL-basierte Ziele können Werte für die Eigenschaft sh:prefixes haben, und diese Werte sind IRIs oder leere Knoten."@de ;
+        sh:message "Οι στόχοι που βασίζονται σε SPARQL μπορεί να έχουν τιμές για την ιδιότητα sh:prefixes και αυτές οι τιμές είναι IRI ή κενοί κόμβοι."@el ;
 		sh:message "SPARQL-based targets may have values for the property sh:prefixes and these values are IRIs or blank nodes."@en;
+	    sh:message "Los destinos basados en SPARQL pueden tener valores para la propiedad sh:prefixes y estos valores son IRI o nodos en blanco."@es ;
+        sh:message "SPARQL-põhistel sihtmärkidel võivad olla atribuudi sh:prefixes väärtused ja need väärtused on IRI-d või tühjad sõlmed."@et ;
+        sh:message "SPARQL-pohjaisilla kohteilla voi olla arvoja ominaisuudelle sh:prefixes, ja nämä arvot ovat IRI:itä tai tyhjiä solmuja."@fi ;
+        sh:message "Les cibles basées sur SPARQL peuvent avoir des valeurs pour la propriété sh:prefixes et ces valeurs sont des IRI ou des nœuds vides."@fr ;
+        sh:message "D’fhéadfadh luachanna a bheith ag spriocanna atá bunaithe ar SPARQL don airí sh:prefixes agus is IRIanna nó nóid fholmha iad na luachanna seo."@ga ;
+        sh:message "Ciljevi temeljeni na SPARQL-u mogu imati vrijednosti za svojstvo sh:prefixes, a te vrijednosti su IRI ili prazni čvorovi."@hr ;
+        sh:message "A SPARQL-alapú céloknak lehetnek értékei az sh:prefixes tulajdonsághoz, és ezek az értékek IRI-k vagy üres csomópontok."@hu ;
+        sh:message "Le destinazioni basate su SPARQL possono avere valori per la proprietà sh:prefixes e questi valori sono IRI o nodi vuoti."@it ;
+        sh:message "SPARQL pagrįsti tikslai gali turėti ypatybės sh:prefixes vertes ir šios reikšmės yra IRI arba tušti mazgai."@lt ;
+        sh:message "Uz SPARQL balstītiem mērķiem var būt vērtības rekvizītam sh:prefixes, un šīs vērtības ir IRI vai tukši mezgli."@lv ;
+        sh:message "Miri bbażati fuq SPARQL jista' jkollhom valuri għall-proprjetà sh:prefixes u dawn il-valuri huma IRIs jew nodi vojta."@mt ;
+        sh:message "Op SPARQL gebaseerde doelen kunnen waarden hebben voor de eigenschap sh:prefixes en deze waarden zijn IRI's of lege knooppunten."@nl ;
+        sh:message "Obiekty docelowe oparte na SPARQL mogą mieć wartości właściwości sh:prefixes, a wartości te są identyfikatorami IRI lub pustymi węzłami."@pl ;
+        sh:message "Os destinos baseados em SPARQL podem ter valores para a propriedade sh:prefixes e esses valores são IRIs ou nós em branco."@pt ;
+        sh:message "Țintele bazate pe SPARQL pot avea valori pentru proprietatea sh:prefixes și aceste valori sunt IRI-uri sau noduri goale."@ro ;
+        sh:message "Ciele založené na SPARQL môžu mať hodnoty pre vlastnosť sh:prefixes a tieto hodnoty sú IRI alebo prázdne uzly."@sk ;
+        sh:message "Cilji, ki temeljijo na SPARQL, imajo lahko vrednosti za lastnost sh:prefixes in te vrednosti so IRI-ji ali prazna vozlišča."@sl ;
+        sh:message "SPARQL-baserade mål kan ha värden för egenskapen sh:prefix och dessa värden är IRI:er eller tomma noder."@sv ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# SPARQLTarget-prefixes-nodeKind
 	] ;
 	
@@ -67,7 +136,30 @@ adsh:SPARQLTargetShape
 		sh:description "Pattern for sh:select class."@en ;
 		
 		sh:path sh:select ;
+		sh:message "Използвайки стойностите на sh:prefixes, както са дефинирани от 5.2.1 Prefix Declarations for SPARQL Queries, стойностите на sh:select трябва да са валидни SPARQL 1.1 SELECT заявки с една резултатна променлива this."@bg ;
+       	sh:message "S použitím hodnot sh:prefixes, jak je definováno v 5.2.1 Prefix Declarations for SPARQL Queries, musí být hodnoty sh:select platné pro dotazy SPARQL 1.1 SELECT s jedinou výslednou proměnnou."@cs ;
+        sh:message "Ved at bruge værdierne af sh:prefixes som defineret af 5.2.1 Prefix Declarations for SPARQL Queries, skal værdierne af sh:select være gyldige SPARQL 1.1 SELECT-forespørgsler med en enkelt resultatvariabel dette."@da ;
+        sh:message "Unter Verwendung der Werte von sh:prefixes wie in 5.2.1 Prefix Declarations for SPARQL Queries definiert, müssen die Werte von sh:select gültige SPARQL 1.1 SELECT-Abfragen mit einer einzigen Ergebnisvariablen sein."@de ;
+        sh:message "Χρησιμοποιώντας τις τιμές του sh:prefixes όπως ορίζονται από τις 5.2.1 Prefix Declarations for SPARQL Queries, οι τιμές του sh:select πρέπει να είναι έγκυρες ερωτήματα SPARQL 1.1 SELECT με μία μόνο μεταβλητή αποτελέσματος αυτή."@el ;
 		sh:message "Using the values of sh:prefixes as defined by 5.2.1 Prefix Declarations for SPARQL Queries, the values of sh:select must be valid SPARQL 1.1 SELECT queries with a single result variable this."@en;
+	    sh:message "Usando los valores de sh:prefixes como se define en 5.2.1 Prefix Declarations for SPARQL Queries, los valores de sh:select deben ser consultas válidas SPARQL 1.1 SELECT con una única variable de resultado this."@es ;
+        sh:message "Kasutades sh:prefixes väärtusi, nagu on määratletud 5.2.1 Prefix Declarations for SPARQL Queries, peavad sh:select väärtused olema kehtivad SPARQL 1.1 SELECT päringud, millel on üks tulemusmuutuja see."@et ;
+        sh:message "Käyttämällä sh:prefixes-arvoja, jotka on määritetty kohdassa 5.2.1 Prefix Declarations for SPARQL Queries, sh:select:n arvojen on oltava kelvollisia SPARQL 1.1 SELECT-kyselyitä, joissa on yksi tulosmuuttuja."@fi ;
+        sh:message "En utilisant les valeurs de sh:prefixes telles que définies par 5.2.1 Prefix Declarations for SPARQL Queries, les valeurs de sh:select doivent être des requêtes SPARQL 1.1 SELECT valides avec une seule variable de résultat this."@fr ;
+        sh:message "Ag baint úsáide as luachanna sh:prefixes mar atá sainmhínithe ag 5.2.1 Prefix Declarations for SPARQL Queries, ní mór luachanna sh:select a bheith bailí SPARQL 1.1 SELECT fiosrúchán agus athróg toraidh amháin acu seo."@ga ;
+        sh:message "Koristeći vrijednosti sh:prefixes kako je definirano u 5.2.1 Prefix Declarations for SPARQL Queries, vrijednosti sh:select moraju biti valjane SPARQL 1.1 SELECT upita s jednom varijablom rezultata this."@hr ;
+        sh:message "Az sh:prefixes 5.2.1 Prefix Declarations for SPARQL Queries által meghatározott értékeit használva az sh:select értékeinek érvényes SPARQL 1.1 SELECT lekérdezéseknek kell lenniük egyetlen eredményváltozóval."@hu ;
+        sh:message "Utilizzando i valori di sh:prefixes come definito da 5.2.1 Prefix Declarations for SPARQL Queries, i valori di sh:select devono essere query valide SPARQL 1.1 SELECT con un'unica variabile di risultato this."@it ;
+        sh:message "Naudojant sh:prefixes reikšmes, apibrėžtas 5.2.1 Prefix Declarations for SPARQL Queries, sh:select reikšmės turi būti galiojančios SPARQL 1.1 SELECT užklausos su vienu rezultato kintamuoju."@lt ;
+        sh:message "Izmantojot sh:prefixes vērtības, kā noteikts 5.2.1 Prefix Declarations for SPARQL Queries, sh:select vērtībām ir jābūt derīgām SPARQL 1.1 SELECT vaicājumiem ar vienu rezultāta mainīgo šo."@lv ;
+        sh:message "Bl-użu tal-valuri ta' sh:prefixes kif definiti minn 5.2.1 Prefix Declarations for SPARQL Queries, il-valuri ta' sh:select għandhom ikunu validi SPARQL 1.1 SELECT mistoqsijiet b'riżultat wieħed varjabbli dan."@mt ;
+        sh:message "Gebruikmakend van de waarden van sh:prefixes zoals gedefinieerd door 5.2.1 Prefix Declarations for SPARQL Queries, moeten de waarden van sh:select geldige SPARQL 1.1 SELECT queries zijn met een enkele resultaatvariabele dit."@nl ;
+        sh:message "Używając wartości sh:prefixes zdefiniowanych w 5.2.1 Prefix Declarations for SPARQL Queries, wartości sh:select muszą być poprawnymi zapytaniami SPARQL 1.1 SELECT z pojedynczą zmienną wynikową this."@pl ;
+        sh:message "Usando os valores de sh:prefixes conforme definido por 5.2.1 Prefix Declarations for SPARQL Queries, os valores de sh:select devem ser consultas SPARQL 1.1 SELECT válidas com uma única variável de resultado this."@pt ;
+        sh:message "Folosind valorile sh:prefixes așa cum sunt definite de 5.2.1 Prefix Declarations for SPARQL Queries, valorile sh:select trebuie să fie valide SPARQL 1.1 SELECT interogări cu o singură variabilă rezultat."@ro ;
+        sh:message "Použitím hodnôt sh:prefixes definovaných v 5.2.1 Prefix Declarations for SPARQL Queries musia byť hodnoty sh:select platné pre dopyty SPARQL 1.1 SELECT s jedinou výslednou premennou, toto."@sk ;
+        sh:message "Z uporabo vrednosti sh:prefixes, kot jih določa 5.2.1 Prefix Declarations for SPARQL Queries, morajo biti vrednosti sh:select veljavne poizvedbe SPARQL 1.1 SELECT z eno samo spremenljivko rezultata this."@sl ;
+        sh:message "Genom att använda värdena för sh:prefixes som definieras av 5.2.1 Prefix Declarations for SPARQL Queries, måste värdena för sh:select vara giltiga SPARQL 1.1 SELECT-frågor med en enda resultatvariabel detta."@sv ;
 		sh:pattern "^\\s*(SELECT)\\s+(\\?this)\\s+(WHERE)\\s+\\{.*" ;		# SPARQLTarget-select-sparql
 		sh:flags "si" ;		
 	] ;	
@@ -77,7 +169,30 @@ adsh:SPARQLTargetShape
 		sh:description "Maximum count for sh:ask class."@en ;
 		
 		sh:path sh:ask ;
+		sh:message "Базираните на SPARQL цели имат най-много една стойност за свойството sh:ask."@bg ;
+       	sh:message "Cíle založené na SPARQL mají pro vlastnost nejvýše jednu hodnotu sh:ask."@cs ;
+        sh:message "SPARQL-baserede mål har højst én værdi for ejendommen sh:ask."@da ;
+        sh:message "SPARQL-basierte Ziele haben höchstens einen Wert für die Eigenschaft sh:ask."@de ;
+        sh:message "Οι στόχοι που βασίζονται σε SPARQL έχουν το πολύ μία τιμή για την ιδιότητα sh:ask."@el ;
 		sh:message "SPARQL-based targets have at most one value for the property sh:ask."@en;
+	    sh:message "Los objetivos basados en SPARQL tienen como máximo un valor para la propiedad sh:ask."@es ;
+        sh:message "SPARQL-põhistel sihtmärkidel on atribuudi sh:ask jaoks maksimaalselt üks väärtus."@et ;
+        sh:message "SPARQL-pohjaisilla kohteilla on enintään yksi arvo ominaisuudelle sh:ask."@fi ;
+        sh:message "Les cibles basées sur SPARQL ont au plus une valeur pour la propriété sh:ask."@fr ;
+        sh:message "Tá luach amháin ar a laghad ag spriocanna atá bunaithe ar SPARQL don mhaoin sh:ask."@ga ;
+        sh:message "Ciljevi temeljeni na SPARQL-u imaju najviše jednu vrijednost za svojstvo sh:ask."@hr ;
+        sh:message "A SPARQL-alapú céloknak legfeljebb egy értéke van az sh:ask tulajdonsághoz."@hu ;
+        sh:message "I target basati su SPARQL hanno al massimo un valore per la proprietà sh:ask."@it ;
+        sh:message "SPARQL pagrįsti tikslai turi ne daugiau kaip vieną nuosavybės reikšmę sh:ask."@lt ;
+        sh:message "Uz SPARQL balstītiem mērķiem ir ne vairāk kā viena rekvizīta vērtība sh:ask."@lv ;
+        sh:message "Il-miri bbażati fuq SPARQL għandhom l-iktar valur wieħed għall-proprjetà sh:ask."@mt ;
+        sh:message "Op SPARQL gebaseerde doelen hebben maximaal één waarde voor de eigenschap sh:ask."@nl ;
+        sh:message "Cele oparte na SPARQL mają co najwyżej jedną wartość właściwości sh:ask."@pl ;
+        sh:message "Os destinos baseados em SPARQL têm no máximo um valor para a propriedade sh:ask."@pt ;
+        sh:message "Țintele bazate pe SPARQL au cel mult o valoare pentru proprietatea sh:ask."@ro ;
+        sh:message "Ciele založené na SPARQL majú pre vlastnosť najviac jednu hodnotu sh:ask."@sk ;
+        sh:message "Cilji, ki temeljijo na SPARQL, imajo največ eno vrednost za lastnost sh:ask."@sl ;
+        sh:message "SPARQL-baserade mål har högst ett värde för egenskapen sh:ask."@sv ;
 		sh:maxCount 1 ;					# SPARQLTarget-ask-count
 	] .
 
@@ -93,8 +208,31 @@ adsh:ResultAnnotationShape
 		sh:name "ResultAnnotation NodeKind shape"@en ;
 		sh:description "NodeKind for sh:resultAnnotation class."@en ;
 		
-		sh:path sh:resultAnnotation ;				
+		sh:path sh:resultAnnotation ;
+		sh:message "Стойностите на sh:resultAnnotation се наричат анотации на резултатите и са или IRI, или празни възли."@bg ;
+       	sh:message "Hodnoty sh:resultAnnotation se nazývají výsledkové anotace a jsou to buď IRI nebo prázdné uzly."@cs ;
+        sh:message "Værdierne for sh:resultAnnotation kaldes resultatannoteringer og er enten IRI'er eller tomme noder."@da ;
+        sh:message "Die Werte von sh:resultAnnotation werden als Ergebnisanmerkungen bezeichnet und sind entweder IRIs oder leere Knoten."@de ;
+        sh:message "Οι τιμές του sh:resultAnnotation ονομάζονται σχολιασμοί αποτελεσμάτων και είναι είτε IRI είτε κενοί κόμβοι."@el ;
 		sh:message "The values of sh:resultAnnotation are called result annotations and are either IRIs or blank nodes."@en ;
+	    sh:message "Los valores de sh:resultAnnotation se denominan anotaciones de resultados y son IRI o nodos en blanco."@es ;
+        sh:message "sh:resultAnnotation väärtusi nimetatakse tulemuste annotatsioonideks ja need on kas IRI-d või tühjad sõlmed."@et ;
+        sh:message "sh:resultAnnotation:n arvoja kutsutaan tulosmerkintöiksi, ja ne ovat joko IRI:itä tai tyhjiä solmuja."@fi ;
+        sh:message "Les valeurs de sh:resultAnnotation sont appelées annotations de résultat et sont soit des IRI, soit des nœuds vides."@fr ;
+        sh:message "Tugtar nótaí toraidh ar luachanna sh:resultAnnotation agus is IRIanna nó nóid bhána iad."@ga ;
+        sh:message "Vrijednosti sh:resultAnnotation nazivaju se napomenama rezultata i ili su IRI ili prazni čvorovi."@hr ;
+        sh:message "Az sh:resultAnnotation értékeit eredményfeljegyzéseknek nevezzük, és ezek vagy IRI-k vagy üres csomópontok."@hu ;
+        sh:message "I valori di sh:resultAnnotation sono chiamati annotazioni dei risultati e sono IRI o nodi vuoti."@it ;
+        sh:message "sh:resultAnnotation reikšmės vadinamos rezultatų anotacijomis ir yra IRI arba tušti mazgai."@lt ;
+        sh:message "sh:resultAnnotation vērtības tiek sauktas par rezultātu anotācijām, un tās ir vai nu IRI, vai tukši mezgli."@lv ;
+        sh:message "Il-valuri ta' sh:resultAnnotation jissejħu annotazzjonijiet tar-riżultati u huma jew IRIs jew nodi vojta."@mt ;
+        sh:message "De waarden van sh:resultAnnotation worden resultaatannotaties genoemd en zijn IRI's of lege knooppunten."@nl ;
+        sh:message "Wartości sh:resultAnnotation nazywane są adnotacjami wyników i są albo IRI, albo pustymi węzłami."@pl ;
+        sh:message "Os valores de sh:resultAnnotation são chamados de anotações de resultado e são IRIs ou nós em branco."@pt ;
+        sh:message "Valorile lui sh:resultAnnotation se numesc adnotări de rezultat și sunt fie IRI, fie noduri goale."@ro ;
+        sh:message "Hodnoty sh:resultAnnotation sa nazývajú anotácie výsledkov a sú to buď IRI alebo prázdne uzly."@sk ;
+        sh:message "Vrednosti sh:resultAnnotation se imenujejo opombe rezultatov in so bodisi IRI-ji bodisi prazna vozlišča."@sl ;
+        sh:message "Värdena för sh:resultAnnotation kallas resultatkommentarer och är antingen IRI:er eller tomma noder."@sv ;
 		sh:or ( [ sh:nodeKind sh:BlankNode ] [ sh:nodeKind sh:IRI ] ) ;		# resultAnnotation-nodeKind
 	] ;
 	
@@ -103,7 +241,30 @@ adsh:ResultAnnotationShape
 		sh:description "Datatype for sh:annotationVarName class."@en ;
 		
 		sh:path (sh:resultAnnotation sh:annotationVarName) ;
+		sh:message "Стойността на sh:annotationVarName трябва да бъде литерал с тип данни xsd:string."@bg ;
+       	sh:message "Hodnota sh:annotationVarName musí být literál s datovým typem xsd:string."@cs ;
+        sh:message "Værdien af sh:annotationVarName skal være en literal med datatypen xsd:string."@da ;
+        sh:message "Der Wert von sh:annotationVarName muss ein Literal mit dem Datentyp xsd:string sein."@de ;
+        sh:message "Η τιμή του sh:annotationVarName πρέπει να είναι κυριολεκτική με τύπο δεδομένων xsd:string."@el ;
 		sh:message "The value of sh:annotationVarName must be a literal with datatype xsd:string."@en ;
+	    sh:message "El valor de sh:annotationVarName debe ser un literal con tipo de datos xsd:string."@es ;
+        sh:message "sh:annotationVarName väärtus peab olema andmetüübiga xsd:string literaal."@et ;
+        sh:message "Parametrin sh:annotationVarName arvon on oltava literaali, jonka tietotyyppi on xsd:string."@fi ;
+        sh:message "La valeur de sh:annotationVarName doit être un littéral avec le type de données xsd:string."@fr ;
+        sh:message "Caithfidh luach sh:annotationVarName a bheith ina liteartha le cineál sonraí xsd:string."@ga ;
+        sh:message "Vrijednost sh:annotationVarName mora biti literal s tipom podataka xsd:string."@hr ;
+        sh:message "Az sh:annotationVarName értékének literálnak kell lennie xsd:string adattípussal."@hu ;
+        sh:message "Il valore di sh:annotationVarName deve essere un valore letterale con tipo di dati xsd:string."@it ;
+        sh:message "sh:annotationVarName reikšmė turi būti literalė su duomenų tipu xsd:string."@lt ;
+        sh:message "sh:annotationVarName vērtībai ir jābūt literālam ar datu tipu xsd:string."@lv ;
+        sh:message "Il-valur ta' sh:annotationVarName għandu jkun litterali b'datatype xsd:string."@mt ;
+        sh:message "De waarde van sh:annotationVarName moet een letterlijke waarde zijn met datatype xsd:string."@nl ;
+        sh:message "Wartość sh:annotationVarName musi być literałem o typie danych xsd:string."@pl ;
+        sh:message "O valor de sh:annotationVarName deve ser um literal com tipo de dados xsd:string."@pt ;
+        sh:message "Valoarea lui sh:annotationVarName trebuie să fie un literal cu tipul de date xsd:string."@ro ;
+        sh:message "Hodnota sh:annotationVarName musí byť literál s typom údajov xsd:string."@sk ;
+        sh:message "Vrednost sh:annotationVarName mora biti literal s podatkovnim tipom xsd:string."@sl ;
+        sh:message "Värdet på sh:annotationVarName måste vara en literal med datatypen xsd:string."@sv ;
 		sh:datatype xsd:string ;	 				# annotationVarName
 	] .
 
@@ -120,7 +281,30 @@ adsh:ResultAnnotationCountShape
 		sh:description "Maximum and minimum count for sh:annotationProperty class."@en ;
 		
 		sh:path sh:annotationProperty ;
+		sh:message "Всяка анотация за резултат има точно една стойност за свойството sh:annotationProperty и тази стойност е IRI."@bg ;
+       	sh:message "Každá anotace výsledku má právě jednu hodnotu pro vlastnost sh:annotationProperty a tato hodnota je IRI."@cs ;
+        sh:message "Hver resultatannotering har nøjagtig én værdi for egenskaben sh:annotationProperty, og denne værdi er en IRI."@da ;
+        sh:message "Jede Ergebnisannotation hat genau einen Wert für die Eigenschaft sh:annotationProperty und dieser Wert ist ein IRI."@de ;
+        sh:message "Κάθε σχολιασμός αποτελέσματος έχει ακριβώς μία τιμή για την ιδιότητα sh:annotationProperty και αυτή η τιμή είναι ένα IRI."@el ;
 		sh:message "Each result annotation has exactly one value for the property sh:annotationProperty and this value is an IRI."@en ;
+	    sh:message "Cada anotación de resultado tiene exactamente un valor para la propiedad sh:annotationProperty y este valor es un IRI."@es ;
+        sh:message "Igal tulemuse annotatsioonil on atribuudi sh:annotationProperty jaoks täpselt üks väärtus ja see väärtus on IRI."@et ;
+        sh:message "Jokaisella tulosmerkinnällä on täsmälleen yksi arvo ominaisuudelle sh:annotationProperty, ja tämä arvo on IRI."@fi ;
+        sh:message "Chaque annotation de résultat a exactement une valeur pour la propriété sh:annotationProperty et cette valeur est un IRI."@fr ;
+        sh:message "Tá luach amháin go díreach ag gach nótáil toraidh don airí sh:annotationProperty agus is IRI an luach seo."@ga ;
+        sh:message "Svaka bilješka rezultata ima točno jednu vrijednost za svojstvo sh:annotationProperty i ova vrijednost je IRI."@hr ;
+        sh:message "Minden eredmény annotációnak pontosan egy értéke van az sh:annotationProperty tulajdonsághoz, és ez az érték egy IRI."@hu ;
+        sh:message "Ogni annotazione del risultato ha esattamente un valore per la proprietà sh:annotationProperty e questo valore è un IRI."@it ;
+        sh:message "Kiekviena rezultato anotacija turi tiksliai vieną ypatybės sh:annotationProperty reikšmę ir ši reikšmė yra IRI."@lt ;
+        sh:message "Katrai rezultāta anotācijai ir tieši viena rekvizīta sh:annotationProperty vērtība, un šī vērtība ir IRI."@lv ;
+        sh:message "Kull annotazzjoni tar-riżultat għandha eżattament valur wieħed għall-proprjetà sh:annotationProperty u dan il-valur huwa IRI."@mt ;
+        sh:message "Elke resultaatannotatie heeft precies één waarde voor de eigenschap sh:annotationProperty en deze waarde is een IRI."@nl ;
+        sh:message "Każda adnotacja wyniku ma dokładnie jedną wartość właściwości sh:annotationProperty, a ta wartość jest identyfikatorem IRI."@pl ;
+        sh:message "Cada anotação de resultado tem exatamente um valor para a propriedade sh:annotationProperty e esse valor é um IRI."@pt ;
+        sh:message "Fiecare adnotare de rezultat are exact o valoare pentru proprietatea sh:annotationProperty și această valoare este un IRI."@ro ;
+        sh:message "Každá anotácia výsledku má práve jednu hodnotu pre vlastnosť sh:annotationProperty a táto hodnota je IRI."@sk ;
+        sh:message "Vsaka opomba rezultata ima natanko eno vrednost za lastnost sh:annotationProperty in ta vrednost je IRI."@sl ;
+        sh:message "Varje resultatkommentar har exakt ett värde för egenskapen sh:annotationProperty och detta värde är en IRI."@sv ;
 		sh:nodeKind sh:IRI ;	
 		sh:maxCount 1 ;					# annotationProperty
 		sh:minCount 1 ;					# annotationProperty
@@ -131,7 +315,30 @@ adsh:ResultAnnotationCountShape
 		sh:description "Maximum count for sh:annotationVarName class."@en ;
 		
 		sh:path sh:annotationVarName ;
+		sh:message "Всяка анотация за резултат има най-много 1 стойност за свойството sh:annotationVarName."@bg ;
+       	sh:message "Každá anotace výsledku má maximálně 1 hodnotu pro vlastnost sh:annotationVarName."@cs ;
+        sh:message "Hver resultatannotation har højst 1 værdi for egenskaben sh:annotationVarName."@da ;
+        sh:message "Jede Ergebnisanmerkung hat höchstens 1 Wert für die Eigenschaft sh:annotationVarName."@de ;
+        sh:message "Κάθε σχολιασμός αποτελέσματος έχει το πολύ 1 τιμή για την ιδιότητα sh:annotationVarName."@el ;
 		sh:message "Each result annotation has at most 1 value for the property sh:annotationVarName."@en ;
+	    sh:message "Cada anotación de resultado tiene como máximo 1 valor para la propiedad sh:annotationVarName."@es ;
+        sh:message "Igal tulemuse annotatsioonil on atribuudi sh:annotationVarName jaoks maksimaalselt 1 väärtus."@et ;
+        sh:message "Jokaisella tulosmerkinnällä on enintään yksi arvo ominaisuudelle sh:annotationVarName."@fi ;
+        sh:message "Chaque annotation de résultat a au plus 1 valeur pour la propriété sh:annotationVarName."@fr ;
+        sh:message "Tá luach 1 ar a mhéad ag gach anótáil toraidh don airí sh:annotationVarName."@ga ;
+        sh:message "Svaka bilješka rezultata ima najviše 1 vrijednost za svojstvo sh:annotationVarName."@hr ;
+        sh:message "Minden eredmény megjegyzés legfeljebb 1 értékkel rendelkezik az sh:annotationVarName tulajdonsághoz."@hu ;
+        sh:message "Ogni annotazione del risultato ha al massimo 1 valore per la proprietà sh:annotationVarName."@it ;
+        sh:message "Kiekviena rezultato anotacija turi daugiausia 1 nuosavybės sh:annotationVarName reikšmę."@lt ;
+        sh:message "Katrai rezultāta anotācijai ir ne vairāk kā 1 rekvizīta sh:annotationVarName vērtība."@lv ;
+        sh:message "Kull annotazzjoni tar-riżultat għandha l-iktar valur 1 għall-proprjetà sh:annotationVarName."@mt ;
+        sh:message "Elke resultaatannotatie heeft maximaal 1 waarde voor de eigenschap sh:annotationVarName."@nl ;
+        sh:message "Każda adnotacja wyniku ma co najwyżej 1 wartość właściwości sh:annotationVarName."@pl ;
+        sh:message "Cada anotação de resultado tem no máximo 1 valor para a propriedade sh:annotationVarName."@pt ;
+        sh:message "Fiecare adnotare de rezultat are cel mult 1 valoare pentru proprietatea sh:annotationVarName."@ro ;
+        sh:message "Každá anotácia výsledku má najviac 1 hodnotu pre vlastnosť sh:annotationVarName."@sk ;
+        sh:message "Vsaka opomba rezultata ima največ 1 vrednost za lastnost sh:annotationVarName."@sl ;
+        sh:message "Varje resultatkommentar har högst 1 värde för egenskapen sh:annotationVarName."@sv ;
 		sh:maxCount 1 ;					# annotationVarName
 	] .
 	
@@ -148,7 +355,30 @@ adsh:ReturnTypeShape
 		sh:description "Maximum count for sh:returnType class."@en ;
 		
 		sh:path sh:returnType ;
+		sh:message "Функцията има най-много една стойност за sh:returnType."@bg ;
+       	sh:message "Funkce má nejvýše jednu hodnotu pro sh:returnType."@cs ;
+        sh:message "En funktion har højst én værdi for sh:returnType."@da ;
+        sh:message "Eine Funktion hat höchstens einen Wert für sh:returnType."@de ;
+        sh:message "Μια συνάρτηση έχει το πολύ μία τιμή για sh:returnType."@el ;
 		sh:message "A function has at most one value for sh:returnType."@en ;
+	    sh:message "Una función tiene como máximo un valor para sh:returnType."@es ;
+        sh:message "Funktsioonil on sh:returnType jaoks maksimaalselt üks väärtus."@et ;
+        sh:message "Funktiolla on enintään yksi arvo sh:returnType:lle."@fi ;
+        sh:message "Une fonction a au plus une valeur pour sh:returnType."@fr ;
+        sh:message "Tá luach amháin ar a mhéad ag feidhm do sh:returnType."@ga ;
+        sh:message "Funkcija ima najviše jednu vrijednost za sh:returnType."@hr ;
+        sh:message "Egy függvénynek legfeljebb egy értéke lehet sh:returnType."@hu ;
+        sh:message "Una funzione ha al massimo un valore per sh:returnType."@it ;
+        sh:message "Funkcija turi ne daugiau kaip vieną sh:returnType reikšmę."@lt ;
+        sh:message "Funkcijai ir ne vairāk kā viena vērtība sh:returnType."@lv ;
+        sh:message "Funzjoni għandha l-iktar valur wieħed għal sh:returnType."@mt ;
+        sh:message "Een functie heeft maximaal één waarde voor sh:returnType."@nl ;
+        sh:message "Funkcja ma co najwyżej jedną wartość dla sh:returnType."@pl ;
+        sh:message "Uma função tem no máximo um valor para sh:returnType."@pt ;
+        sh:message "O funcție are cel mult o valoare pentru sh:returnType."@ro ;
+        sh:message "Funkcia má najviac jednu hodnotu pre sh:returnType."@sk ;
+        sh:message "Funkcija ima največ eno vrednost za sh:returnType."@sl ;
+        sh:message "En funktion har högst ett värde för sh:returnType."@sv ;
 		sh:maxCount 1 ;					# returnType-maxCount
 	] ;
 	
@@ -156,15 +386,61 @@ adsh:ReturnTypeShape
 		sh:name "Return type NodeKind shape"@en ;
 		sh:description "NodeKind for sh:returnType class."@en ;
 		
-		sh:path sh:returnType ;				
+		sh:path sh:returnType ;
+		sh:message "Стойностите на sh:returnType са IRI."@bg ;
+       	sh:message "Hodnoty sh:returnType jsou IRI."@cs ;
+        sh:message "Værdierne for sh:returnType er IRI'er."@da ;
+        sh:message "Die Werte von sh:returnType sind IRIs."@de ;
+        sh:message "Οι τιμές του sh:returnType είναι IRI."@el ;
 		sh:message "The values of sh:returnType are IRIs."@en ;
+	    sh:message "Los valores de sh:returnType son IRI."@es ;
+        sh:message "sh:returnType väärtused on IRI-d."@et ;
+        sh:message "sh:returnType:n arvot ovat IRI:itä."@fi ;
+        sh:message "Les valeurs de sh:returnType sont des IRI."@fr ;
+        sh:message "Is iad na luachanna de sh:returnType ná IRIanna."@ga ;
+        sh:message "Vrijednosti sh:returnType su IRI."@hr ;
+        sh:message "Az sh:returnType értékei IRI-k."@hu ;
+        sh:message "I valori di sh:returnType sono IRI."@it ;
+        sh:message "sh:returnType reikšmės yra IRI."@lt ;
+        sh:message "sh:returnType vērtības ir IRI."@lv ;
+        sh:message "Il-valuri ta' sh:returnType huma IRIs."@mt ;
+        sh:message "De waarden van sh:returnType zijn IRI's."@nl ;
+        sh:message "Wartości sh:returnType to IRI."@pl ;
+        sh:message "Os valores de sh:returnType são IRIs."@pt ;
+        sh:message "Valorile lui sh:returnType sunt IRI."@ro ;
+        sh:message "Hodnoty sh:returnType sú IRI."@sk ;
+        sh:message "Vrednosti sh:returnType so IRI."@sl ;
+        sh:message "Värdena för sh:returnType är IRI."@sv ;
 		sh:nodeKind sh:IRI ;		# returnType-nodeKind
 	] .
 	
 adsh:SPARQLFunctionShape
 	a sh:NodeShape ;			
-	sh:targetClass sh:SPARQLFunction ;	
+	sh:targetClass sh:SPARQLFunction ;
+	sh:message "Функциите, базирани на SPARQL, имат точно една стойност за sh:ask или sh:select."@bg ;
+    sh:message "Funkce založené na SPARQL mají přesně jednu hodnotu pro sh:ask nebo sh:select."@cs ;
+    sh:message "SPARQL-baserede funktioner har præcis én værdi for enten sh:ask eller sh:select."@da ;
+    sh:message "SPARQL-basierte Funktionen haben genau einen Wert für entweder sh:ask oder sh:select."@de ;
+    sh:message "Οι συναρτήσεις που βασίζονται σε SPARQL έχουν ακριβώς μία τιμή είτε για sh:ask είτε για sh:select."@el ;
 	sh:message "SPARQL-based functions have exactly one value for either sh:ask or sh:select."@en ;
+	sh:message "Las funciones basadas en SPARQL tienen exactamente un valor para sh:ask o sh:select."@es ;
+    sh:message "SPARQL-põhistel funktsioonidel on kas sh:ask või sh:select jaoks täpselt üks väärtus."@et ;
+    sh:message "SPARQL-pohjaisilla funktioilla on täsmälleen yksi arvo joko sh:ask:lle tai sh:select:lle."@fi ;
+    sh:message "Les fonctions basées sur SPARQL ont exactement une valeur pour sh:ask ou sh:select."@fr ;
+    sh:message "Tá luach amháin go díreach ag feidhmeanna atá bunaithe ar SPARQL maidir le sh:ask nó sh:select."@ga ;
+    sh:message "Funkcije temeljene na SPARQL-u imaju točno jednu vrijednost za sh:ask ili sh:select."@hr ;
+    sh:message "A SPARQL-alapú függvényeknek pontosan egy értéke van az sh:ask vagy az sh:select számára."@hu ;
+    sh:message "Le funzioni basate su SPARQL hanno esattamente un valore per sh:ask o sh:select."@it ;
+    sh:message "SPARQL pagrįstos funkcijos turi tiksliai vieną reikšmę sh:ask arba sh:select."@lt ;
+    sh:message "Uz SPARQL balstītām funkcijām ir tieši viena vērtība vai nu sh:ask, vai sh:select."@lv ;
+    sh:message "Funzjonijiet ibbażati fuq SPARQL għandhom eżattament valur wieħed jew għal sh:ask jew sh:select."@mt ;
+    sh:message "Op SPARQL gebaseerde functies hebben precies één waarde voor sh:ask of sh:select."@nl ;
+    sh:message "Funkcje oparte na SPARQL mają dokładnie jedną wartość dla sh:ask lub sh:select."@pl ;
+    sh:message "As funções baseadas em SPARQL têm exatamente um valor para sh:ask ou sh:select."@pt ;
+    sh:message "Funcțiile bazate pe SPARQL au exact o valoare pentru sh:ask sau sh:select."@ro ;
+    sh:message "Funkcie založené na SPARQL majú presne jednu hodnotu pre sh:ask alebo sh:select."@sk ;
+    sh:message "Funkcije, ki temeljijo na SPARQL, imajo natanko eno vrednost za sh:ask ali sh:select."@sl ;
+    sh:message "SPARQL-baserade funktioner har exakt ett värde för antingen sh:ask eller sh:select."@sv ;
 	
 	rdfs:comment "Requirements for sh:SPARQLFunction class."@en ;
 	rdfs:label "SPARQL Function Shape"@en ;
@@ -195,8 +471,30 @@ adsh:SPARQLFunctionShape
 adsh:FilterShapeShape			# FilterShapeExpression
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:filterShape ;
+    sh:message "Изразът за филтърна форма е празен възел с точно една стойност за sh:filterShape (която е добре оформена форма) и точно една стойност за sh:nodes (която е добре оформен израз на възел)."@bg ;
+    sh:message "Výraz tvaru filtru je prázdný uzel s přesně jednou hodnotou pro sh:filterShape (což je správně vytvořený tvar) a přesně jednou hodnotou pro sh:nodes (což je správně vytvořený výraz uzlu)."@cs ;
+    sh:message "Et filterformudtryk er en tom node med nøjagtig én værdi for sh:filterShape (som er en velformet form) og nøjagtig én værdi for sh:nodes (som er et velformet nodeudtryk)."@da ;
+    sh:message "Ein Filterformausdruck ist ein leerer Knoten mit genau einem Wert für sh:filterShape (was eine wohlgeformte Form ist) und genau einem Wert für sh:nodes (was ein wohlgeformter Knotenausdruck ist)."@de ;
+    sh:message "Μια έκφραση σχήματος φίλτρου είναι ένας κενός κόμβος με ακριβώς μία τιμή για το sh:filterShape (το οποίο είναι ένα καλά διαμορφωμένο σχήμα) και ακριβώς μία τιμή για το sh:nodes (που είναι μια καλοσχηματισμένη έκφραση κόμβου)."@el ;
 	sh:message "A filter shape expression is a blank node with exactly one value for sh:filterShape (which is a well-formed shape) and exactly one value for sh:nodes (which is a well-formed node expression)."@en ;
-	
+	sh:message "Una expresión de forma de filtro es un nodo en blanco con exactamente un valor para sh:filterShape (que es una forma bien formada) y exactamente un valor para sh:nodes (que es una expresión de nodo bien formada)."@es ;
+    sh:message "Filtri kuju avaldis on tühi sõlm, millel on täpselt üks väärtus sh:filterShape jaoks (mis on hästi vormindatud kujund) ja täpselt üks väärtus väärtusele sh:nodes (mis on hästi vormindatud sõlmeavaldis)."@et ;
+    sh:message "Suodatinmuotolauseke on tyhjä solmu, jossa on täsmälleen yksi arvo sh:filterShape:lle (joka on hyvin muodostettu muoto) ja täsmälleen yksi arvo sh:nodes:lle (joka on hyvin muodostettu solmulauseke)."@fi ;
+    sh:message "Une expression de forme de filtre est un nœud vide avec exactement une valeur pour sh:filterShape (qui est une forme bien formée) et exactement une valeur pour sh:nodes (qui est une expression de nœud bien formée)."@fr ;
+    sh:message "Nód bán is ea slonn crutha scagaire le luach amháin go díreach do sh:filterShape (ar cruth dea-chruthaithe é) agus luach amháin go díreach do sh:nodes (ar slonn nód dea-chruthaithe é)."@ga ;
+    sh:message "Izraz oblika filtra je prazan čvor s točno jednom vrijednošću za sh:filterShape (što je dobro oblikovan oblik) i točno jednom vrijednošću za sh:nodes (što je dobro oblikovan izraz čvora)."@hr ;
+    sh:message "A szűrőalak-kifejezés egy üres csomópont, amelynek pontosan egy értéke van az sh:filterShape-hoz (ami egy jól formázott alakzat), és pontosan egy értékkel az sh:nodes-hoz (ami egy jól formázott csomópont-kifejezés)."@hu ;
+    sh:message "Un'espressione della forma del filtro è un nodo vuoto con esattamente un valore per sh:filterShape (che è una forma ben formata) ed esattamente un valore per sh:nodes (che è un'espressione del nodo ben formata)."@it ;
+    sh:message "Filtro formos išraiška yra tuščias mazgas, turintis tiksliai vieną reikšmę sh:filterShape (tai yra gerai suformuota forma) ir tiksliai vieną reikšmę sh:nodes (tai yra gerai suformuota mazgo išraiška)."@lt ;
+    sh:message "Filtra formas izteiksme ir tukšs mezgls ar tieši vienu vērtību sh:filterShape (kas ir labi izveidota forma) un tieši vienu vērtību sh:nodes (kas ir labi izveidota mezgla izteiksme)."@lv ;
+    sh:message "Espressjoni ta' forma ta' filtru hija node vojta b'valur wieħed eżatt għal sh:filterShape (li hija forma ffurmata tajjeb) u eżattament valur wieħed għal sh:nodes (li hija espressjoni ta' node ffurmata tajjeb)."@mt ;
+    sh:message "Een filtervormexpressie is een leeg knooppunt met precies één waarde voor sh:filterShape (wat een goedgevormde vorm is) en precies één waarde voor sh:nodes (wat een goedgevormde knooppuntexpressie is)."@nl ;
+    sh:message "Wyrażenie kształtu filtra jest pustym węzłem z dokładnie jedną wartością sh:filterShape (co jest prawidłowym kształtem) i dokładnie jedną wartością dla sh:nodes (co jest poprawnie sformułowanym wyrażeniem węzła)."@pl ;
+    sh:message "Uma expressão de forma de filtro é um nó em branco com exatamente um valor para sh:filterShape (que é uma forma bem formada) e exatamente um valor para sh:nodes (que é uma expressão de nó bem formada)."@pt ;
+    sh:message "O expresie de formă de filtru este un nod gol cu exact o valoare pentru sh:filterShape (care este o formă bine formată) și exact o valoare pentru sh:nodes (care este o expresie de nod bine formată)."@ro ;
+    sh:message "Výraz tvaru filtra je prázdny uzol s presne jednou hodnotou pre sh:filterShape (čo je dobre vytvorený tvar) a presne jednou hodnotou pre sh:nodes (čo je dobre vytvorený výraz uzla)."@sk ;
+    sh:message "Izraz oblike filtra je prazno vozlišče z natanko eno vrednostjo za sh:filterShape (ki je dobro oblikovana oblika) in natanko eno vrednostjo za sh:nodes (ki je dobro oblikovan izraz vozlišča)."@sl ;
+    sh:message "Ett filterformuttryck är en tom nod med exakt ett värde för sh:filterShape (vilket är en välformad form) och exakt ett värde för sh:nodes (som är ett välformat noduttryck)."@sv ;
 	rdfs:comment "Requirements for subjects of sh:filterShape class."@en ;
 	rdfs:label "Filter Shape Shape"@en ;
 	
@@ -224,7 +522,30 @@ adsh:FilterShapeShape			# FilterShapeExpression
 adsh:PathExpressionShape			# PathExpression
 	a sh:NodeShape ;
 	sh:targetSubjectsOf sh:path ;
+    sh:message "Изразът за път е празен възел с точно една стойност на свойството sh:path (които са добре оформени пътеки на свойства) и най-много една стойност за sh:nodes (което е добре оформен израз на възел)."@bg ;
+    sh:message "Výraz cesta je prázdný uzel s přesně jednou hodnotou vlastnosti sh:path (což jsou správně vytvořené cesty vlastností) a nejvýše jednou hodnotou pro sh:nodes (což je správně vytvořený výraz uzlu)."@cs ;
+    sh:message "Et stiudtryk er en tom node med præcis én værdi af egenskaben sh:path (som er velformede egenskabsstier) og højst én værdi for sh:nodes (som er et velformet nodeudtryk)."@da ;
+    sh:message "Ein Pfadausdruck ist ein leerer Knoten mit genau einem Wert der Eigenschaft sh:path (wobei es sich um wohlgeformte Eigenschaftspfade handelt) und höchstens einem Wert für sh:nodes (was ein wohlgeformter Knotenausdruck ist)."@de ;
+    sh:message "Μια έκφραση διαδρομής είναι ένας κενός κόμβος με ακριβώς μία τιμή της ιδιότητας sh:path (που είναι καλά διαμορφωμένες διαδρομές ιδιοτήτων) και το πολύ μια τιμή για sh:nodes (η οποία είναι μια καλοσχηματισμένη έκφραση κόμβου)."@el ;
 	sh:message "A path expression is a blank node with exactly one value of the property sh:path (which are well-formed property paths) and at most one value for sh:nodes (which is a well-formed node expression)."@en ;
+	sh:message "Una expresión de ruta es un nodo en blanco con exactamente un valor de la propiedad sh:path (que son rutas de propiedad bien formadas) y como máximo un valor para sh:nodes (que es una expresión de nodo bien formada)."@es ;
+    sh:message "Teeavaldis on tühi sõlm, millel on täpselt üks atribuudi sh:path väärtus (mis on hästi moodustatud atribuuditeed) ja maksimaalselt üks väärtus sh:nodes jaoks (mis on hästi vormindatud sõlmeavaldis)."@et ;
+    sh:message "Polkulauseke on tyhjä solmu, jolla on täsmälleen yksi arvo ominaisuudelle sh:path (jotka ovat hyvin muotoiltuja ominaisuuspolkuja) ja enintään yksi arvo sh:nodes:lle (joka on hyvin muotoiltu solmulauseke)."@fi ;
+    sh:message "Une expression de chemin est un nœud vide avec exactement une valeur de la propriété sh:path (qui sont des chemins de propriété bien formés) et au plus une valeur pour sh:nodes (qui est une expression de nœud bien formée)."@fr ;
+    sh:message "Nód bán is ea slonn cosáin a bhfuil luach amháin go díreach aige ar an airí sh:path (ar cosáin airí dea-chruthaithe iad) agus luach amháin ar a mhéad do sh:nodes (ar slonn nód dea-chruthaithe é)."@ga ;
+    sh:message "Izraz staze je prazan čvor s točno jednom vrijednošću svojstva sh:path (koje su dobro oblikovane staze svojstva) i najviše jedne vrijednosti za sh:nodes (što je dobro oblikovan izraz čvora)."@hr ;
+    sh:message "Az elérési út kifejezés egy üres csomópont, amelynek pontosan egy értéke van az sh:path tulajdonságnak (amelyek jól formált tulajdonságútvonalak), és legfeljebb egy értékkel az sh:nodes-hoz (ami egy jól formázott csomópontkifejezés)."@hu ;
+    sh:message "Un'espressione di percorso è un nodo vuoto con esattamente un valore della proprietà sh:path (che sono percorsi di proprietà ben formati) e al massimo un valore per sh:nodes (che è un'espressione di nodo ben formata)."@it ;
+    sh:message "Kelio išraiška yra tuščias mazgas, turintis tiksliai vieną ypatybės sh:path reikšmę (tai yra gerai suformuoti nuosavybės keliai) ir daugiausiai vieną reikšmę sh:nodes (tai yra gerai suformuota mazgo išraiška)."@lt ;
+    sh:message "Ceļa izteiksme ir tukšs mezgls ar tieši vienu rekvizīta sh:path vērtību (kas ir labi izveidoti rekvizītu ceļi) un ne vairāk kā vienu vērtību sh:nodes (kas ir labi izveidota mezgla izteiksme)."@lv ;
+    sh:message "Espressjoni ta' mogħdija hija nodu vojt b'eżatt valur wieħed tal-proprjetà sh:path (li huma mogħdijiet ta' proprjetà ffurmati tajjeb) u l-iktar valur wieħed għal sh:nodes (li hija espressjoni ta' node ffurmata tajjeb)."@mt ;
+    sh:message "Een padexpressie is een leeg knooppunt met precies één waarde van de eigenschap sh:path (dit zijn goedgevormde eigenschapspaden) en maximaal één waarde voor sh:nodes (wat een goedgevormde knooppuntexpressie is)."@nl ;
+    sh:message "Wyrażenie ścieżki jest pustym węzłem z dokładnie jedną wartością właściwości sh:path (które są poprawnie sformułowanymi ścieżkami właściwości) i co najwyżej jedną wartością sh:nodes (co jest poprawnie sformułowanym wyrażeniem węzła)."@pl ;
+    sh:message "Uma expressão de caminho é um nó em branco com exatamente um valor da propriedade sh:path (que são caminhos de propriedade bem formados) e no máximo um valor para sh:nodes (que é uma expressão de nó bem formada)."@pt ;
+    sh:message "O expresie de cale este un nod gol cu exact o valoare a proprietății sh:path (care sunt căi de proprietate bine formate) și cel mult o valoare pentru sh:nodes (care este o expresie de nod bine formată)."@ro ;
+    sh:message "Výraz cesta je prázdny uzol s presne jednou hodnotou vlastnosti sh:path (čo sú správne vytvorené cesty vlastnosti) a najviac jednou hodnotou pre sh:nodes (čo je dobre vytvorený výraz uzla)."@sk ;
+    sh:message "Izraz poti je prazno vozlišče z natanko eno vrednostjo lastnosti sh:path (ki so dobro oblikovane poti lastnosti) in največ eno vrednostjo za sh:nodes (ki je dobro oblikovan izraz vozlišča)."@sl ;
+    sh:message "Ett sökvägsuttryck är en tom nod med exakt ett värde av egenskapen sh:path (som är välformade egenskapsvägar) och högst ett värde för sh:nodes (som är ett välformat noduttryck)."@sv ;
 	
 	rdfs:comment "Requirements for subjects of sh:path class."@en ;
 	rdfs:label "Path Expression Shape"@en ;
@@ -251,7 +572,30 @@ adsh:PathExpressionShape			# PathExpression
 adsh:RuleTypeShape					# Rule-type
 	a sh:NodeShape ;
 	sh:targetObjectsOf sh:rule ;
+    sh:message "Всяко правило SHACL има поне един rdf:type, който е IRI."@bg ;
+    sh:message "Každé pravidlo SHACL má alespoň jedno rdf:type, což je IRI."@cs ;
+    sh:message "Hver SHACL-regel har mindst én rdf:type, som er en IRI."@da ;
+    sh:message "Jede SHACL-Regel hat mindestens einen rdf:type, der ein IRI ist."@de ;
+    sh:message "Κάθε κανόνας SHACL έχει τουλάχιστον ένα rdf:type που είναι IRI."@el ;
 	sh:message "Each SHACL rule has at least one rdf:type which is a IRI."@en ;
+	sh:message "Cada regla SHACL tiene al menos un rdf:type que es un IRI."@es ;
+    sh:message "Igal SHACL-reeglil on vähemalt üks rdf:type, mis on IRI."@et ;
+    sh:message "Jokaisella SHACL-säännöllä on vähintään yksi rdf:type, joka on IRI."@fi ;
+    sh:message "Chaque règle SHACL a au moins un rdf:type qui est un IRI."@fr ;
+    sh:message "Tá rdf:type amháin ar a laghad ag gach riail SHACL arb é an IRI é."@ga ;
+    sh:message "Svako SHACL pravilo ima barem jedan rdf:type koji je IRI."@hr ;
+    sh:message "Minden SHACL-szabályhoz tartozik legalább egy rdf:type, amely egy IRI."@hu ;
+    sh:message "Ogni regola SHACL ha almeno un rdf:type che è un IRI."@it ;
+    sh:message "Kiekviena SHACL taisyklė turi bent vieną rdf:type, kuris yra IRI."@lt ;
+    sh:message "Katrai SHACL kārtulai ir vismaz viens rdf:type, kas ir IRI."@lv ;
+    sh:message "Kull regola SHACL għandha mill-inqas rdf:type waħda li hija IRI."@mt ;
+    sh:message "Elke SHACL-regel heeft ten minste één rdf:type, wat een IRI is."@nl ;
+    sh:message "Każda reguła SHACL ma przynajmniej jedną rdf:type, która jest IRI."@pl ;
+    sh:message "Cada regra SHACL tem pelo menos um rdf:type que é um IRI."@pt ;
+    sh:message "Fiecare regulă SHACL are cel puțin un rdf:type care este un IRI."@ro ;
+    sh:message "Každé pravidlo SHACL má aspoň jedno rdf:type, čo je IRI."@sk ;
+    sh:message "Vsako pravilo SHACL ima vsaj eno rdf:type, ki je IRI."@sl ;
+    sh:message "Varje SHACL-regel har minst en rdf:type som är en IRI."@sv ;
 	
 	rdfs:comment "Requirements for rdf:type property in sh:rule class."@en ;
 	rdfs:label "Rule Type Shape"@en ;
@@ -288,7 +632,31 @@ adsh:OrderShape
 		
 		sh:path sh:order ;
 		sh:maxCount 1 ;
+	    sh:message "Всяко правило или форма може да има най-много една стойност за свойството sh:order."@bg ;
+        sh:message "Každé pravidlo nebo tvar může mít nejvýše jednu hodnotu vlastnosti sh:order."@cs ;
+        sh:message "Hver regel eller form må højst have én værdi for egenskaben sh:order."@da ;
+        sh:message "Jede Regel oder Form kann höchstens einen Wert für die Eigenschaft sh:order haben."@de ;
+        sh:message "Κάθε κανόνας ή σχήμα μπορεί να έχει το πολύ μία τιμή για την ιδιότητα sh:order."@el ;
 		sh:message "Each rule or shape may have at most one value for the property sh:order."@en ;
+	    sh:message "Cada regla o forma puede tener como máximo un valor para la propiedad sh:order."@es ;
+        sh:message "Igal reeglil või kujundil võib atribuudi sh:order jaoks olla kuni üks väärtus."@et ;
+        sh:message "Jokaisella säännöllä tai muodolla voi olla enintään yksi arvo ominaisuudelle sh:order."@fi ;
+        sh:message "Chaque règle ou forme peut avoir au plus une valeur pour la propriété sh:order."@fr ;
+        sh:message "D’fhéadfadh luach amháin ar a laghad a bheith ag gach riail nó cruth don airí sh:order."@ga ;
+        sh:message "Svako pravilo ili oblik može imati najviše jednu vrijednost za svojstvo sh:order."@hr ;
+        sh:message "Minden szabálynak vagy alakzatnak legfeljebb egy értéke lehet a sh:order tulajdonsághoz."@hu ;
+        sh:message "Ogni regola o forma può avere al massimo un valore per la proprietà sh:order."@it ;
+        sh:message "Kiekviena taisyklė arba forma gali turėti ne daugiau kaip vieną ypatybės sh:order reikšmę."@lt ;
+        sh:message "Katrai kārtulai vai formai var būt ne vairāk kā viena rekvizīta vērtība sh:order."@lv ;
+        sh:message "Kull regola jew għamla jista' jkollha l-iktar valur wieħed għall-proprjetà sh:order."@mt ;
+        sh:message "Elke regel of vorm mag maximaal één waarde hebben voor de eigenschap sh:order."@nl ;
+        sh:message "Każda reguła lub kształt może mieć co najwyżej jedną wartość właściwości sh:order."@pl ;
+        sh:message "Cada regra ou forma pode ter no máximo um valor para a propriedade sh:order."@pt ;
+        sh:message "Fiecare regulă sau formă poate avea cel mult o valoare pentru proprietatea sh:order."@ro ;
+        sh:message "Každé pravidlo alebo tvar môže mať najviac jednu hodnotu pre vlastnosť sh:order."@sk ;
+        sh:message "Vsako pravilo ali oblika ima lahko največ eno vrednost za lastnost sh:order."@sl ;
+        sh:message "Varje regel eller form kan ha högst ett värde för egenskapen sh:order."@sv ;
+
 	] ;
 	sh:property [					# rule-order-datatype
 		sh:name "Order datatype and NodeKind shape"@en ;
@@ -297,7 +665,30 @@ adsh:OrderShape
 		sh:path sh:order ;
 		sh:nodeKind sh:Literal ;
 		sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:integer ] [ sh:datatype xsd:byte ] [ sh:datatype xsd:int ] [ sh:datatype xsd:long ] [ sh:datatype xsd:negativeInteger ] [ sh:datatype xsd:nonNegativeInteger ] [ sh:datatype xsd:nonPositiveInteger ] [ sh:datatype xsd:positiveInteger ] [ sh:datatype xsd:shortunsignedLong ] [ sh:datatype xsd:unsignedInt ] [ sh:datatype xsd:unsignedShort ] [ sh:datatype xsd:unsignedByte ] ) ; 	
+		sh:message "Стойностите на sh:order при правилата и формите са литерали с числов тип данни като xsd:decimal."@bg ;
+        sh:message "Hodnoty sh:order v pravidlech a tvarech jsou literály s číselným datovým typem, jako je xsd:decimal."@cs ;
+        sh:message "Værdierne af sh:order ved regler og former er bogstaver med en numerisk datatype såsom xsd:decimal."@da ;
+        sh:message "Die Werte von sh:order bei Regeln und Formen sind Literale mit einem numerischen Datentyp wie xsd:decimal."@de ;
+        sh:message "Οι τιμές του sh:order σε κανόνες και σχήματα είναι κυριολεκτικές με έναν αριθμητικό τύπο δεδομένων όπως xsd:decimal."@el ;
 		sh:message "The values of sh:order at rules and shapes are literals with a numeric datatype such as xsd:decimal."@en ;
+	    sh:message "Los valores de sh:order en las reglas y las formas son literales con un tipo de datos numérico como xsd:decimal."@es ;
+        sh:message "Reeglite ja kujundite sh:order väärtused on numbrilise andmetüübiga, näiteks xsd:decimal, literaalid."@et ;
+        sh:message "Sääntöjen ja muotojen sh:order-arvot ovat literaaleja, joiden tietotyyppi on numeerinen, kuten xsd:decimal."@fi ;
+        sh:message "Les valeurs de sh:order au niveau des règles et des formes sont des littéraux avec un type de données numérique tel que xsd:decimal."@fr ;
+        sh:message "Is liteartha iad luachanna sh:ord ag rialacha agus cruthanna le cineál sonraí uimhriúil amhail xsd:decimal."@ga ;
+        sh:message "Vrijednosti sh:order u pravilima i oblicima su literali s numeričkim tipom podataka kao što je xsd:decimal."@hr ;
+        sh:message "A szabályoknál és alakzatoknál az sh:order értékei numerikus adattípusú literálok, például xsd:decimal."@hu ;
+        sh:message "I valori di sh:order alle regole e alle forme sono letterali con un tipo di dati numerico come xsd:decimal."@it ;
+        sh:message "Sh:order reikšmės taisyklėse ir formose yra literalai su skaitiniu duomenų tipu, pvz., xsd:decimal."@lt ;
+        sh:message "Sh:order vērtības kārtulās un formās ir literāļi ar skaitlisku datu tipu, piemēram, xsd:decimal."@lv ;
+        sh:message "Il-valuri ta' sh:order f'regoli u forom huma letterali b'tip ta' data numeriku bħal xsd:decimal."@mt ;
+        sh:message "De waarden van sh:order bij regels en vormen zijn letterlijke waarden met een numeriek datatype zoals xsd:decimal."@nl ;
+        sh:message "Wartości sh:order w regułach i kształtach są literałami z numerycznym typem danych, takim jak xsd:decimal."@pl ;
+        sh:message "Os valores de sh:order em regras e formas são literais com um tipo de dados numérico como xsd:decimal."@pt ;
+        sh:message "Valorile lui sh:order la reguli și forme sunt literale cu un tip de date numeric, cum ar fi xsd:decimal."@ro ;
+        sh:message "Hodnoty sh:order v pravidlách a tvaroch sú literály s číselným typom údajov, napríklad xsd:decimal."@sk ;
+        sh:message "Vrednosti sh:order pri pravilih in oblikah so literali s številskim podatkovnim tipom, kot je xsd:decimal."@sl ;
+        sh:message "Värdena för sh:order vid regler och former är bokstavliga med en numerisk datatyp som xsd:decimal."@sv ;
 	] .
 	
 
@@ -314,7 +705,30 @@ adsh:RuleDeactivatedShape
 		
 		sh:path sh:deactivated ;		# deactivated-maxCount
 		sh:maxCount 1 ;
+	    sh:message "Всяко правило може да има най-много една стойност за свойството sh:deactivated."@bg ;
+        sh:message "Každé pravidlo může mít nejvýše jednu hodnotu pro vlastnost sh:deactivated."@cs ;
+        sh:message "Hver regel må højst have én værdi for egenskaben sh:deactivated."@da ;
+        sh:message "Jede Regel darf höchstens einen Wert für die Eigenschaft sh:deactivated haben."@de ;
+        sh:message "Κάθε κανόνας μπορεί να έχει το πολύ μία τιμή για την ιδιότητα sh:deactivated."@el ;
 		sh:message "Each rule may have at most one value for the property sh:deactivated."@en ;
+	    sh:message "Cada regla puede tener como máximo un valor para la propiedad sh:deactivated."@es ;
+        sh:message "Igal reeglil võib atribuudi sh:deactivated jaoks olla kuni üks väärtus."@et ;
+        sh:message "Kullakin säännöllä voi olla enintään yksi arvo ominaisuudelle sh:deactivated."@fi ;
+        sh:message "Chaque règle peut avoir au plus une valeur pour la propriété sh:deactivated."@fr ;
+        sh:message "Féadfaidh luach amháin ar a laghad a bheith ag gach riail don mhaoin sh:deactivated."@ga ;
+        sh:message "Svako pravilo može imati najviše jednu vrijednost za svojstvo sh:deactivated."@hr ;
+        sh:message "Minden szabálynak legfeljebb egy értéke lehet az sh:deactivated tulajdonsághoz."@hu ;
+        sh:message "Ciascuna regola può avere al massimo un valore per la proprietà sh:deactivated."@it ;
+        sh:message "Kiekviena taisyklė gali turėti ne daugiau kaip vieną ypatybės sh:deactivated reikšmę."@lt ;
+        sh:message "Katrai kārtulai var būt ne vairāk kā viena rekvizīta vērtība sh:deactivated."@lv ;
+        sh:message "Kull regola jista' jkollha l-iktar valur wieħed għall-proprjetà sh:deactivated."@mt ;
+        sh:message "Elke regel mag maximaal één waarde hebben voor de eigenschap sh:deactivated."@nl ;
+        sh:message "Każda reguła może mieć co najwyżej jedną wartość właściwości sh:deactivated."@pl ;
+        sh:message "Cada regra pode ter no máximo um valor para a propriedade sh:deactivated."@pt ;
+        sh:message "Fiecare regulă poate avea cel mult o valoare pentru proprietatea sh:deactivated."@ro ;
+        sh:message "Každé pravidlo môže mať najviac jednu hodnotu pre vlastnosť sh:deactivated."@sk ;
+        sh:message "Vsako pravilo ima lahko največ eno vrednost za lastnost sh:deactivated."@sl ;
+        sh:message "Varje regel kan ha högst ett värde för egenskapen sh:deactivated."@sv ;
 	] ;
 	
 	sh:property [								# deactivated-in
@@ -324,7 +738,30 @@ adsh:RuleDeactivatedShape
 		sh:path sh:deactivated ;
 		sh:nodeKind sh:Literal ;
 		sh:datatype xsd:boolean ;
+	    sh:message "Стойностите на sh:deactivated са или от xsd:boolean литералите true или false."@bg ;
+        sh:message "Hodnoty sh:deactivated jsou buď literály xsd:boolean true nebo false."@cs ;
+        sh:message "Værdierne for sh:deactivated er enten af xsd:boolean literalerne true eller false."@da ;
+        sh:message "Die Werte von sh:deactivated sind entweder die xsd:boolean-Literale true oder false."@de ;
+        sh:message "Οι τιμές του sh:deactivated είναι είτε από τα xsd:boolean κυριολεκτικά true ή false."@el ;
 		sh:message "The values of sh:deactivated are either of the xsd:boolean literals true or false."@en ;
+	    sh:message "Los valores de sh:deactivated son cualquiera de los literales xsd:boolean true o false."@es ;
+        sh:message "sh:deactivated väärtused on kas xsd:boolean-literaalid true või false."@et ;
+        sh:message "sh:deactivated:n arvot ovat joko xsd:boolean-literaaleja true tai false."@fi ;
+        sh:message "Les valeurs de sh:deactivated sont soit les littéraux xsd:boolean true ou false."@fr ;
+        sh:message "Is iad na luachanna sh:deactivated ceachtar de na litreacha xsd:boolean true nó false."@ga ;
+        sh:message "Vrijednosti sh:deactivated su ili xsd:boolean literali true ili false."@hr ;
+        sh:message "Az sh:deactivated értékei az xsd:boolean literálok true vagy false."@hu ;
+        sh:message "I valori di sh:deactivated sono dei valori letterali xsd:boolean true o false."@it ;
+        sh:message "sh:deactivated reikšmės yra xsd:boolean literalės true arba false."@lt ;
+        sh:message "sh:deactivated vērtības ir vai nu no xsd:boolean literāļiem true vai false."@lv ;
+        sh:message "Il-valuri ta' sh:deactivated huma jew tal-xsd:boolean letterali true jew false."@mt ;
+        sh:message "De waarden van sh:deactivated zijn een van de xsd:boolean letterlijke waarden true of false."@nl ;
+        sh:message "Wartości sh:deactivated to jeden z literałów xsd:boolean true lub false."@pl ;
+        sh:message "Os valores de sh:deactivated são os literais xsd:boolean true ou false."@pt ;
+        sh:message "Valorile lui sh:deactivated sunt fie dintre literalele xsd:boolean true, fie false."@ro ;
+        sh:message "Hodnoty sh:deactivated sú buď z literálov xsd:boolean true alebo false."@sk ;
+        sh:message "Vrednosti sh:deactivated so bodisi xsd:boolean literali true ali false."@sl ;
+        sh:message "Värdena för sh:deactivated är antingen av xsd:boolean literalerna true eller false."@sv ;
 	] .
 	
 adsh:SPARQLRuleShape					
@@ -341,7 +778,30 @@ adsh:SPARQLRuleShape
 		sh:path sh:construct ;
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
+	    sh:message "Правилата на SPARQL трябва да имат точно една стойност за свойството sh:construct."@bg ;
+        sh:message "Pravidla SPARQL musí mít právě jednu hodnotu pro vlastnost sh:construct."@cs ;
+        sh:message "SPARQL-regler skal have nøjagtig én værdi for egenskaben sh:construct."@da ;
+        sh:message "SPARQL-Regeln müssen genau einen Wert für die Eigenschaft sh:construct haben."@de ;
+        sh:message "Οι κανόνες SPARQL πρέπει να έχουν ακριβώς μία τιμή για την ιδιότητα sh:construct."@el ;
 		sh:message "SPARQL rules must have exactly one value for the property sh:construct."@en ;
+	    sh:message "Las reglas SPARQL deben tener exactamente un valor para la propiedad sh:construct."@es ;
+        sh:message "SPARQL-i reeglitel peab atribuudi sh:construct jaoks olema täpselt üks väärtus."@et ;
+        sh:message "SPARQL-säännöillä on oltava täsmälleen yksi arvo ominaisuudelle sh:construct."@fi ;
+        sh:message "Les règles SPARQL doivent avoir exactement une valeur pour la propriété sh:construct."@fr ;
+        sh:message "Caithfidh luach amháin go díreach a bheith ag rialacha SPARQL don mhaoin sh:construct."@ga ;
+        sh:message "SPARQL pravila moraju imati točno jednu vrijednost za svojstvo sh:construct."@hr ;
+        sh:message "A SPARQL-szabályoknak pontosan egy értékkel kell rendelkezniük az sh:construct tulajdonsághoz."@hu ;
+        sh:message "Le regole SPARQL devono avere esattamente un valore per la proprietà sh:construct."@it ;
+        sh:message "SPARQL taisyklės turi turėti tiksliai vieną ypatybės sh:construct reikšmę."@lt ;
+        sh:message "SPARQL kārtulām ir jābūt tieši vienai rekvizīta sh:construct vērtībai."@lv ;
+        sh:message "Ir-regoli SPARQL għandu jkollhom eżattament valur wieħed għall-proprjetà sh:construct."@mt ;
+        sh:message "SPARQL-regels moeten precies één waarde hebben voor de eigenschap sh:construct."@nl ;
+        sh:message "Reguły SPARQL muszą mieć dokładnie jedną wartość właściwości sh:construct."@pl ;
+        sh:message "As regras SPARQL devem ter exatamente um valor para a propriedade sh:construct."@pt ;
+        sh:message "Regulile SPARQL trebuie să aibă exact o valoare pentru proprietatea sh:construct."@ro ;
+        sh:message "Pravidlá SPARQL musia mať presne jednu hodnotu pre vlastnosť sh:construct."@sk ;
+        sh:message "Pravila SPARQL morajo imeti natanko eno vrednost za lastnost sh:construct."@sl ;
+        sh:message "SPARQL-regler måste ha exakt ett värde för egenskapen sh:construct."@sv ;
 	] ;
 	
 	sh:property [								# construct-count
@@ -351,7 +811,30 @@ adsh:SPARQLRuleShape
 		sh:path sh:construct ;
 		sh:nodeKind sh:Literal ;
 		sh:datatype xsd:string ;
+	    sh:message "Стойностите на sh:construct са литерали с тип данни xsd:string."@bg ;
+        sh:message "Hodnoty sh:construct jsou literály s datovým typem xsd:string."@cs ;
+        sh:message "Værdierne af sh:construct er bogstaver med datatype xsd:string."@da ;
+        sh:message "Die Werte von sh:construct sind Literale vom Datentyp xsd:string."@de ;
+        sh:message "Οι τιμές του sh:construct είναι κυριολεκτικές με τύπο δεδομένων xsd:string."@el ;
 		sh:message "The values of sh:construct are literals with datatype xsd:string."@en ;
+	    sh:message "Los valores de sh:construct son literales con tipo de datos xsd:string."@es ;
+        sh:message "sh:construct väärtused on andmetüübiga xsd:string literaalid."@et ;
+        sh:message "sh:construct:n arvot ovat literaaleja, joiden tietotyyppi on xsd:string."@fi ;
+        sh:message "Les valeurs de sh:construct sont des littéraux avec le type de données xsd:string."@fr ;
+        sh:message "Is liteartha iad luachanna sh:construct le datatype xsd:string."@ga ;
+        sh:message "Vrijednosti sh:construct su literali s tipom podataka xsd:string."@hr ;
+        sh:message "Az sh:construct értékei xsd:string adattípusú literálok."@hu ;
+        sh:message "I valori di sh:construct sono letterali con tipo di dati xsd:string."@it ;
+        sh:message "sh:construct reikšmės yra literalai, kurių duomenų tipas xsd:string."@lt ;
+        sh:message "sh:construct vērtības ir literāļi ar datu tipu xsd:string."@lv ;
+        sh:message "Il-valuri ta' sh:construct huma letterali b'datatype xsd:string."@mt ;
+        sh:message "De waarden van sh:construct zijn letterlijke waarden met datatype xsd:string."@nl ;
+        sh:message "Wartości sh:construct są literałami o typie danych xsd:string."@pl ;
+        sh:message "Os valores de sh:construct são literais com tipo de dados xsd:string."@pt ;
+        sh:message "Valorile lui sh:construct sunt literale cu tipul de date xsd:string."@ro ;
+        sh:message "Hodnoty sh:construct sú literály s typom údajov xsd:string."@sk ;
+        sh:message "Vrednosti sh:construct so literali s podatkovnim tipom xsd:string."@sl ;
+        sh:message "Värdena för sh:construct är bokstavliga med datatypen xsd:string."@sv ;
 	] .
 
 
@@ -369,7 +852,30 @@ adsh:TripleRuleShape
 		sh:path sh:subject ;		# tripleRule-subject
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
+	    sh:message "Всяко тройно правило трябва да има точно една стойност на свойството sh:subject (което трябва да бъде добре оформен израз на възел)."@bg ;
+        sh:message "Každé trojité pravidlo musí mít právě jednu hodnotu vlastnosti sh:subject (což musí být správně vytvořený výraz uzlu)."@cs ;
+        sh:message "Hver tredobbelt regel skal have nøjagtig én værdi af egenskaben sh:subject (som skal være et velformet nodeudtryk)."@da ;
+        sh:message "Jede Tripelregel muss genau einen Wert der Eigenschaft sh:subject haben (der ein wohlgeformter Knotenausdruck sein muss)."@de ;
+        sh:message "Κάθε τριπλός κανόνας πρέπει να έχει ακριβώς μία τιμή της ιδιότητας sh:subject (η οποία πρέπει να είναι μια καλοσχηματισμένη έκφραση κόμβου)."@el ;
 		sh:message "Each triple rule must have exactly one value of the property sh:subject (which must be a well-formed node expression)."@en ;
+	    sh:message "Cada regla triple debe tener exactamente un valor de la propiedad sh:subject (que debe ser una expresión de nodo bien formada)."@es ;
+        sh:message "Igal kolmikreeglil peab olema täpselt üks atribuudi sh:subject väärtus (mis peab olema hästi vormistatud sõlmeavaldis)."@et ;
+        sh:message "Jokaisella kolmoissäännöllä on oltava täsmälleen yksi ominaisuuden sh:subject arvo (jonka on oltava hyvin muotoiltu solmulauseke)."@fi ;
+        sh:message "Chaque règle triple doit avoir exactement une valeur de la propriété sh:subject (qui doit être une expression de nœud bien formée)."@fr ;
+        sh:message "Caithfidh luach amháin go díreach a bheith ag gach riail thríarach ar an airí sh:subject (nach mór a bheith ina slonn nód dea-chruthaithe)."@ga ;
+        sh:message "Svako trostruko pravilo mora imati točno jednu vrijednost svojstva sh:subject (koje mora biti dobro oblikovan izraz čvora)."@hr ;
+        sh:message "Minden hármas szabálynak pontosan egy értékkel kell rendelkeznie az sh:subject tulajdonságból (amelynek jól formázott csomópont-kifejezésnek kell lennie)."@hu ;
+        sh:message "Ogni regola tripla deve avere esattamente un valore della proprietà sh:subject (che deve essere un'espressione del nodo ben formata)."@it ;
+        sh:message "Kiekviena triguba taisyklė turi turėti tiksliai vieną ypatybės sh:subject reikšmę (kuri turi būti gerai suformuota mazgo išraiška)."@lt ;
+        sh:message "Katrā trīskāršā kārtulā ir jābūt tieši vienai rekvizīta sh:subject vērtībai (tai jābūt labi izveidotai mezgla izteiksmei)."@lv ;
+        sh:message "Kull regola trippla jrid ikollha eżattament valur wieħed tal-proprjetà sh:subject (li trid tkun espressjoni ta' node ffurmata tajjeb)."@mt ;
+        sh:message "Elke drievoudige regel moet exact één waarde van de eigenschap sh:subject hebben (dit moet een goedgevormde knooppuntexpressie zijn)."@nl ;
+        sh:message "Każda potrójna reguła musi mieć dokładnie jedną wartość właściwości sh:subject (która musi być poprawnie sformułowanym wyrażeniem węzła)."@pl ;
+        sh:message "Cada regra tripla deve ter exatamente um valor da propriedade sh:subject (que deve ser uma expressão de nó bem formada)."@pt ;
+        sh:message "Fiecare regulă triplă trebuie să aibă exact o valoare a proprietății sh:subject (care trebuie să fie o expresie de nod bine formată)."@ro ;
+        sh:message "Každé trojité pravidlo musí mať práve jednu hodnotu vlastnosti sh:subject (čo musí byť dobre vytvorený výraz uzla)."@sk ;
+        sh:message "Vsako trojno pravilo mora imeti natanko eno vrednost lastnosti sh:subject (ki mora biti dobro oblikovan izraz vozlišča)."@sl ;
+        sh:message "Varje trippelregel måste ha exakt ett värde av egenskapen sh:subject (som måste vara ett välformat noduttryck)."@sv ;
 	] ;
 	
 	sh:property [
@@ -379,7 +885,30 @@ adsh:TripleRuleShape
 		sh:path sh:predicate ;		# tripleRule-predicate
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
+	    sh:message "Всяко тройно правило трябва да има точно една стойност на свойството sh:predicate (което трябва да бъде добре оформен израз на възел)."@bg ;
+        sh:message "Každé trojité pravidlo musí mít právě jednu hodnotu vlastnosti sh:predicate (což musí být správně vytvořený výraz uzlu)."@cs ;
+        sh:message "Hver tredobbelt regel skal have nøjagtig én værdi af egenskaben sh:predicate (som skal være et velformet nodeudtryk)."@da ;
+        sh:message "Jede Tripelregel muss genau einen Wert der Eigenschaft sh:predicate haben (der ein wohlgeformter Knotenausdruck sein muss)."@de ;
+        sh:message "Κάθε τριπλός κανόνας πρέπει να έχει ακριβώς μία τιμή της ιδιότητας sh:predicate (η οποία πρέπει να είναι μια καλοσχηματισμένη έκφραση κόμβου)."@el ;
 		sh:message "Each triple rule must have exactly one value of the property sh:predicate (which must be a well-formed node expression)."@en ;
+	    sh:message "Cada regla triple debe tener exactamente un valor de la propiedad sh:predicate (que debe ser una expresión de nodo bien formada)."@es ;
+        sh:message "Igal kolmikreeglil peab olema täpselt üks atribuudi sh:predicate väärtus (mis peab olema hästi vormistatud sõlmeavaldis)."@et ;
+        sh:message "Jokaisella kolmoissäännöllä on oltava täsmälleen yksi ominaisuuden sh:predicate arvo (jonka on oltava hyvin muotoiltu solmulauseke)."@fi ;
+        sh:message "Chaque règle triple doit avoir exactement une valeur de la propriété sh:predicate (qui doit être une expression de nœud bien formée)."@fr ;
+        sh:message "Caithfidh luach amháin go díreach a bheith ag gach riail thríarach ar an airí sh:predicate (nach mór a bheith ina slonn nód dea-chruthaithe)."@ga ;
+        sh:message "Svako trostruko pravilo mora imati točno jednu vrijednost svojstva sh:predicate (koje mora biti dobro oblikovan izraz čvora)."@hr ;
+        sh:message "Minden hármas szabálynak pontosan egy értékkel kell rendelkeznie az sh:predicate tulajdonságból (amelynek jól formázott csomópont-kifejezésnek kell lennie)."@hu ;
+        sh:message "Ogni regola tripla deve avere esattamente un valore della proprietà sh:predicate (che deve essere un'espressione di nodo ben formata)."@it ;
+        sh:message "Kiekviena triguba taisyklė turi turėti tiksliai vieną ypatybės sh:predicate reikšmę (kuri turi būti gerai suformuota mazgo išraiška)."@lt ;
+        sh:message "Katrā trīskāršā kārtulā ir jābūt tieši vienai rekvizīta sh:predicate vērtībai (tai jābūt labi izveidotai mezgla izteiksmei)."@lv ;
+        sh:message "Kull regola tripla jrid ikollha eżattament valur wieħed tal-proprjetà sh:predicate (li trid tkun espressjoni ta' node ffurmata tajjeb)."@mt ;
+        sh:message "Elke drievoudige regel moet precies één waarde van de eigenschap sh:predicate hebben (dit moet een goedgevormde knooppuntexpressie zijn)."@nl ;
+        sh:message "Każda potrójna reguła musi mieć dokładnie jedną wartość właściwości sh:predicate (która musi być poprawnie sformułowanym wyrażeniem węzła)."@pl ;
+        sh:message "Cada regra tripla deve ter exatamente um valor da propriedade sh:predicate (que deve ser uma expressão de nó bem formada)."@pt ;
+        sh:message "Fiecare regulă triplă trebuie să aibă exact o valoare a proprietății sh:predicate (care trebuie să fie o expresie de nod bine formată)."@ro ;
+        sh:message "Každé trojité pravidlo musí mať práve jednu hodnotu vlastnosti sh:predicate (čo musí byť dobre vytvorený výraz uzla)."@sk ;
+        sh:message "Vsako trojno pravilo mora imeti natanko eno vrednost lastnosti sh:predicate (ki mora biti dobro oblikovan izraz vozlišča)."@sl ;
+        sh:message "Varje trippelregel måste ha exakt ett värde av egenskapen sh:predicate (som måste vara ett välformat noduttryck)."@sv ;
 	] ;
 	
 	sh:property [
@@ -389,6 +918,29 @@ adsh:TripleRuleShape
 		sh:path sh:object ;			# tripleRule-object
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
+	    sh:message "Всяко тройно правило трябва да има точно една стойност на свойството sh:object (което трябва да бъде добре оформен израз на възел)."@bg ;
+        sh:message "Každé trojité pravidlo musí mít přesně jednu hodnotu vlastnosti sh:object (což musí být správně vytvořený výraz uzlu)."@cs ;
+        sh:message "Hver tredobbelt regel skal have nøjagtig én værdi af egenskaben sh:object (som skal være et velformet nodeudtryk)."@da ;
+        sh:message "Jede Tripelregel muss genau einen Wert der Eigenschaft sh:object haben (der ein wohlgeformter Knotenausdruck sein muss)."@de ;
+        sh:message "Κάθε τριπλός κανόνας πρέπει να έχει ακριβώς μία τιμή της ιδιότητας sh:object (η οποία πρέπει να είναι μια καλοσχηματισμένη έκφραση κόμβου)."@el ;
 		sh:message "Each triple rule must have exactly one value of the property sh:object (which must be a well-formed node expression)."@en ;
+	    sh:message "Cada regla triple debe tener exactamente un valor de la propiedad sh:object (que debe ser una expresión de nodo bien formada)."@es ;
+        sh:message "Igal kolmikreeglil peab olema täpselt üks atribuudi sh:object väärtus (mis peab olema hästi vormistatud sõlmeavaldis)."@et ;
+        sh:message "Jokaisella kolmoissäännöllä on oltava täsmälleen yksi ominaisuuden sh:object arvo (jonka on oltava hyvin muotoiltu solmulauseke)."@fi ;
+        sh:message "Chaque règle triple doit avoir exactement une valeur de la propriété sh:object (qui doit être une expression de nœud bien formée)."@fr ;
+        sh:message "Caithfidh luach amháin go díreach a bheith ag gach riail thríarach ar an maoin sh:object (nach mór a bheith ina slonn nód dea-chruthaithe)."@ga ;
+        sh:message "Svako trostruko pravilo mora imati točno jednu vrijednost svojstva sh:object (koje mora biti dobro oblikovan izraz čvora)."@hr ;
+        sh:message "Minden hármas szabálynak pontosan egy értékkel kell rendelkeznie az sh:object tulajdonságból (amelynek jól formázott csomópont-kifejezésnek kell lennie)."@hu ;
+        sh:message "Ogni regola tripla deve avere esattamente un valore della proprietà sh:object (che deve essere un'espressione di nodo ben formata)."@it ;
+        sh:message "Kiekviena triguba taisyklė turi turėti tiksliai vieną ypatybės sh:object reikšmę (kuri turi būti gerai suformuota mazgo išraiška)."@lt ;
+        sh:message "Katrā trīskāršā kārtulā ir jābūt tieši vienai rekvizīta sh:object vērtībai (tai jābūt labi izveidotai mezgla izteiksmei)."@lv ;
+        sh:message "Kull regola tripla għandu jkollha eżattament valur wieħed tal-proprjetà sh:object (li trid tkun espressjoni ta' node ffurmata tajjeb)."@mt ;
+        sh:message "Elke drievoudige regel moet exact één waarde van de eigenschap sh:object hebben (dit moet een goedgevormde knooppuntexpressie zijn)."@nl ;
+        sh:message "Każda potrójna reguła musi mieć dokładnie jedną wartość właściwości sh:object (która musi być poprawnie sformułowanym wyrażeniem węzła)."@pl ;
+        sh:message "Cada regra tripla deve ter exatamente um valor da propriedade sh:object (que deve ser uma expressão de nó bem formada)."@pt ;
+        sh:message "Fiecare regulă triplă trebuie să aibă exact o valoare a proprietății sh:object (care trebuie să fie o expresie de nod bine formată)."@ro ;
+        sh:message "Každé trojité pravidlo musí mať práve jednu hodnotu vlastnosti sh:object (čo musí byť dobre vytvorený výraz uzla)."@sk ;
+        sh:message "Vsako trojno pravilo mora imeti natanko eno vrednost lastnosti sh:object (ki mora biti dobro oblikovan izraz vozlišča)."@sl ;
+        sh:message "Varje trippelregel måste ha exakt ett värde av egenskapen sh:object (som måste vara ett välformat noduttryck)."@sv ;
 	] .
 	
