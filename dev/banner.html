@@ -1,7 +1,7 @@
 <div>
     <div style="display: table;">
         <div style="display: table-row;">
-            <div style="display: table-cell; cursor: pointer;" onclick="window.location.href='upload'"><h1>SHACL shape validator</h1></div>
+            <div id="validatorBannerTitle" style="display: table-cell; cursor: pointer;"><h1>SHACL shape validator</h1></div>
         </div>
         <div style="display: table-row;">
             <div style="display: table-cell; padding-top: 20px;">
@@ -45,23 +45,8 @@
                                         <b>Disclaimer:</b> The SHACL shapes implementing the <a href="https://www.w3.org/TR/shacl-af/">SHACL advanced features</a> and remaining core rules (see second option) as well as the list and implementation of best practices (see third option) result from the experience and work of the European Commission's DIGIT and specifically the <a href="https://joinup.ec.europa.eu/solution/interoperability-test-bed">Interoperability Test Bed team</a> and the <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic">Semantic Interoperability Community (SEMIC)</a>. These are provided for the benefit of SHACL shape developers but should not be considered as endorsed by W3C nor be used for formal conformance testing.
                                     </p>
                                     <div style="margin-top: 20px;">
-                                        <button id="viewButton" class="btn btn-default" type="button">View additional details</button>
-                                        <script>
-                                            $(document).ready(function() {
-                                                $("#viewButton").on("click", function () {
-                                                    if ($("#detailedRules").is(":hidden")) {
-                                                        $("#detailedRules").show();
-                                                        $("#viewButton").html('Hide additional details');
-                                                    } else {
-                                                        $("#detailedRules").hide();
-                                                        $("#viewButton").html('View additional details');
-                                                    }
-                                                });
-                                                $('#infoModal').on('show.bs.modal', function () {
-                                                    $("#detailedRules").hide();
-                                                });
-                                            });
-                                        </script>
+                                        <button id="viewButton" class="btn btn-default toggleDetailRuleDisplayButton" type="button">View additional details</button>
+                                        <button id="hideButton" class="btn btn-default toggleDetailRuleDisplayButton" type="button" style="display: none">Hide additional details</button>
                                     </div>
                                 </div>
                             </div>
