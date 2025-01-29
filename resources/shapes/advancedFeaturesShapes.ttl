@@ -160,7 +160,7 @@ adsh:SPARQLTargetShape
         sh:message "Použitím hodnôt sh:prefixes definovaných v 5.2.1 Prefix Declarations for SPARQL Queries musia byť hodnoty sh:select platné pre dopyty SPARQL 1.1 SELECT s jedinou výslednou premennou, toto."@sk ;
         sh:message "Z uporabo vrednosti sh:prefixes, kot jih določa 5.2.1 Prefix Declarations for SPARQL Queries, morajo biti vrednosti sh:select veljavne poizvedbe SPARQL 1.1 SELECT z eno samo spremenljivko rezultata this."@sl ;
         sh:message "Genom att använda värdena för sh:prefixes som definieras av 5.2.1 Prefix Declarations for SPARQL Queries, måste värdena för sh:select vara giltiga SPARQL 1.1 SELECT-frågor med en enda resultatvariabel detta."@sv ;
-		sh:pattern "^\\s*(SELECT)\\s+(\\?this)\\s+(WHERE)\\s+\\{.*" ;		# SPARQLTarget-select-sparql
+		sh:pattern "^\\s*SELECT\\s+(?:(?:DISTINCT\\s+)|(?:REDUCED\\s+))?\\?this\\s+WHERE\\s+\\{.*" ;		# SPARQLTarget-select-sparql
 		sh:flags "si" ;		
 	] ;	
 	
